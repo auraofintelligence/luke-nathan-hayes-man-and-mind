@@ -586,10 +586,10 @@ function renderPage(page, index) {
   <link rel="canonical" href="${siteUrl}${page.file}">
   <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
   <link rel="apple-touch-icon" href="assets/favicon.jpg">
-  <link rel="stylesheet" href="styles/tokens.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/components.css">
-  <link rel="stylesheet" href="styles/motion.css">
+  <link rel="stylesheet" href="styles/tokens.css?v=20260904c">
+  <link rel="stylesheet" href="styles/base.css?v=20260904c">
+  <link rel="stylesheet" href="styles/components.css?v=20260904c">
+  <link rel="stylesheet" href="styles/motion.css?v=20260904c">
   ${personSchema}
 </head>
 <body data-page="${escapeHtml(page.id)}" data-theme="${escapeHtml(page.theme)}">
