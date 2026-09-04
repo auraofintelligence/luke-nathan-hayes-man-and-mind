@@ -1,0 +1,44 @@
+@keyframes breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(0.96); }
+  50% { transform: translate(-50%, -50%) scale(1.04); }
+}
+
+@keyframes orbit {
+  to { transform: rotate(342deg); }
+}
+
+@keyframes drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -12px, 0); }
+}
+
+.hero-wordmark {
+  animation: breathe 7s ease-in-out infinite;
+}
+
+.hero-orbit {
+  animation: orbit 36s linear infinite;
+}
+
+.soundtrack-disc {
+  animation: orbit 14s linear infinite;
+}
+
+.home-mark {
+  transition: transform 200ms var(--ease), box-shadow 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .story-card:hover {
+    transform: none;
+  }
+}

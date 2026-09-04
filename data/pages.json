@@ -1,0 +1,128 @@
+[
+  {
+    "id": "home",
+    "file": "index.html",
+    "title": "The Mind Behind the Man",
+    "shortTitle": "Home",
+    "chapter": "00",
+    "theme": "mirror-ball",
+    "description": "A guided self-portrait of Luke Nathan Hayes, told through two voices, a mirror-ball Aura and a source trail."
+  },
+  {
+    "id": "bloke",
+    "file": "the-bloke.html",
+    "title": "The bloke before the blueprint",
+    "shortTitle": "The bloke",
+    "chapter": "01",
+    "theme": "warm-sand",
+    "description": "Meet the practical human behind the larger ideas through island life, work, travel, humour and the identities he uses in public."
+  },
+  {
+    "id": "break",
+    "file": "the-break.html",
+    "title": "I stopped accepting the default",
+    "shortTitle": "The break",
+    "chapter": "02",
+    "theme": "archive-violet",
+    "description": "Follow the early civic work and the period when Luke stopped accepting inherited systems as the only possible systems."
+  },
+  {
+    "id": "personal-aura",
+    "file": "personal-aura.html",
+    "title": "My Aura is a mirror ball",
+    "shortTitle": "Personal Aura",
+    "chapter": "03",
+    "theme": "prismatic-aura",
+    "description": "Explore Luke's personal Aura as a mirror ball whose facets connect body, mind, place, work, love, music, civics and future."
+  },
+  {
+    "id": "under-aura",
+    "file": "under-the-aura.html",
+    "title": "The machinery under the metaphor",
+    "shortTitle": "Under the Aura",
+    "chapter": "04",
+    "theme": "torus-cyan",
+    "description": "Look beneath the Aura metaphor at its geometry, memory ideas, digital-twin designs, hardware paths and open engineering questions."
+  },
+  {
+    "id": "songs",
+    "file": "songs-stories-comedy.html",
+    "title": "I sing the system before I build it",
+    "shortTitle": "Songs and stories",
+    "chapter": "05",
+    "theme": "protopian-gold",
+    "description": "Enter the songs, comedy and story worlds Luke uses to feel, test and communicate systems before the technical language catches up."
+  },
+  {
+    "id": "love",
+    "file": "love-and-tribe.html",
+    "title": "Love is infrastructure too",
+    "shortTitle": "Love and tribe",
+    "chapter": "06",
+    "theme": "constellation-magenta",
+    "description": "A candid, non-explicit account of love, consent, non-monogamy, larger family possibilities and the personal hopes inside Luke's story worlds."
+  },
+  {
+    "id": "minjerribah",
+    "file": "minjerribah.html",
+    "title": "Start on the island",
+    "shortTitle": "Minjerribah",
+    "chapter": "07",
+    "theme": "island-cyan",
+    "description": "Begin on Minjerribah, where Luke's practical work, music, local prototypes and carefully labelled future proposals meet."
+  },
+  {
+    "id": "fair-go",
+    "file": "a-fair-go.html",
+    "title": "A fair go needs better machinery",
+    "shortTitle": "A fair go",
+    "chapter": "08",
+    "theme": "civic-purple",
+    "description": "From a purple toilet mat to civic ledgers and shared compute, explore Luke's proposals for making a fair go more practical."
+  },
+  {
+    "id": "every-border",
+    "file": "every-border.html",
+    "title": "Every border can become a bridge",
+    "shortTitle": "Every border",
+    "chapter": "09",
+    "theme": "saffron-sky",
+    "description": "Travel through India, Nepal and a wider world of invitations, hosts, useful work, art, relationships and cross-border tools."
+  },
+  {
+    "id": "earth-infinity",
+    "file": "from-earth-to-infinity.html",
+    "title": "From one Aura to a solar system",
+    "shortTitle": "Earth to infinity",
+    "chapter": "10",
+    "theme": "cosmic-aurora",
+    "description": "Move from one personal Aura towards Oceania, Earth and a solar-system horizon without blurring built work, proposals and frontier questions."
+  },
+  {
+    "id": "sources",
+    "file": "sources.html",
+    "title": "Show me the receipts",
+    "shortTitle": "Sources",
+    "chapter": "11",
+    "theme": "archive-light",
+    "description": "Inspect the working source catalogue behind the portrait, including public links, held local records, authorship notes and unresolved gaps."
+  },
+  {
+    "id": "choose-door",
+    "file": "choose-your-door.html",
+    "title": "Why are you here?",
+    "shortTitle": "Choose your door",
+    "chapter": "12",
+    "theme": "path-glow",
+    "description": "Choose a short route through the same open story based on what brought you here, without hiding the rest of the site."
+  },
+  {
+    "id": "sitemap",
+    "file": "sitemap.html",
+    "title": "Complete site map",
+    "shortTitle": "Site map",
+    "chapter": "13",
+    "theme": "constellation-map",
+    "description": "See every chapter and public project link in one clear map of The Mind Behind the Man."
+  }
+]

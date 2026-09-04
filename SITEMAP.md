@@ -1,0 +1,16 @@
+# Site map
+
+1. [The Mind Behind the Man](index.html)
+2. [The bloke before the blueprint](the-bloke.html)
+3. [I stopped accepting the default](the-break.html)
+4. [My Aura is a mirror ball](personal-aura.html)
+5. [The machinery under the metaphor](under-the-aura.html)
+6. [I sing the system before I build it](songs-stories-comedy.html)
+7. [Love is infrastructure too](love-and-tribe.html)
+8. [Start on the island](minjerribah.html)
+9. [A fair go needs better machinery](a-fair-go.html)
+10. [Every border can become a bridge](every-border.html)
+11. [From one Aura to a solar system](from-earth-to-infinity.html)
+12. [Show me the receipts](sources.html)
+13. [Why are you here?](choose-your-door.html)
+14. [Complete site map](sitemap.html)

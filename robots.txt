@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/sitemap.xml

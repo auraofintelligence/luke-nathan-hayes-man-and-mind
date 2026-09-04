@@ -1,0 +1,26 @@
+:root {
+  --ink: #f7f3ff;
+  --ink-soft: #cbc4da;
+  --ink-dim: #928aa4;
+  --midnight: #08070d;
+  --midnight-raised: #100d19;
+  --midnight-glass: rgba(18, 14, 29, 0.76);
+  --ultraviolet: #7c3cff;
+  --aurora: #4deeea;
+  --magenta: #ff3f9f;
+  --gold: #ffc85a;
+  --sand: #d7b887;
+  --good: #7ee787;
+  --line: rgba(255, 255, 255, 0.14);
+  --line-strong: rgba(255, 255, 255, 0.28);
+  --shadow: 0 28px 80px rgba(0, 0, 0, 0.42);
+  --radius-sm: 0.7rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 2rem;
+  --page: min(1180px, calc(100vw - 2rem));
+  --reading: 760px;
+  --display: "Arial Black", "Trebuchet MS", Arial, sans-serif;
+  --sans: Inter, Aptos, "Segoe UI", Arial, sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}

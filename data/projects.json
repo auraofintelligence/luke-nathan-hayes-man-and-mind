@@ -1,0 +1,236 @@
+[
+  {
+    "id": "U01",
+    "title": "AI, EDA and chip design video",
+    "type": "video",
+    "url": "https://youtu.be/GzhfZy8-CjU?si=7uwyX4o8peos22Qf",
+    "page": "04",
+    "status": "External inspiration",
+    "summary": "AI-assisted chip design trigger"
+  },
+  {
+    "id": "U02",
+    "title": "Aura Direct Hardware",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/aura-direct-hardware/",
+    "page": "04",
+    "status": "Live public project",
+    "summary": "Current processors, FPGA, custom silicon and compute commons"
+  },
+  {
+    "id": "U03",
+    "title": "Virtual Solar Swarm",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/virtual-solar-swarm/",
+    "page": "10",
+    "status": "Live public project",
+    "summary": "Choose-your-own mission design studio"
+  },
+  {
+    "id": "U04",
+    "title": "Extreme Matter Atlas",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/extreme-matter-atlas/",
+    "page": "07",
+    "status": "Live public project",
+    "summary": "Elements, materials, patterns and frontier engineering"
+  },
+  {
+    "id": "U05",
+    "title": "Aura of Intelligence",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/index.html",
+    "page": "03",
+    "status": "Live public gateway",
+    "summary": "Bridge to the infinite and the personal Aura"
+  },
+  {
+    "id": "U06",
+    "title": "Grain by Grain Documentary",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/grain-by-grain-documentary/index.html",
+    "page": "07",
+    "status": "Live public project",
+    "summary": "Civilisation of sand and generation city"
+  },
+  {
+    "id": "U07",
+    "title": "P4A",
+    "type": "website",
+    "url": "https://p4a.xyz",
+    "page": "08",
+    "status": "Live public workbench",
+    "summary": "Proposed civic movement and roots-up democracy"
+  },
+  {
+    "id": "U08",
+    "title": "Aura Horn Torus",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/aura-horn-torus/index.html",
+    "page": "04",
+    "status": "Live public prototype",
+    "summary": "Interactive 12 by 24 horn torus lattice"
+  },
+  {
+    "id": "U09",
+    "title": "ready SET Co-op local projects",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/ready-set-co-op-cultural-intelligence-node/projects.html",
+    "page": "07",
+    "status": "Proposed public concept",
+    "summary": "Possible future co-operative and Dunwich cultural intelligence node"
+  },
+  {
+    "id": "U10",
+    "title": "Straddie Twins",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/straddie-twins/index.html",
+    "page": "07",
+    "status": "Live public models",
+    "summary": "Two digital twins of Minjerribah"
+  },
+  {
+    "id": "U11",
+    "title": "Future of Life 2045",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/Future-of-Life-2045/",
+    "page": "10",
+    "status": "Live public worldbuilding",
+    "summary": "Larger families, open intelligence, regenerative places and Cities of Light"
+  },
+  {
+    "id": "U12",
+    "title": "Strange but True",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/strange-but-true/index.html",
+    "page": "01",
+    "status": "Live sole-trader site",
+    "summary": "Current practical local work on Minjerribah"
+  },
+  {
+    "id": "U13",
+    "title": "Project Atlas",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/project-atlas/",
+    "page": "11",
+    "status": "Live public navigation layer",
+    "summary": "Audited project dates, links and evidence-backed connections"
+  },
+  {
+    "id": "U14",
+    "title": "Australian Law 2012: Luke's Relevance",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/index.html",
+    "page": "02",
+    "status": "Live historical explainer",
+    "summary": "The 2012 to 2013 break with the default system"
+  },
+  {
+    "id": "U15",
+    "title": "Australian Visa and Activity Atlas",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/Australian-visa-activity-atlas/",
+    "page": "09",
+    "status": "Live public tool",
+    "summary": "Entry and activity routes for speaking, teaching, work and creative travel"
+  },
+  {
+    "id": "U16",
+    "title": "Oceania Healthy De-Slop Co-ops: Co-operative Paths",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/Oceania-healthy-de-slop-co-ops/co-operative-paths/",
+    "page": "08",
+    "status": "Live public exploration",
+    "summary": "Locally authored co-operative paths and visible exit terms"
+  },
+  {
+    "id": "U17",
+    "title": "Australian Sire Story Forge",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/australian-sire-story-forge/index.html",
+    "page": "05",
+    "status": "Live public tool",
+    "summary": "Sourced romantasy and science-fiction story planning"
+  },
+  {
+    "id": "U18",
+    "title": "Loose Goose Comedy Engine",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/loose-goose-comedy-engine/index.html",
+    "page": "05",
+    "status": "Live public tool",
+    "summary": "Truth lock, comedy lenses and 92 BPM beat scoring"
+  },
+  {
+    "id": "U19",
+    "title": "Right Place, Right Time",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/right-place-right-time/index.html",
+    "page": "09",
+    "status": "Live public support path",
+    "summary": "Local, Australian, Oceania and world-scale journey"
+  },
+  {
+    "id": "U20",
+    "title": "GAJRA Earth Claude Build",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/gajra-earth-claude-build/index.html",
+    "page": "10",
+    "status": "Live public project",
+    "summary": "AI alignment, self-alignment and the garland metaphor"
+  },
+  {
+    "id": "U21",
+    "title": "Global Founder Atlas",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/global-founder-atlas/index.html",
+    "page": "09",
+    "status": "Live public tool",
+    "summary": "Funding, residencies, research and founder mobility"
+  },
+  {
+    "id": "U22",
+    "title": "Global Group Marriages",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/global-group-marriages/",
+    "page": "06",
+    "status": "Live public proposal",
+    "summary": "Larger self-sovereign family structures"
+  },
+  {
+    "id": "U23",
+    "title": "i C. infinity Music Universe",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/i-C-infinity-music-universe/index.html",
+    "page": "05",
+    "status": "Live public music universe",
+    "summary": "Songs, albums, stories and imaginative worlds"
+  },
+  {
+    "id": "U24",
+    "title": "Strange but True Cosmic Nexus",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/strange-but-true-cosmic-nexus/",
+    "page": "05",
+    "status": "Live public project",
+    "summary": "Mystery, maps, source trails, travel and film"
+  },
+  {
+    "id": "U25",
+    "title": "Luke Catalyst",
+    "type": "website",
+    "url": "https://lukecatalyst.com",
+    "page": "01",
+    "status": "Live personal portfolio",
+    "summary": "Earlier personal portfolio and social footer source"
+  },
+  {
+    "id": "U26",
+    "title": "Grey Area Commons",
+    "type": "website",
+    "url": "https://auraofintelligence.github.io/grey-area-commons/",
+    "page": "06",
+    "status": "Separate adult-only project",
+    "summary": "Gentle adult connection questions and self-authored files"
+  }
+]
