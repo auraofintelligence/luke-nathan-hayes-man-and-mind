@@ -1,18 +1,14 @@
 import { initialiseNavigation } from './navigation.js';
-import { initialisePerspective } from './perspective.js';
-import { initialiseEvidenceLens } from './evidence-lens.js';
 import { initialiseSourceDrawer } from './source-drawer.js';
 import { initialiseAudienceDoors } from './audience.js';
-import { initialiseMirrorBall } from './mirror-ball.js';
+import { initialiseHornTorus } from './horn-torus.js?v=20260904c';
 import { initialiseSourceRoom } from './source-room.js';
 import { initialiseAdultGateway } from './adult-gateway.js';
 
 initialiseNavigation();
-initialisePerspective();
-initialiseEvidenceLens();
 initialiseSourceDrawer();
 initialiseAudienceDoors();
-initialiseMirrorBall();
+initialiseHornTorus();
 initialiseSourceRoom();
 initialiseAdultGateway();
 

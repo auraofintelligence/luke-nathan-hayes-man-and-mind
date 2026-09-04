@@ -5,8 +5,8 @@
     "title": "The Mind Behind the Man",
     "shortTitle": "Home",
     "chapter": "00",
-    "theme": "mirror-ball",
-    "description": "A guided self-portrait of Luke Nathan Hayes, told through two voices, a mirror-ball Aura and a source trail."
+    "theme": "prismatic-horn",
+    "description": "A vivid self-portrait of Luke Nathan Hayes told through one life, a 288-facet horn torus and the worlds connected to it."
   },
   {
     "id": "bloke",
@@ -29,11 +29,11 @@
   {
     "id": "personal-aura",
     "file": "personal-aura.html",
-    "title": "My Aura is a mirror ball",
+    "title": "My Aura has 288 facets",
     "shortTitle": "Personal Aura",
     "chapter": "03",
     "theme": "prismatic-aura",
-    "description": "Explore Luke's personal Aura as a mirror ball whose facets connect body, mind, place, work, love, music, civics and future."
+    "description": "Explore Luke's personal Aura through a horn torus whose facets connect body, mind, place, work, love, music, civics and future."
   },
   {
     "id": "under-aura",
@@ -69,7 +69,7 @@
     "shortTitle": "Minjerribah",
     "chapter": "07",
     "theme": "island-cyan",
-    "description": "Begin on Minjerribah, where Luke's practical work, music, local prototypes and carefully labelled future proposals meet."
+    "description": "Begin on Minjerribah, where Luke's practical work, music, local prototypes and enormous future questions meet."
   },
   {
     "id": "fair-go",
@@ -96,7 +96,7 @@
     "shortTitle": "Earth to infinity",
     "chapter": "10",
     "theme": "cosmic-aurora",
-    "description": "Move from one personal Aura towards Oceania, Earth and a solar-system horizon without blurring built work, proposals and frontier questions."
+    "description": "Follow Luke's widening path from one personal Aura through Oceania and Earth to the Sun, satellites and the questions beyond them."
   },
   {
     "id": "sources",
@@ -105,7 +105,7 @@
     "shortTitle": "Sources",
     "chapter": "11",
     "theme": "archive-light",
-    "description": "Inspect the working source catalogue behind the portrait, including public links, held local records, authorship notes and unresolved gaps."
+    "description": "Walk through Luke's open studio of old documents, live links, rough drafts, AI conversations, missing pieces and changing versions."
   },
   {
     "id": "choose-door",

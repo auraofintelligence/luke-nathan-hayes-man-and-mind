@@ -2,22 +2,27 @@
 
 ## Direction and source material
 
-Luke Nathan Hayes supplied the personal framing, source register, local source files and public project links. The site structure and copy were developed through Luke-directed AI collaboration, then kept traceable through the repository data files.
+Luke Nathan Hayes supplied the personal framing, archive register, local files, music, art and public project links. The site structure and copy were developed through Luke-directed AI collaboration, then revised into a single autobiographical story under Luke's direction.
 
-## Visual material and review status
+## Horn torus
 
-- *A Protopian Gambit* cover artwork: supplied by Luke and registered as F29, but held out of this public release until its embedded metadata, authorship and reuse rights are reviewed.
-- i C. infinity ring photograph: supplied by Luke but held out of this public release until photographer attribution and reuse permission are confirmed.
-- Interactive mirror ball, music placeholder and abstract page geometry: original browser-rendered Canvas and CSS work in this repository. They are interface artwork, not documentary evidence.
+The interactive 12 by 24 horn torus is adapted from Luke's original [Aura Horn Torus](https://auraofintelligence.github.io/aura-horn-torus/) geometry. The portfolio version renders only the 288 outside facets, keeps the camera outside the surface and connects every facet to an item in the site's source map. It uses Canvas and ordinary JavaScript with no vector image files or icon libraries.
+
+Based on aura-horn-torus by Luke Nathan Hayes / Strange But True / Aura of Intelligence.
+
+## Raster art now shown
+
+- The i C. infinity ring photograph is used as the favicon and home control. Luke supplied it; the photographer is not recorded in the file.
+- *A Protopian Gambit* cover was supplied and directed by Luke. The complete composite source history is not recorded.
+- The Luke and Aura portrait, *Starseed Code* cover, *Songs of Straddie* cover and Luke Universal Creator image were already public in Luke's i C. infinity archive.
+- The *A Protopian Gambit* visual study was already public in a Luke-directed project and is described as generated concept artwork.
+
+These details are also kept beside the images in the source archive. The uncertainty is part of the public record rather than a reason to replace the art with a blank box.
 
 ## Missing media
 
-The intended Luke portrait and most registered historical images were not found on this laptop under the supplied filenames. They have not been replaced with generated documentary scenes. A later selective image pass will add approved life moments, captions and transcripts.
+Many registered historical images and most song videos are not on this laptop under their expected names. They remain visible as source threads and will be added selectively in a later image and music pass.
 
 ## Public links
 
-External projects, services and social platforms remain the property of their respective owners. A link does not imply endorsement, partnership or permission to reuse material from the destination.
-
-## AI boundary
-
-AI-assisted source documents are design records, not independent evidence. Third-person copy on this site is contextual narration based on the source register. It is not an independent biography. The paired first-person passages are editorial drafts synthesised from Luke's supplied material and remain subject to Luke's direct review and revision.
+External projects, services and social platforms remain the property of their respective owners. A link opens the related public work; it does not manufacture an endorsement.

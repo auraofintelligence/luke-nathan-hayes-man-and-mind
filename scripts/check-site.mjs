@@ -1,39 +1,41 @@
 import { access, readFile, readdir, stat } from 'node:fs/promises';
-import { dirname, extname, resolve } from 'node:path';
+import { dirname, extname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const loadJson = async (path) => JSON.parse(await readFile(resolve(root, path), 'utf8'));
-const [pages, content, controversies, sources] = await Promise.all([
+const [pages, content, controversies, sources, facets] = await Promise.all([
   loadJson('data/pages.json'),
   loadJson('data/site-content.json'),
   loadJson('data/controversies.json'),
-  loadJson('sources/register.json')
+  loadJson('sources/register.json'),
+  loadJson('data/facets.json')
 ]);
 
 const errors = [];
+const addError = (message) => errors.push(message);
 const sourceIds = new Set(sources.map((source) => source.id));
+const sourceById = new Map(sources.map((source) => [source.id, source]));
 const pageIds = new Set(pages.map((page) => page.id));
 const pageFiles = new Set(pages.map((page) => page.file));
-const allowedEvidence = new Set(['lived', 'built', 'submitted', 'proposed', 'modelled', 'frontier', 'story', 'open-question']);
-
-const addError = (message) => errors.push(message);
 
 if (pages.length !== 14) addError(`Expected 14 pages, found ${pages.length}.`);
 if (pageIds.size !== pages.length) addError('Page IDs are not unique.');
 if (pageFiles.size !== pages.length) addError('Page filenames are not unique.');
 if (!sources.length) addError('The source register is empty.');
 if (sourceIds.size !== sources.length) addError('Source IDs are not unique.');
-for (const requiredSource of ['F24', 'F25', 'F37']) {
-  if (!sourceIds.has(requiredSource)) addError(`Required album source ${requiredSource} is missing.`);
+
+for (const requiredSource of ['F24', 'F25', 'F29', 'F37', 'F38', 'U08', 'U17']) {
+  if (!sourceIds.has(requiredSource)) addError(`Required source ${requiredSource} is missing.`);
 }
 
 const referencedSources = new Set();
 for (const [pageId, pageContent] of Object.entries(content)) {
   if (!pageIds.has(pageId)) addError(`Content exists for unknown page ${pageId}.`);
+  if ('firstPerson' in pageContent || 'thirdPerson' in pageContent) addError(`${pageId}: discarded split voice remains in content.`);
+  if (!Array.isArray(pageContent.story?.paragraphs) || !pageContent.story.paragraphs.length) addError(`${pageId}: coherent story opening is missing.`);
   for (const section of pageContent.sections || []) {
     for (const card of section.cards || []) {
-      if (!allowedEvidence.has(card.evidence)) addError(`${pageId}: invalid evidence label ${card.evidence}.`);
       for (const sourceId of card.sourceIds || []) referencedSources.add(sourceId);
     }
   }
@@ -42,7 +44,6 @@ for (const [pageId, pageContent] of Object.entries(content)) {
 
 for (const item of controversies) {
   if (!pageIds.has(item.page)) addError(`Controversy uses unknown page ${item.page}.`);
-  if (!allowedEvidence.has(item.evidence)) addError(`${item.title}: invalid evidence label ${item.evidence}.`);
   for (const sourceId of item.sourceIds || []) referencedSources.add(sourceId);
   for (const key of ['idea', 'meaning', 'care', 'exists', 'notYet', 'change']) {
     if (!item[key]) addError(`${item.title}: missing ${key}.`);
@@ -53,10 +54,34 @@ for (const sourceId of referencedSources) {
   if (!sourceIds.has(sourceId)) addError(`Unknown source reference ${sourceId}.`);
 }
 
-for (const source of sources) {
-  if (!referencedSources.has(source.id) && !source.intentionallyUnused) {
-    addError(`Source ${source.id} is not cited and is not marked intentionally unused.`);
+if (facets.length !== 288) addError(`Expected 288 horn-torus facets, found ${facets.length}.`);
+const facetAddresses = new Set();
+const facetCoverage = new Map(sources.map((source) => [source.id, 0]));
+facets.forEach((facet, index) => {
+  if (facet.number !== index + 1) addError(`Facet ${index} has non-contiguous number ${facet.number}.`);
+  if (!Number.isInteger(facet.row) || facet.row < 0 || facet.row >= 12) addError(`Facet ${facet.number}: invalid row.`);
+  if (!Number.isInteger(facet.column) || facet.column < 0 || facet.column >= 24) addError(`Facet ${facet.number}: invalid column.`);
+  const address = `${facet.row}:${facet.column}`;
+  if (facetAddresses.has(address)) addError(`Duplicate facet address ${address}.`);
+  facetAddresses.add(address);
+  if (!sourceIds.has(facet.sourceId)) {
+    addError(`Facet ${facet.number}: unknown source ${facet.sourceId}.`);
+    return;
   }
+  facetCoverage.set(facet.sourceId, facetCoverage.get(facet.sourceId) + 1);
+  const source = sourceById.get(facet.sourceId);
+  const expectedHref = source.url || source.publicPath || '';
+  if (facet.href !== expectedHref) addError(`Facet ${facet.number}: source link does not match ${facet.sourceId}.`);
+  if (source.availability === 'public-link' && !/^https:\/\//i.test(facet.href)) addError(`Facet ${facet.number}: public source needs an HTTPS link.`);
+  if (!source.url && !source.publicPath && facet.href) addError(`Facet ${facet.number}: private archive location became a link.`);
+});
+
+for (const [sourceId, count] of facetCoverage) {
+  if (!count) addError(`Source ${sourceId} does not appear on the horn torus.`);
+}
+const coverageCounts = [...facetCoverage.values()];
+if (coverageCounts.length && Math.max(...coverageCounts) - Math.min(...coverageCounts) > 1) {
+  addError('Facet source distribution is not balanced.');
 }
 
 const localTarget = (href) => {
@@ -78,10 +103,14 @@ for (const page of pages) {
 
   if (!html.includes('<html lang="en-AU">')) addError(`${page.file}: missing Australian language declaration.`);
   if (!/<main\s+id="top"(?:\s|>)/.test(html)) addError(`${page.file}: missing main#top.`);
-  if (!html.includes('data-perspective="both"')) addError(`${page.file}: missing perspective control state.`);
+  if (!html.includes('rel="icon"') || !html.includes('assets/favicon.jpg')) addError(`${page.file}: raster favicon is missing.`);
+  if (/data-perspective|perspective-control|First-person draft|Third person/i.test(html)) addError(`${page.file}: discarded split voice remains.`);
+  if (/evidence-bar|evidence-toggle|evidence-chip/i.test(html)) addError(`${page.file}: clinical evidence controls remain.`);
+  if (/mirror[ -]ball/i.test(html)) addError(`${page.file}: discarded mirror-ball language remains.`);
   if (/[–—]/u.test(html)) addError(`${page.file}: contains an en dash or em dash.`);
-  if (/<svg\b/i.test(html)) addError(`${page.file}: contains forbidden inline SVG.`);
+  if (/<svg\b|data:image\/svg\+xml|\.svg(?:[?#"']|$)/i.test(html)) addError(`${page.file}: contains a forbidden vector image reference.`);
   if (/ready SET(?! Co-op)/g.test(html)) addError(`${page.file}: contains an incomplete ready SET Co-op name.`);
+  if (page.id === 'home' && (!html.includes('data-horn-torus') || !html.includes('Facet 001 of 288'))) addError('index.html: 288-facet horn torus is missing.');
 
   const anchors = html.match(/<a\b[^>]*>/gi) || [];
   for (const anchor of anchors) {
@@ -113,6 +142,11 @@ for (const page of pages) {
   }
 }
 
+const torusScript = await readFile(resolve(root, 'scripts/horn-torus.js'), 'utf8');
+const minimumCamera = Number(torusScript.match(/MIN_CAMERA_DISTANCE\s*=\s*([\d.]+)/)?.[1]);
+if (!Number.isFinite(minimumCamera) || minimumCamera <= 4.1) addError('Horn-torus camera can cross the outside safety boundary.');
+if (!torusScript.includes('const ROWS = 12;') || !torusScript.includes('const COLUMNS = 24;')) addError('Horn-torus lattice is not fixed at 12 by 24.');
+
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const files = [];
@@ -125,10 +159,22 @@ async function walk(directory) {
   return files;
 }
 
-for (const file of await walk(root)) {
-  if (extname(file).toLowerCase() === '.svg') addError(`Forbidden SVG file: ${file.slice(root.length + 1)}`);
+const files = await walk(root);
+for (const file of files) {
+  const extension = extname(file).toLowerCase();
+  if (extension === '.svg') addError(`Forbidden vector image file: ${relative(root, file)}`);
   const details = await stat(file);
-  if (details.size > 20 * 1024 * 1024) addError(`File exceeds 20 MB: ${file.slice(root.length + 1)}`);
+  if (details.size > 20 * 1024 * 1024) addError(`File exceeds 20 MB: ${relative(root, file)}`);
+  if (['.html', '.css', '.js', '.json'].includes(extension) && !file.endsWith('check-site.mjs')) {
+    const text = await readFile(file, 'utf8');
+    if (/data:image\/svg\+xml|\.svg(?:[?#"']|$)|createElementNS\([^)]*svg/i.test(text)) {
+      addError(`Forbidden vector image reference: ${relative(root, file)}`);
+    }
+  }
+}
+
+for (const discarded of ['scripts/mirror-ball.js', 'scripts/perspective.js', 'scripts/evidence-lens.js']) {
+  if (files.includes(resolve(root, discarded))) addError(`Discarded interface file remains: ${discarded}`);
 }
 
 if (errors.length) {
@@ -136,5 +182,5 @@ if (errors.length) {
   errors.forEach((error) => console.error(`- ${error}`));
   process.exitCode = 1;
 } else {
-  console.log(`Site checks passed: ${pages.length} pages, ${sources.length} sources, ${referencedSources.size} cited records.`);
+  console.log(`Site checks passed: ${pages.length} pages, ${sources.length} source threads and all 288 outside facets mapped.`);
 }

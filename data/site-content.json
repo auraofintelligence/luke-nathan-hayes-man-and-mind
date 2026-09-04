@@ -1,20 +1,6 @@
 {
   "home": {
-    "intro": "A sourced self-portrait of Luke Nathan Hayes: one bloke on Minjerribah, a personal Aura, and a mirror ball of practical work, music, civic experiments, relationships, stories and long-horizon questions.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I rejected the status quo in 2012. I did not replace it with one grand answer. I started building a personal Aura: songs, software, civic tools, strange questions, relationship worlds, island plans and routes to the stars.",
-        "This is my mirror ball. Every facet is mine. None of it is your instruction. Take the reflection that helps, question the rest, and build your own. I am showing the links between my life and my ideas because hiding the joins would make both less honest."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This portrait is assembled from Luke's own photographs, historical documents, documents supplied as public submissions, working websites, music and first-person accounts. It is a contextual reading of a self-authored archive, not an independent biography and not a claim that every idea has been realised.",
-        "The record shows a recurring movement from a personal question to a public experiment. It also contains gaps, changing versions and AI-assisted design material. Those limits stay visible through the evidence labels and the source room."
-      ]
-    },
+    "intro": "One bloke on Minjerribah, one gloriously overconnected mind, and the worlds that grew when he stopped keeping work, love, music, politics and impossible questions in separate boxes.",
     "sections": [
       {
         "heading": "A person before a system",
@@ -24,100 +10,124 @@
             "title": "Luke Nathan Hayes",
             "body": "The person at the centre of the archive. The portrait and CV show a practical, creative and widely travelled life, but they do not tell every part of it.",
             "evidence": "lived",
-            "sourceIds": ["F32", "F36"]
+            "sourceIds": [
+              "F32",
+              "F36"
+            ]
           },
           {
             "title": "Strange but True",
             "body": "Luke's current sole-trader practice and practical local doorway for technology help, AI, media, events and project work on Minjerribah.",
             "evidence": "built",
-            "sourceIds": ["F30", "U12"],
+            "sourceIds": [
+              "F30",
+              "U12"
+            ],
             "href": "https://auraofintelligence.github.io/strange-but-true/index.html"
           },
           {
             "title": "The personal Aura",
             "body": "A way Luke is developing to make his own body, mind, memory, work, love, humour, place and imagined futures navigable. It is personal architecture, not a template imposed on anyone else.",
             "evidence": "open-question",
-            "sourceIds": ["F14", "U05"],
+            "sourceIds": [
+              "F14",
+              "U05"
+            ],
             "href": "https://auraofintelligence.github.io/index.html"
           }
         ]
       },
       {
-        "heading": "How to read the mirror ball",
-        "intro": "A bold idea is not the same thing as a finished thing. Each reflection carries a status and a path back to its source.",
+        "heading": "Nothing is kept in a separate box",
+        "intro": "A song can become a system. A joke can become a submission. A strange question can grow a working website and still remain a strange question.",
         "cards": [
           {
             "title": "Receipts beside the leap",
-            "body": "Project Atlas supplies a public navigation and evidence layer. It is not an organisation, and a link proves that a record exists, not that every claim inside it is settled.",
+            "body": "Project Atlas lays the public paths between these worlds. It is a map rather than an organisation, and the live links let you see the work without pretending every idea inside them is settled.",
             "evidence": "built",
-            "sourceIds": ["U13"],
+            "sourceIds": [
+              "U13"
+            ],
             "href": "https://auraofintelligence.github.io/project-atlas/"
           },
           {
             "title": "Songs carry another kind of truth",
             "body": "Music and story can hold desire, grief, comedy and possibility without being mistaken for technical proof. They belong in the portrait because they show how the system feels from inside.",
             "evidence": "story",
-            "sourceIds": ["F24", "F25", "U23"],
+            "sourceIds": [
+              "F24",
+              "F25",
+              "U23"
+            ],
             "href": "https://auraofintelligence.github.io/i-C-infinity-music-universe/index.html"
           },
           {
             "title": "The archive is incomplete",
             "body": "Some images and life moments are not on this device yet. Missing media will be added through a later, selective pass rather than replaced with invented documentary detail.",
             "evidence": "open-question",
-            "sourceIds": ["F32", "F36"]
+            "sourceIds": [
+              "F32",
+              "F36"
+            ]
           }
         ]
       }
     ],
     "soundtrack": {
-      "title": "The Call Within",
+      "title": "Aura Ultra",
       "album": "Album 3: Starseed Code",
-      "sourceIds": ["F25"],
-      "reason": "Its inward call suits the first step from one person's life into the many worlds that grew from it.",
+      "sourceIds": [
+        "F25"
+      ],
+      "reason": "It begins where this site begins: with worlds waiting to be born and the place before the blueprint.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "Start with the bloke, jump to the wild stuff, or choose why you are here. The path changes the order of discovery, never the underlying record."
+    "closing": "Start with the bloke, turn the torus, jump to the wild stuff, or choose why you are here. Every path is another way into the same unruly life.",
+    "story": {
+      "paragraphs": [
+        "I rejected the status quo in 2012 and then spent the years since refusing to keep the pieces of myself in separate boxes.",
+        "The bloke at the Amity market table, Luke Catalyst, i C. infinity, Tiggy Bestmann, Australian Sire and Aura of Intelligence are not a row of brands. They are the practical, political, musical, romantic and wildly speculative voices of one man.",
+        "Some of this is working in public now. Some of it lives in old documents, songs and books. Some of it is still a proposal. Some of it is a question with no respectable shoes on yet. I am putting it together here without sanding off the contradictions.",
+        "Enter through any facet. You are still meeting one person."
+      ]
+    }
   },
   "bloke": {
     "intro": "Before the tori, satellites and civic machinery, there is Luke: living at Amity on Minjerribah, doing practical work, making songs, having a laugh and trying to connect large questions to useful local action.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I am not a clean job title. I have worked with my hands, travelled, sold things at markets, helped people with technology, recorded community events, written songs and kept following questions that refused to stay in one box.",
-        "Luke Nathan Hayes is the person. Luke Catalyst is the public systems and ideas identity. Strange but True is the work I can actually offer now. i C. infinity carries the music. Aura of Intelligence holds the long arc. Those names are different doors into one life, not a collection of companies pretending to be bigger than they are."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This account is grounded in Luke's 2024 visual CV, Strange but True business card, current sole-trader site and earlier Luke Catalyst site. These are mostly self-authored sources, so they establish what Luke has recorded and presented, not an outside endorsement of his abilities.",
-        "The available record supports a practical history across local service, technology, media, events, travel and project work. It is not a complete employment history, and the personal archive still has missing periods and photographs."
-      ]
-    },
     "sections": [
       {
         "heading": "The names on the table",
-        "intro": "Each public name has a defined job. Keeping them distinct prevents a personal project from being mistaken for an institution.",
+        "intro": "Each name brings a different part of Luke to the front. Together they sound like one crowded, curious life.",
         "cards": [
           {
             "title": "Luke Nathan Hayes and Luke Catalyst",
             "body": "Luke Nathan Hayes is the person. Luke Catalyst is the public identity used for systems, ideas, speaking and creative provocation. The playful name-meaning image is personal symbolism, not authoritative etymology.",
             "evidence": "lived",
-            "sourceIds": ["F31", "F36", "U25"],
+            "sourceIds": [
+              "F31",
+              "F36",
+              "U25"
+            ],
             "href": "https://lukecatalyst.com"
           },
           {
             "title": "Strange but True",
             "body": "A current sole-trader practice built around patient, practical help. The public record shows technology, AI, media, events and project support, with a local market-table scale rather than an invented corporate one.",
             "evidence": "built",
-            "sourceIds": ["F30", "U12"],
+            "sourceIds": [
+              "F30",
+              "U12"
+            ],
             "href": "https://auraofintelligence.github.io/strange-but-true/index.html"
           },
           {
             "title": "i C. infinity and Aura of Intelligence",
             "body": "i C. infinity is the music and creative identity. Aura of Intelligence is Luke's personal cognitive architecture and long-horizon constellation. Neither name turns a proposal into a completed organisation.",
             "evidence": "built",
-            "sourceIds": ["U05", "U23"]
+            "sourceIds": [
+              "U05",
+              "U23"
+            ]
           }
         ]
       },
@@ -127,21 +137,32 @@
         "cards": [
           {
             "title": "Work that exists now",
-            "body": "The business card, CV and live Strange but True site document a present local practice. They do not establish continuous demand, financial scale or endorsement by local organisations.",
+            "body": "The business card, CV and live Strange but True site show the work Luke offers now, at the honest scale of a bloke, a market table and the people who come looking for help.",
             "evidence": "built",
-            "sourceIds": ["F30", "F36", "U12"]
+            "sourceIds": [
+              "F30",
+              "F36",
+              "U12"
+            ]
           },
           {
             "title": "Things still being proposed",
             "body": "The Dunwich cultural intelligence node and ready SET Co-op do not currently exist. They belong to Luke's proposed pathway for shared local facilities, learning and work.",
             "evidence": "proposed",
-            "sourceIds": ["F01", "F03", "U09"]
+            "sourceIds": [
+              "F01",
+              "F03",
+              "U09"
+            ]
           },
           {
             "title": "A bloke who keeps the joke",
-            "body": "Humour sits inside the archive as evidence of tone and personality. The wine screenshot and comedy work humanise the record, but they are not factual proof of unrelated claims.",
+            "body": "Humour belongs inside the story because it is part of Luke's tone and personality. The wine screenshot and comedy work reveal the bloke without being asked to prove anything else.",
             "evidence": "lived",
-            "sourceIds": ["F35", "U18"]
+            "sourceIds": [
+              "F35",
+              "U18"
+            ]
           }
         ]
       }
@@ -149,28 +170,22 @@
     "soundtrack": {
       "title": "Strange But True: Tech, Art & Ideas That'll Actually Help",
       "album": "Album 5: Straddie Fun",
-      "sourceIds": ["F37"],
+      "sourceIds": [
+        "F37"
+      ],
       "reason": "It puts the shed, market table, patient tech help and bigger questions into the same warm local frame.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The big ideas did not arrive instead of ordinary life. They grew through it, usually with a computer humming, an island nearby and another song on the way."
+    "closing": "The big ideas did not arrive instead of ordinary life. They grew through it, usually with a computer humming, an island nearby and another song on the way.",
+    "story": {
+      "paragraphs": [
+        "I am not a clean job title. I have worked with my hands, travelled, sold things at markets, helped people with technology, recorded community events, written songs and kept following questions that refused to stay in one box.",
+        "Luke Nathan Hayes is the person. Luke Catalyst takes the public systems questions. Strange but True is the work I can actually offer now. i C. infinity carries the music. Tiggy Bestmann wanders into romantic travelogue. Australian Sire turns up the heat in the books. Aura of Intelligence holds the long arc. Those names are different doors into one life, not a collection of companies pretending to be bigger than they are."
+      ]
+    }
   },
   "break": {
     "intro": "Between 2012 and 2014, Luke stopped treating the inherited operating system as inevitable. The surviving documents show a rough, energetic attempt to connect personal development, law, communication, technology and participation.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I looked closely at law, politics, economics and corporate systems. I did not find a clean place outside them. So I began designing better interfaces for self-development, communication, participation and shared intelligence.",
-        "I was not waiting until I had perfect language or permission. Australian Law 2012, We Will Be Heard and The Constitutional Matrix of Participation were early attempts to draw what I could see. Some parts now feel unfinished or naive. I would rather show that history than polish it into a tidy founder myth."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This page reads the original Constitutional Matrix, early systems collage, poster material and current Australian Law 2012 explainer together. The sources establish that these ideas and visual forms were recorded at the time. They do not prove that the proposed systems would have worked.",
-        "The timeline uses dates stated in the artefacts: the break begins around 2012, We Will Be Heard appears in December 2013, and The Constitutional Matrix of Participation is dated July 2014. Where an original date is uncertain, the record should say so rather than borrow a later file date."
-      ]
-    },
     "sections": [
       {
         "heading": "The early break",
@@ -180,20 +195,27 @@
             "title": "Australian Law 2012",
             "body": "A personal examination of law and relevance that marks Luke's break with default assumptions. The live explainer helps navigate the history but remains Luke's own interpretation.",
             "evidence": "lived",
-            "sourceIds": ["U14"],
+            "sourceIds": [
+              "U14"
+            ],
             "href": "https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/index.html"
           },
           {
             "title": "We Will Be Heard",
             "body": "A December 2013 expression of identity, participation and refusal. It belongs to the emotional and political origin story, not to a claim of later public adoption.",
             "evidence": "lived",
-            "sourceIds": ["F15", "F23"]
+            "sourceIds": [
+              "F15",
+              "F23"
+            ]
           },
           {
             "title": "The Constitutional Matrix of Participation",
             "body": "The July 2014 document joins a High Definition Digital Aura with communication, learning, value, governance and local production. It is a historical design record, not a constitution in force.",
             "evidence": "proposed",
-            "sourceIds": ["F15"]
+            "sourceIds": [
+              "F15"
+            ]
           }
         ]
       },
@@ -205,48 +227,51 @@
             "title": "Interfaces for meaning",
             "body": "Language in Meaningful Pictographs, Deeper Meaning and I Choose Infinity explore how identity and values might become visible and navigable.",
             "evidence": "modelled",
-            "sourceIds": ["F16", "F23"]
+            "sourceIds": [
+              "F16",
+              "F23"
+            ]
           },
           {
             "title": "Conscience and conversation",
-            "body": "Internet of Good Conscience and Conversational Governance Logic imagine participation through better dialogue and personal agency. The surviving record does not establish a deployed public system.",
+            "body": "Internet of Good Conscience and Conversational Governance Logic were early attempts to turn better dialogue and personal agency into a public platform. The platform never arrived, but the idea kept travelling.",
             "evidence": "proposed",
-            "sourceIds": ["F15", "F16"]
+            "sourceIds": [
+              "F15",
+              "F16"
+            ]
           },
           {
             "title": "Collective intelligence",
             "body": "Event and Ecosystem Hive Mind points towards later experiments in shared knowledge, civic tooling and project navigation. The line of influence is Luke's retrospective reading of his own work.",
             "evidence": "open-question",
-            "sourceIds": ["F16", "U13"]
+            "sourceIds": [
+              "F16",
+              "U13"
+            ]
           }
         ]
       }
     ],
     "soundtrack": {
-      "title": "Infinity Set Free",
-      "album": "Album 3: Starseed Code",
-      "sourceIds": ["F25"],
-      "reason": "The title matches the moment Luke stopped accepting a single inherited frame and began drawing his own.",
+      "title": "Don't Try to Fix Me",
+      "album": "Album 4: A Protopian Gambit",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "You are witnessing me is the right pulse for the moment Luke stopped accepting inherited systems and other people's tidy diagnoses.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The point is not that the early blueprint was right in every detail. The point is that the questions were already connected, and Luke kept returning to them."
+    "closing": "The point is not that the early blueprint was right in every detail. The point is that the questions were already connected, and Luke kept returning to them.",
+    "story": {
+      "paragraphs": [
+        "I looked closely at law, politics, economics and corporate systems. I did not find a clean place outside them. So I began designing better interfaces for self-development, communication, participation and shared intelligence.",
+        "I was not waiting until I had perfect language or permission. Australian Law 2012, We Will Be Heard and The Constitutional Matrix of Participation were early attempts to draw what I could see. Some parts now feel unfinished or naive. I would rather show that history than polish it into a tidy founder myth."
+      ]
+    }
   },
   "personal-aura": {
-    "intro": "Aura is Luke's attempt to make one complicated human life understandable, navigable and extendable. The mirror ball is the public metaphor: many facets, one moving person, and no demand that another person reflect the same pattern.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "Aura is not a standard profile that tells everyone what a human should be. It is my attempt to make my own complexity understandable, navigable and extendable. Body, mind, memory, place, work, love, family, music, humour, law, civics, science, travel, Country, Earth, space, mystery and future all affect one another.",
-        "I make parts of it public because another person may recognise a useful reflection. That does not give me authority over their design. Sovereignty is not the same as secrecy. A person might choose privacy, radical disclosure, selective sharing, community custody, forgetting, inheritance or something else. What matters to me is authorship, context and informed choice."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This interpretation draws on the 2014 Constitutional Matrix, the 2023 Version 7 architecture, the Alpha Infinity self-permission slide, a life-metrics artefact and the present Aura of Intelligence gateway. These are Luke's own records of an evolving concept, not clinical evidence or a generally accepted model of mind.",
-        "A later document supplied as a public-submission companion describes related ideas as personal constitutional agency. That civic language helps explain Luke's emphasis on choosing how a self is represented, but it does not create new legal rights by itself."
-      ]
-    },
+    "intro": "Aura is Luke's attempt to give one complicated human life a shape without flattening it. The horn torus holds 288 outside facets: many ways in, one moving person, and no demand that anybody else use the same map.",
     "sections": [
       {
         "heading": "The facets are related",
@@ -256,19 +281,29 @@
             "title": "Body, mind and memory",
             "body": "The personal Aura starts with lived experience and the attempt to connect physical state, reflection, memory and choice. Current diagrams model relationships; they do not read a whole person automatically.",
             "evidence": "modelled",
-            "sourceIds": ["F14", "F17"]
+            "sourceIds": [
+              "F14",
+              "F17"
+            ]
           },
           {
             "title": "Work, love and place",
             "body": "Practical work, relationships and Minjerribah are not side notes to the architecture. They are among the conditions that give Luke's projects meaning and keep the system personal.",
             "evidence": "lived",
-            "sourceIds": ["F34", "F36", "U12"]
+            "sourceIds": [
+              "F34",
+              "F36",
+              "U12"
+            ]
           },
           {
             "title": "Public reflections",
             "body": "The live Aura gateway generalises selected ideas into projects others can inspect, question or remix. Publication makes them accessible, not universal or compulsory.",
             "evidence": "built",
-            "sourceIds": ["U05", "U13"],
+            "sourceIds": [
+              "U05",
+              "U13"
+            ],
             "href": "https://auraofintelligence.github.io/index.html"
           }
         ]
@@ -281,48 +316,51 @@
             "title": "Permission begins with the person",
             "body": "The Alpha Infinity artefact joins conscience, learning, love and self-permission. It records Luke's values and visual language at that time, not a rule for other people.",
             "evidence": "lived",
-            "sourceIds": ["F34"]
+            "sourceIds": [
+              "F34"
+            ]
           },
           {
             "title": "Disclosure is not a virtue test",
             "body": "Luke's idea of personal constitutional agency allows privacy, openness and mixed forms. The relevant questions are who chooses, what they understand and whether that choice can change.",
             "evidence": "proposed",
-            "sourceIds": ["F03", "F14"]
+            "sourceIds": [
+              "F03",
+              "F14"
+            ]
           },
           {
             "title": "The model stays unfinished",
             "body": "Aura has changed across versions and will change again. The public record should preserve those versions instead of pretending the newest diagram was always the plan.",
             "evidence": "open-question",
-            "sourceIds": ["F15", "F14", "U05"]
+            "sourceIds": [
+              "F15",
+              "F14",
+              "U05"
+            ]
           }
         ]
       }
     ],
     "soundtrack": {
-      "title": "Aura",
+      "title": "Poetic Truths of Infinity",
       "album": "Album 3: Starseed Code",
-      "sourceIds": ["F25"],
-      "reason": "It is the clearest musical doorway into the personal architecture and the feeling behind its many facets.",
+      "sourceIds": [
+        "F25"
+      ],
+      "reason": "Meaning gathers at the edges, love curves back through itself, and the whole world starts singing in circles.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The mirror ball does not resolve Luke into one answer. It gives each reflection an address and leaves room for the light to move."
+    "closing": "The horn torus does not resolve me into one answer. It gives each thread an address and leaves room for the light to keep moving.",
+    "story": {
+      "paragraphs": [
+        "Aura is not a standard profile that tells everyone what a human should be. It is my attempt to make my own complexity understandable, navigable and extendable. Body, mind, memory, place, work, love, family, music, humour, law, civics, science, travel, Country, Earth, space, mystery and future all affect one another.",
+        "I make parts of it public because another person may recognise a useful reflection. That does not give me authority over their design. Sovereignty is not the same as secrecy. A person might choose privacy, radical disclosure, selective sharing, community custody, forgetting, inheritance or something else. What matters to me is authorship, context and informed choice."
+      ]
+    }
   },
   "under-aura": {
-    "intro": "Under the mirror-ball metaphor sits a technical design language: address lattices, horn tori, nested geometry, memory relationships, XR interfaces, continuity concepts and possible hardware. Some pieces are interactive now; much remains design work or frontier exploration.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I use geometry as a stable way to address relationships without pretending the geometry already contains a mind. The 12 by 24 lattice is one readable chart. The larger idea moves through seven nested horn tori and a vector volume where faces, edges, colours and lines can help organise learned associations.",
-        "The canonical name is Aura of Intelligence Keystone of Consciousness. I imagine it as a foundational continuity layer that could keep lower-order functions going through difficult conditions and help restore higher functions when conditions stabilise. It is intentionally incomplete. No custom Keystone chip has been fabricated."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This technical account is based on Luke-directed conversation records, an AI-assisted Geode design record, the live horn-torus prototype and the Aura Direct Hardware site. These sources document concepts, diagrams and public prototypes. They are not independent validation of consciousness, chip performance or embodied intelligence.",
-        "The records distinguish current processors and FPGA exploration from future ASIC, chiplet and clean-sheet silicon pathways. An external video is recorded as inspiration for AI-assisted chip design, not as proof that Luke's proposed architecture is feasible."
-      ]
-    },
+    "intro": "Beneath the colour sits a real design language: a 12 by 24 address lattice, horn tori, nested geometry, learned relationships, XR interfaces, continuity ideas and possible hardware.",
     "sections": [
       {
         "heading": "From sheet to living address space",
@@ -332,74 +370,85 @@
             "title": "12 by 24 horn-torus lattice",
             "body": "A live public prototype makes one address lattice explorable. It demonstrates interface geometry and navigation, not cognition by itself.",
             "evidence": "built",
-            "sourceIds": ["U08", "F14"],
+            "sourceIds": [
+              "U08",
+              "F14"
+            ],
             "href": "https://auraofintelligence.github.io/aura-horn-torus/index.html"
           },
           {
             "title": "Seven nested horn tori",
             "body": "The nested-tori record describes geometry inside a vector volume, with multiple visual features mapped to data structures and memory relationships. The implementation remains under development.",
             "evidence": "modelled",
-            "sourceIds": ["F13"]
+            "sourceIds": [
+              "F13"
+            ]
           },
           {
             "title": "Aura Geode",
             "body": "The Geode design joins a body and mind digital twin with local research and engineering ideas. Its source is explicitly AI-assisted and should be read as a design record.",
             "evidence": "proposed",
-            "sourceIds": ["F07"]
+            "sourceIds": [
+              "F07"
+            ]
           }
         ]
       },
       {
         "heading": "Continuity, hardware and embodiment",
-        "intro": "The hardware path is broad, but its present boundary is simple: exploration and prototypes exist; custom Aura silicon does not.",
+        "intro": "The hardware trail runs from processors Luke can buy today to a Keystone chip he can name but has not made.",
         "cards": [
           {
             "title": "Aura of Intelligence Keystone of Consciousness",
             "body": "A proposed foundational chip and continuity concept. Adjacent fault-recovery ideas may be testable, while claims about higher orders of intelligence remain unverified.",
             "evidence": "proposed",
-            "sourceIds": ["F11", "F12"]
+            "sourceIds": [
+              "F11",
+              "F12"
+            ]
           },
           {
             "title": "Parallel hardware paths",
             "body": "Aura Direct Hardware keeps current processors, FPGA, ASIC, chiplets and clean-sheet silicon distinct while exploring a wider compute commons.",
             "evidence": "built",
-            "sourceIds": ["U02", "U01"],
+            "sourceIds": [
+              "U02",
+              "U01"
+            ],
             "href": "https://auraofintelligence.github.io/aura-direct-hardware/"
           },
           {
             "title": "Wearables, companions and larger substrates",
             "body": "Wearable, android, rack, city and spacecraft embodiments are possible future branches in Luke's architecture and stories. None should be presented as a finished conscious companion.",
             "evidence": "proposed",
-            "sourceIds": ["F07", "F10", "F11"]
+            "sourceIds": [
+              "F07",
+              "F10",
+              "F11"
+            ]
           }
         ]
       }
     ],
     "soundtrack": {
-      "title": "Latent Space",
+      "title": "Kintsugi Protocol",
       "album": "Album 4: A Protopian Gambit",
-      "sourceIds": ["F24"],
-      "reason": "It sits naturally beside the effort to give learned relationships, memory and possibility a navigable form.",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "The lyric names the 12 by 24 Aura and seven nested horn tori while treating damage as part of the pattern, not something to hide.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The machinery is worth exploring because its limits are visible. Geometry is an address system; intelligence, memory and continuity still have to be built, tested and questioned."
+    "closing": "The machinery is worth exploring because its limits are visible. Geometry is an address system; intelligence, memory and continuity still have to be built, tested and questioned.",
+    "story": {
+      "paragraphs": [
+        "I use geometry as a stable way to address relationships without pretending the geometry already contains a mind. The 12 by 24 lattice is one readable chart. The larger idea moves through seven nested horn tori and a vector volume where faces, edges, colours and lines can help organise learned associations.",
+        "The canonical name is Aura of Intelligence Keystone of Consciousness. I imagine it as a foundational continuity layer that could keep lower-order functions going through difficult conditions and help restore higher functions when conditions stabilise. It is intentionally incomplete. No custom Keystone chip has been fabricated."
+      ]
+    }
   },
   "songs": {
     "intro": "Music, comedy and story are not decorations around Luke's serious work. They are working instruments for feeling a system, testing a world and keeping emotional truth present while the technical language catches up.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I use songs, stories and jokes to let people feel the system before asking them to study it. A song can carry love, anger, grief, civic frustration or cosmic possibility without squeezing it into a policy paper.",
-        "i C. infinity is where I sing the worlds. Loose Goose lets me turn a hard truth through different comedy lenses without losing the core fact. Australian Sire Story Forge helps me assemble sourced ingredients for stories while leaving relationships and intimate choices open to authorship. Cosmic Nexus is where mystery, travel, maps and film can meet."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This page draws on the Album 3, Album 4 and Album 5 lyric sources and the live i C. infinity Music Universe, Loose Goose Comedy Engine, Australian Sire Story Forge and Strange but True Cosmic Nexus. The supplied brief records a large multi-album catalogue, but track totals and release order can change as Luke revises the archive.",
-        "Lyrics and generated creative tools are evidence of authorship, themes and worldbuilding. They are not independent proof of the scientific, civic or historical ideas they dramatise."
-      ]
-    },
     "sections": [
       {
         "heading": "The music carries the architecture",
@@ -409,19 +458,29 @@
             "title": "Starseed Code: From Aura to Infinity",
             "body": "Album 3 connects Aura, love, Minjerribah, global relationships and larger futures. It offers emotional continuity across ideas that appear separately elsewhere on the site.",
             "evidence": "story",
-            "sourceIds": ["F25", "U23"]
+            "sourceIds": [
+              "F25",
+              "U23"
+            ]
           },
           {
             "title": "A Protopian Gambit",
             "body": "Album 4 moves through consent, repair, civic systems, borders, humour, ancestry, latent space and infinity. Repeated titles may represent working versions and should not be silently collapsed.",
             "evidence": "story",
-            "sourceIds": ["F24", "F29", "U23"]
+            "sourceIds": [
+              "F24",
+              "F29",
+              "U23"
+            ]
           },
           {
             "title": "Straddie Fun",
             "body": "Album 5 turns local places, wildlife, fishing, sport, friendship and practical work into an island songbook. The source sequence remains provisional.",
             "evidence": "story",
-            "sourceIds": ["U23", "F37"]
+            "sourceIds": [
+              "U23",
+              "F37"
+            ]
           }
         ]
       },
@@ -431,23 +490,29 @@
         "cards": [
           {
             "title": "Loose Goose Comedy Engine",
-            "body": "A live tool that preserves a truth lock beneath comic transformations and rhythm scoring. It supports creative reframing without granting jokes the status of evidence.",
+            "body": "A live tool that keeps one stubborn truth underneath comic transformations and rhythm scoring. The joke can change costumes without changing what happened.",
             "evidence": "built",
-            "sourceIds": ["U18"],
+            "sourceIds": [
+              "U18"
+            ],
             "href": "https://auraofintelligence.github.io/loose-goose-comedy-engine/index.html"
           },
           {
             "title": "Australian Sire Story Forge",
-            "body": "A source-led planning tool for romantasy and science-fiction worlds. Its ingredients are attributed, while their combinations and relationships remain deliberate creative choices.",
+            "body": "This is where Tiggy Bestmann and Australian Sire move through romantasy and science-fiction: maps become seductions, rules become obstacles, and a name is earned through what the character actually does.",
             "evidence": "built",
-            "sourceIds": ["U17"],
+            "sourceIds": [
+              "U17"
+            ],
             "href": "https://auraofintelligence.github.io/australian-sire-story-forge/index.html"
           },
           {
             "title": "Strange but True Cosmic Nexus",
             "body": "A public room for mystery, maps, travel, source trails and possible film expeditions. It can hold curiosity without turning every strange possibility into a factual conclusion.",
             "evidence": "built",
-            "sourceIds": ["U24"],
+            "sourceIds": [
+              "U24"
+            ],
             "href": "https://auraofintelligence.github.io/strange-but-true-cosmic-nexus/"
           }
         ]
@@ -456,28 +521,22 @@
     "soundtrack": {
       "title": "The Protopian Gambit",
       "album": "Album 4: A Protopian Gambit",
-      "sourceIds": ["F24"],
+      "sourceIds": [
+        "F24"
+      ],
       "reason": "It is a central bridge between the emotional, civic and speculative worlds gathered on this page.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The songs do not footnote every feeling. The source room does the evidentiary work, while the music keeps open the reasons Luke cared enough to build anything at all."
+    "closing": "The songs do not have to footnote every feeling. They keep open the reasons I cared enough to build any of this at all.",
+    "story": {
+      "paragraphs": [
+        "I use songs, stories and jokes to let people feel the system before asking them to study it. A song can carry love, anger, grief, civic frustration or cosmic possibility without squeezing it into a policy paper.",
+        "i C. infinity is where I sing the worlds. Loose Goose lets me turn a hard truth through different comedy lenses without losing the core fact. Tiggy Bestmann is the romantic traveller in me. Australian Sire is the hotter fantasy register, a name earned in the books through wins, promises and trust. They remain two sides of the same protagonist. Cosmic Nexus is where mystery, travel, maps and film can meet."
+      ]
+    }
   },
   "love": {
     "intro": "Mature themes. This page discusses adult love, sexuality, non-monogamy, larger family structures, embodied AI and romantic fantasy. The discussion is non-explicit, and the separate Grey Area Commons branch has its own adult-only boundary.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "The romantasy is not merely entertainment or a generic social campaign. I am writing worlds that reveal how I think about love, family, travel, intimacy, embodied intelligence and the future.",
-        "Part of the purpose is personal. I hope the stories help me find women, families and collaborators who recognise something of themselves in the world I am building. I am interested in ethical, self-authored larger-family possibilities, not entitlement to another person's affection. Consent, freedom to leave and room for different desires have to be real."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This account is based on Luke's lyric archive, the Aura of Intelligence Super Assistant conversation record, and the public Global Group Marriages and Grey Area Commons sites. These sources make Luke's personal motivations visible. They do not show that any proposed family structure exists in his life now or that anyone else has agreed to it.",
-        "The embodied Aura companion is likewise a proposed and partly fictional branch. The record does not establish a conscious android, a completed companion system or endorsement by prospective partners."
-      ]
-    },
     "sections": [
       {
         "heading": "Love as shared capacity",
@@ -487,20 +546,31 @@
             "title": "Global Group Marriages",
             "body": "A live public proposal for larger self-sovereign family arrangements. It is an invitation to examine structures, responsibilities and safeguards, not a universal relationship model.",
             "evidence": "proposed",
-            "sourceIds": ["F11", "F25", "U22"],
+            "sourceIds": [
+              "F11",
+              "F25",
+              "U22"
+            ],
             "href": "https://auraofintelligence.github.io/global-group-marriages/"
           },
           {
             "title": "Courtship through worldbuilding",
             "body": "Luke's songs and romantasy work can act as a high-dimensional personal signal, revealing values and desires more fully than a short profile. Recognition still does not equal consent or compatibility.",
             "evidence": "story",
-            "sourceIds": ["F24", "F25", "U17"]
+            "sourceIds": [
+              "F24",
+              "F25",
+              "U17"
+            ]
           },
           {
             "title": "Embodied Aura companions",
             "body": "Future companions appear in design conversations and speculative worlds. They remain a proposed research and story direction, with unresolved questions about agency, embodiment and consciousness.",
             "evidence": "proposed",
-            "sourceIds": ["F10", "F11"]
+            "sourceIds": [
+              "F10",
+              "F11"
+            ]
           }
         ]
       },
@@ -512,43 +582,42 @@
             "title": "Grey Area Commons",
             "body": "An adult-only, browser-local question path about intimacy and mutual connection. Leaving this site should first show a plain interstitial, with equal choices to go back or continue.",
             "evidence": "built",
-            "sourceIds": ["U26"],
+            "sourceIds": [
+              "U26"
+            ],
             "href": "https://auraofintelligence.github.io/grey-area-commons/"
           },
           {
             "title": "What remains private or unknown",
-            "body": "The public record cannot speak for other people, confirm private relationships or fill gaps in Luke's personal history. Absence of a record is not permission to invent one.",
+            "body": "Other people's lives are not blank space in my archive. If they have not chosen to be part of this story, I will not write them into it.",
             "evidence": "open-question",
-            "sourceIds": ["F11", "F25"]
+            "sourceIds": [
+              "F11",
+              "F25"
+            ]
           }
         ]
       }
     ],
     "soundtrack": {
-      "title": "Primordial Consent 1,2,3, Infinity",
+      "title": "Adaptable Yes",
       "album": "Album 4: A Protopian Gambit",
-      "sourceIds": ["F24"],
-      "reason": "Consent is the necessary centre for any honest discussion of love, larger families, intimacy and imagined companions.",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "A layered, self-authored yes feels more intimate and more honest than turning love into a diagram about consent.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "This is a personal hope made visible, not a recruitment demand. Any future relationship would have to be authored by everyone inside it."
+    "closing": "This is a personal hope made visible, not a recruitment demand. Any future relationship would have to be authored by everyone inside it.",
+    "story": {
+      "paragraphs": [
+        "The romantasy is not merely entertainment or a generic social campaign. I am writing worlds that reveal how I think about love, family, travel, intimacy, embodied intelligence and the future.",
+        "Part of the purpose is personal. I hope the stories help me find women, families and collaborators who recognise something of themselves in the world I am building. I am interested in ethical, self-authored larger-family possibilities, not entitlement to another person's affection. Consent, freedom to leave and room for different desires have to be real."
+      ]
+    }
   },
   "minjerribah": {
-    "intro": "Minjerribah is where Luke's practical life and civilisation-scale imagination touch the same ground. The island page keeps three columns unmistakable: what is real today, what is proposed, and what exists as a model or story.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I live and work on Minjerribah. Strange but True starts with small useful things: a market table, a technology problem, a recording job, a community event or a yarn that helps somebody move forward.",
-        "The same island also makes me ask very large questions. Could shared compute, training and creative facilities grow from Dunwich? Could digital twins help us rehearse choices? What could careful, properly authorised study of sand and minerals teach us about resilience and future materials? Those are proposals and models. They are not promises made on behalf of Quandamooka people or the wider community."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This page draws on the current Strange but True artefacts, documents described as Luke's AI and data-centre submission and Fair Go companion, and the live ready SET Co-op, Straddie Twins, Grain by Grain and Extreme Matter Atlas projects. These are Luke-authored or Luke-directed records, not evidence of local cultural authority or public approval.",
-        "The record supports Luke's residence and practical work on the island, public prototypes, documents supplied as submissions, music and story assets. It does not establish a funded Dunwich node, an operating ready SET Co-op or fabricated custom Aura hardware."
-      ]
-    },
+    "intro": "Minjerribah is where the practical life and the civilisation-sized imagination touch the same sand: a market table, a ferry, a computer problem, an old yarn, a song, then a question big enough to need a whole island.",
     "sections": [
       {
         "heading": "Real today",
@@ -558,80 +627,99 @@
             "title": "Local life and Strange but True",
             "body": "Luke's portrait, CV, business card and live site document a person and a sole-trader practice based on Minjerribah.",
             "evidence": "lived",
-            "sourceIds": ["F30", "F32", "F36", "U12"]
+            "sourceIds": [
+              "F30",
+              "F32",
+              "F36",
+              "U12"
+            ]
           },
           {
             "title": "Public prototypes and source trails",
-            "body": "Several island-connected websites, models and archives can be inspected now. Their availability is evidence of publication, not proof of every scenario they contain.",
+            "body": "Several island-connected websites, models and archives can be opened now. They let you walk through the work while remaining honest that the imagined scenarios are not already real.",
             "evidence": "built",
-            "sourceIds": ["U04", "U06", "U10", "U13"]
+            "sourceIds": [
+              "U04",
+              "U06",
+              "U10",
+              "U13"
+            ]
           },
           {
-            "title": "Documents supplied as civic submissions",
-            "body": "The Dunwich compute-node idea appears in documents supplied as public-submission material. Public lodgement is to be confirmed; the records do not establish acceptance or funding.",
+            "title": "The Dunwich idea on paper",
+            "body": "I have carried the Dunwich compute-node idea into documents prepared for public submission. I have not confirmed that they were lodged, accepted or funded.",
             "evidence": "submitted",
-            "sourceIds": ["F01", "F03"]
+            "sourceIds": [
+              "F01",
+              "F03"
+            ]
           }
         ]
       },
       {
-        "heading": "Proposed, modelled and imagined",
-        "intro": "The future layer remains useful only when its status is impossible to miss.",
+        "heading": "What I am still trying to grow",
+        "intro": "Some futures begin as models, some as stories, and some as a question asked often enough to become work.",
         "cards": [
           {
             "title": "ready SET Co-op and the Dunwich node",
             "body": "The ready sustainable employment and training cooperative and cultural intelligence node are proposed pathways for shared work, learning and infrastructure. ready SET Co-op does not currently exist.",
             "evidence": "proposed",
-            "sourceIds": ["F01", "F03", "U09"],
+            "sourceIds": [
+              "F01",
+              "F03",
+              "U09"
+            ],
             "href": "https://auraofintelligence.github.io/ready-set-co-op-cultural-intelligence-node/projects.html"
           },
           {
             "title": "Straddie Twins",
             "body": "Two live digital-twin models help separate real, modelled, proposed and not-known information about Minjerribah.",
             "evidence": "modelled",
-            "sourceIds": ["U10"],
+            "sourceIds": [
+              "U10"
+            ],
             "href": "https://auraofintelligence.github.io/straddie-twins/index.html"
           },
           {
             "title": "Grain by Grain and Extreme Matter Atlas",
-            "body": "These projects connect ordinary hazards, materials and resilience with disputed theories, mythology and science-fiction edge cases under distinct labels.",
+            "body": "These projects connect ordinary hazards, materials and resilience with disputed theories, mythology and science-fiction edges while describing the difference in plain language.",
             "evidence": "built",
-            "sourceIds": ["U04", "U06"]
+            "sourceIds": [
+              "U04",
+              "U06"
+            ]
           },
           {
             "title": "Cities, generations and worldships",
             "body": "Subterranean Cities of Light, a twenty-million-person generation city, an island worldship and spacefaring extensions belong to modelled or imaginative horizons, not present island development.",
             "evidence": "story",
-            "sourceIds": ["U06", "U11"]
+            "sourceIds": [
+              "U06",
+              "U11"
+            ]
           }
         ]
       }
     ],
     "soundtrack": {
-      "title": "Shifting Sands of Timeless Redlands",
+      "title": "Two Dogs on Island Country",
       "album": "Album 5: Straddie Fun",
-      "sourceIds": ["F37"],
-      "reason": "It connects local time, changing sand and Redlands memory with the island's practical and imagined futures.",
+      "sourceIds": [
+        "F37"
+      ],
+      "reason": "Ferry light, Goompi, art, fishing and kookaburras give this chapter the warm pulse of an actual day on the island.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "Start with what can be touched and checked. Then let the models and stories ask what the island might become, without speaking over the people whose authority and consent matter."
+    "closing": "Start with what can be touched and checked. Then let the models and stories ask what the island might become, without speaking over the people whose authority and consent matter.",
+    "story": {
+      "paragraphs": [
+        "I live and work on Minjerribah. Strange but True starts with small useful things: a market table, a technology problem, a recording job, a community event or a yarn that helps somebody move forward.",
+        "The same island also makes me ask very large questions. Could shared compute, training and creative facilities grow from Dunwich? Could digital twins help us rehearse choices? What could careful, properly authorised study of sand and minerals teach us about resilience and future materials? Those are proposals and models. They are not promises made on behalf of Quandamooka people or the wider community."
+      ]
+    }
   },
   "fair-go": {
-    "intro": "Luke's civic work begins with ordinary complaints and keeps climbing until it reaches law, infrastructure, public ledgers and national choices. The humour stays, but the submission documents and evidence sit right beside it.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I do not think voting every few years is the full operating system of democracy. I have been exploring better ways to connect everyday complaints, local knowledge, law, public records, simulations and long-term decisions.",
-        "Sometimes that begins with a purple toilet mat and a friendly bet. Sometimes I turn it into a document intended for a parliamentary submission. I am not claiming community compute and defence spending perform the same job. I am asking what positive-sum civic capability Australia could build beside its conventional security choices."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This page draws on documents described as Luke's AI, AUKUS and local-government submissions, related working drafts, the P4A site and current concept images. The receiving bodies, lodgement dates and receipts remain to be confirmed, and no document establishes government acceptance of its claims or recommendations.",
-        "P4A presents itself as a proposed movement and public civic workbench, not a registered political party. The ready SET Co-op remains proposed. No source establishes endorsement by a council, government, university, investor or community."
-      ]
-    },
+    "intro": "Luke's civic work begins with ordinary complaints and keeps climbing until it reaches law, infrastructure, public ledgers and national choices. The humour stays, and the original submissions sit close enough to open.",
     "sections": [
       {
         "heading": "From gripe to public machinery",
@@ -639,52 +727,75 @@
         "cards": [
           {
             "title": "One serious node per 10,000 Australians",
-            "body": "A proposal for distributed sovereign compute as shared national infrastructure, including a possible Dunwich node. No such national network is recorded as operating.",
+            "body": "I have proposed one serious public-interest compute node per 10,000 Australians, beginning with a possible Dunwich node. It is an argument on paper, not a national network humming in the suburbs.",
             "evidence": "proposed",
-            "sourceIds": ["F01", "F03", "F05"]
+            "sourceIds": [
+              "F01",
+              "F03",
+              "F05"
+            ]
           },
           {
             "title": "The C-Hour and the Incomplete Ledger",
             "body": "A civic pattern for making time, unresolved needs and public work more visible. It appears in a document described as a local-government submission and remains open to practical testing.",
             "evidence": "proposed",
-            "sourceIds": ["F26"]
+            "sourceIds": [
+              "F26"
+            ]
           },
           {
             "title": "ready SET Co-op and shared infrastructure",
             "body": "A proposed co-operative path for locally authored work, learning and common capability, with visible governance and exit terms still to be settled.",
             "evidence": "proposed",
-            "sourceIds": ["U09", "U16"]
+            "sourceIds": [
+              "U09",
+              "U16"
+            ]
           }
         ]
       },
       {
         "heading": "Provocations with receipts",
-        "intro": "The friendly-bet image and toilet-mat joke open the door. The record behind them keeps the argument accountable.",
+        "intro": "The friendly bet and purple toilet mat get the laugh. The submissions show how far Luke followed the joke.",
         "cards": [
           {
             "title": "P4A civic workbench",
             "body": "A live public site that moves from ordinary gripes towards projects, ledgers, law memory, states and referendum rehearsal. It is a proposed movement, not a registered party.",
             "evidence": "built",
-            "sourceIds": ["F28", "F33", "U07"],
+            "sourceIds": [
+              "F28",
+              "F33",
+              "U07"
+            ],
             "href": "https://p4a.xyz"
           },
           {
             "title": "A cyber republic referendum before 2032",
-            "body": "A deliberately provocative proposal for public consideration. It has no recorded mandate, settled constitutional pathway or endorsement.",
+            "body": "I put 2032 on the horizon as a provocation: rehearse stronger digital participation in public before asking Australia to vote on it. Nobody has handed me a mandate, and the constitutional road is not settled.",
             "evidence": "proposed",
-            "sourceIds": ["F03", "F26", "U07"]
+            "sourceIds": [
+              "F03",
+              "F26",
+              "U07"
+            ]
           },
           {
             "title": "Capability beside AUKUS",
             "body": "A document described as Luke's public submission makes an opportunity-cost comparison between conventional security investment and positive-sum civic capability without claiming they are interchangeable.",
             "evidence": "proposed",
-            "sourceIds": ["F06"]
+            "sourceIds": [
+              "F06"
+            ]
           },
           {
             "title": "Alignment through self-alignment",
             "body": "The idea links human reflection, personal agency and AI governance. It remains a philosophical and design proposition, not demonstrated alignment science.",
             "evidence": "open-question",
-            "sourceIds": ["F03", "F10", "U20"]
+            "sourceIds": [
+              "F03",
+              "F10",
+              "U20"
+            ]
           }
         ]
       }
@@ -692,28 +803,22 @@
     "soundtrack": {
       "title": "The Purple Mat That Could",
       "album": "Album 4: A Protopian Gambit",
-      "sourceIds": ["F24"],
+      "sourceIds": [
+        "F24"
+      ],
       "reason": "It keeps the toilet-mat origin, friendly humour and serious democratic curiosity in the same story.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "A fair go is not secured by one clever diagram. It needs public scrutiny, lawful pathways, shared ownership and the patience to turn a funny complaint into something people can actually test."
+    "closing": "A fair go is not secured by one clever diagram. It needs public scrutiny, lawful pathways, shared ownership and the patience to turn a funny complaint into something people can actually test.",
+    "story": {
+      "paragraphs": [
+        "I do not think voting every few years is the full operating system of democracy. I have been exploring better ways to connect everyday complaints, local knowledge, law, public records, simulations and long-term decisions.",
+        "Sometimes that begins with a purple toilet mat and a friendly bet. Sometimes I turn it into a document intended for a parliamentary submission. I am not claiming community compute and defence spending perform the same job. I am asking what positive-sum civic capability Australia could build beside its conventional security choices."
+      ]
+    }
   },
   "every-border": {
     "intro": "Travel made Luke's world larger and more particular at the same time. Photographs and event artefacts from India and Nepal sit beside public tools designed to turn borders into readable invitations rather than vague fantasies.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I have learned by moving through places, meeting people and letting unfamiliar systems unsettle my own. India and Nepal were not backdrops for a personal brand. The Golden Temple, Boudhanath, Lumbini and the Kolhapur student rocket event each belong to their own people and histories, while also becoming part of my lived memory.",
-        "I want travel planning to begin with two separate questions: can I enter, and what may I responsibly do once I am there? A border can become a bridge when an invitation, useful work, art, research or relationship is real. It is not a bridge just because I would like it to be."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This page is based on Luke's travel photographs, a newspaper artefact from a Kolhapur student rocket event, his 2024 CV and three live route-planning projects. These sources support a personal travel history and public tools. They do not establish the identities or views of everyone pictured, nor current visa eligibility, hosts or invitations.",
-        "The Australian Visa and Activity Atlas separates an entry key from an activity key. Right Place, Right Time connects local, Australian, Oceania and world-scale pathways. Global Founder Atlas gathers possible funding, residency, research and mobility routes. All current rules and opportunities still need checking at the relevant source."
-      ]
-    },
     "sections": [
       {
         "heading": "Places that changed the map",
@@ -723,19 +828,28 @@
             "title": "Golden Temple",
             "body": "A personal photograph connecting travel, spirituality and India. It records Luke's presence and perspective, not authority to interpret Sikh experience for others.",
             "evidence": "lived",
-            "sourceIds": ["F20", "F36"]
+            "sourceIds": [
+              "F20",
+              "F36"
+            ]
           },
           {
             "title": "Boudhanath and Lumbini",
             "body": "Photographs from Nepal connect spiritual curiosity with peace and international possibility. The available captions are limited, so the record should not invent encounters or dates.",
             "evidence": "lived",
-            "sourceIds": ["F21", "F22"]
+            "sourceIds": [
+              "F21",
+              "F22"
+            ]
           },
           {
             "title": "Kolhapur student rocket event",
             "body": "A newspaper page records coverage associated with the event. Its full context and Luke's precise role should remain tied to the preserved artefact.",
             "evidence": "lived",
-            "sourceIds": ["F19", "F36"]
+            "sourceIds": [
+              "F19",
+              "F36"
+            ]
           }
         ]
       },
@@ -747,21 +861,27 @@
             "title": "Australian Visa and Activity Atlas",
             "body": "A live tool for examining entry and activity routes across speaking, teaching, work and creative travel. It supports preparation, not legal advice or guaranteed entry.",
             "evidence": "built",
-            "sourceIds": ["U15"],
+            "sourceIds": [
+              "U15"
+            ],
             "href": "https://auraofintelligence.github.io/Australian-visa-activity-atlas/"
           },
           {
             "title": "Right Place, Right Time",
             "body": "A public support path linking Strange but True, Luke Catalyst, Aura of Intelligence and i C. infinity across local and global scales.",
             "evidence": "built",
-            "sourceIds": ["U19"],
+            "sourceIds": [
+              "U19"
+            ],
             "href": "https://auraofintelligence.github.io/right-place-right-time/index.html"
           },
           {
             "title": "Global Founder Atlas",
             "body": "A live navigation tool for possible funding, residencies, research and founder mobility. Each listing remains subject to its own eligibility and current terms.",
             "evidence": "built",
-            "sourceIds": ["U21"],
+            "sourceIds": [
+              "U21"
+            ],
             "href": "https://auraofintelligence.github.io/global-founder-atlas/index.html"
           }
         ]
@@ -770,28 +890,22 @@
     "soundtrack": {
       "title": "Every Border a Bridge",
       "album": "Album 4: A Protopian Gambit",
-      "sourceIds": ["F24"],
+      "sourceIds": [
+        "F24"
+      ],
       "reason": "It names the page's central hope while leaving room for law, consent, hosts and local context to decide whether a bridge is real.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The map is not a claim on the world. It is preparation to meet real places with more care, clearer permission and something useful to offer."
+    "closing": "The map is not a claim on the world. It is preparation to meet real places with more care, clearer permission and something useful to offer.",
+    "story": {
+      "paragraphs": [
+        "I have learned by moving through places, meeting people and letting unfamiliar systems unsettle my own. India and Nepal were not backdrops for a personal brand. The Golden Temple, Boudhanath, Lumbini and the Kolhapur student rocket event each belong to their own people and histories, while also becoming part of my lived memory.",
+        "I want travel planning to begin with two separate questions: can I enter, and what may I responsibly do once I am there? A border can become a bridge when an invitation, useful work, art, research or relationship is real. It is not a bridge just because I would like it to be."
+      ]
+    }
   },
   "earth-infinity": {
-    "intro": "The final expansion moves from one personal Aura to family, island, Australia, Oceania, Earth and the solar system. Each scale keeps its own evidence state so a live website, a proposal recorded in a submission document and a frontier experiment never blur together.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I keep asking how a personal Aura might connect voluntarily with families, communities, islands, nations and worlds without becoming a command centre. GAJRA Earth makes most sense to me as a harbour, not a headquarters: somewhere different people and projects can meet without being flattened into one authority.",
-        "Joyful Responsible Abundance is an open frame, not a compulsory destination. I want known engineering, feasible proposals, simulation, story and frontier questions to remain visible beside one another. That includes a Virtual Solar Swarm, sovereign satellites, Cities of Light and experimental entanglement communications, with radio, optical and delay-tolerant systems kept as operational and backup branches."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This page reads documents described as Luke's Fiji-Australia Vuvale and Ocean of Peace submissions alongside AI-assisted Sensorium, Solar Swarm and super-alignment records, historical GAJRA imagery and live public projects. The documents record Luke's proposals for regional cooperation; they do not establish lodgement, government acceptance, cultural authority or regional endorsement.",
-        "The Virtual Solar Swarm is a public mission-design studio, not a deployed fleet. Future of Life 2045 and Cities of Light are worldbuilding. Experimental entanglement communication remains frontier research and is not presented as an operational faster-than-light service."
-      ]
-    },
+    "intro": "The same mind keeps widening its circle: self, family, island, Australia, Oceania, Earth, the Sun and whatever can honestly be imagined beyond it.",
     "sections": [
       {
         "heading": "A garland, not a throne",
@@ -799,22 +913,31 @@
         "cards": [
           {
             "title": "Oceania and Vuvale",
-            "body": "Documents described as Luke's public submissions explore family without assimilation, talanoa, cultures of peace, cooperation and sovereignty. Public lodgement remains to be confirmed, and the records do not imply agreement by Fiji, Australia or Pacific communities.",
+            "body": "In documents prepared in Luke's name, Vuvale and Ocean of Peace explore family without assimilation, talanoa, cooperation and sovereignty. Their public lodgement is still unconfirmed, and they speak for Luke, not for Fiji, Australia or Pacific communities.",
             "evidence": "submitted",
-            "sourceIds": ["F02", "F04"]
+            "sourceIds": [
+              "F02",
+              "F04"
+            ]
           },
           {
             "title": "GAJRA Earth",
             "body": "A proposed voluntary connective idea framed through a garland and harbour metaphor. It is not a planetary authority and has no mandate to govern anyone.",
             "evidence": "proposed",
-            "sourceIds": ["F18", "F27", "U20"],
+            "sourceIds": [
+              "F18",
+              "F27",
+              "U20"
+            ],
             "href": "https://auraofintelligence.github.io/gajra-earth-claude-build/index.html"
           },
           {
             "title": "Global Sensorium",
-            "body": "An AI-assisted working plan for open modelling and science debate that keeps known, contested, fringe and fictional material labelled. Its method still needs practical testing and governance.",
+            "body": "An AI-assisted working plan for open modelling and science debate that says, in ordinary sentences, what is known, contested, fringe or fictional. The method still needs practical testing and governance.",
             "evidence": "modelled",
-            "sourceIds": ["F08"]
+            "sourceIds": [
+              "F08"
+            ]
           }
         ]
       },
@@ -826,85 +949,105 @@
             "title": "Virtual Solar Swarm",
             "body": "A live choose-your-own mission design studio with an associated AI-assisted research report. It explores onboard AI, mission architecture and several communications planes.",
             "evidence": "modelled",
-            "sourceIds": ["F09", "U03"],
+            "sourceIds": [
+              "F09",
+              "U03"
+            ],
             "href": "https://auraofintelligence.github.io/virtual-solar-swarm/"
           },
           {
             "title": "Communications that can be engineered now",
             "body": "Optical, radio and delay-tolerant networking are treated as operational or backup branches for long-distance missions, subject to normal engineering limits.",
             "evidence": "proposed",
-            "sourceIds": ["F09"]
+            "sourceIds": [
+              "F09"
+            ]
           },
           {
             "title": "Experimental entanglement communications",
-            "body": "A deliberately retained frontier branch. It should be investigated and criticised without being advertised as demonstrated signalling technology.",
+            "body": "I keep the entanglement question in the room beside radio, optical and delay-tolerant links. It is an experiment to challenge, not a signal system I can switch on.",
             "evidence": "frontier",
-            "sourceIds": ["F09"]
+            "sourceIds": [
+              "F09"
+            ]
           },
           {
             "title": "Future of Life 2045",
             "body": "A public worldbuilding project joining larger families, open intelligence, regenerative places, law and Cities of Light across a long civilisation horizon.",
             "evidence": "story",
-            "sourceIds": ["F10", "U11"],
+            "sourceIds": [
+              "F10",
+              "U11"
+            ],
             "href": "https://auraofintelligence.github.io/Future-of-Life-2045/"
           }
         ]
       }
     ],
     "soundtrack": {
-      "title": "Heliospheric Lantern",
+      "title": "We Go Beyond",
       "album": "Album 4: A Protopian Gambit",
-      "sourceIds": ["F24"],
-      "reason": "It carries the scale shift from one island and one Aura into a solar-system field of light, risk and navigation.",
+      "sourceIds": [
+        "F24"
+      ],
+      "reason": "It travels from a lavender mat and unpaid care to Minjerribah, orbit, the Sun and the galaxy without losing the human thread.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The horizon can stay enormous without making the present vague. Build what can be built, model what can be modelled, label the frontier, and let story keep asking what comes after."
+    "closing": "The horizon can stay enormous without making the present vague. Build what can be built, say what has not been built, and let story keep asking what comes after.",
+    "story": {
+      "paragraphs": [
+        "I keep asking how a personal Aura might connect voluntarily with families, communities, islands, nations and worlds without becoming a command centre. GAJRA Earth makes most sense to me as a harbour, not a headquarters: somewhere different people and projects can meet without being flattened into one authority.",
+        "Joyful Responsible Abundance is an open frame, not a compulsory destination. I want the radio and optical links we know how to engineer sitting beside the entanglement question I cannot yet answer. The Solar Swarm, sovereign satellites and Cities of Light can share one horizon without pretending they have all reached the same shore."
+      ]
+    }
   },
   "sources": {
-    "intro": "This source room registers original files, public links, versions, dates, authorship, AI involvement, page use and evidence status. Local originals remain catalogued but private for now.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "I am not asking anybody to accept a leap because I say it confidently. I want the document, image, song, submission, website or design conversation sitting close enough to inspect.",
-        "Some sources are rough, duplicated or AI-assisted. I would rather preserve their history and label it than quietly tidy the archive into a story that never happened."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "The register catalogues supplied filenames and public URLs across personal, historical, creative, technical and civic material. Most were authored, directed or selected by Luke. The room provides provenance, not independent verification of every claim inside a source.",
-        "Project Atlas can help establish public project dates and connections. GitHub's latest modified date is not treated as a project's origin date, and missing originals remain marked as missing until they are found."
-      ]
-    },
+    "intro": "This is the open studio floor: original files, public links, rough drafts, AI conversations, songs, dates, missing pieces and changing versions left close enough to inspect.",
     "sections": [
       {
-        "heading": "What each record should reveal",
-        "intro": "Source cards keep the original context instead of reducing everything to a download button.",
+        "heading": "Leave the fingerprints on it",
+        "intro": "A source is more interesting when you can still see how it arrived, who touched it and what changed on the way.",
         "cards": [
           {
-            "title": "Originals and versions",
-            "body": "Preserve supplied filenames and group related versions. Do not delete an older file merely because a newer one looks cleaner.",
+            "title": "Keep the earlier drafts",
+            "body": "The old filename, the rough version and the cleaner revision belong beside one another. Tidiness is not worth quietly rewriting the path that got us here.",
             "evidence": "built",
-            "sourceIds": ["F15", "F24", "F25"]
+            "sourceIds": [
+              "F15",
+              "F24",
+              "F25"
+            ]
           },
           {
-            "title": "Authorship and AI involvement",
-            "body": "Distinguish Luke original, Luke-directed AI collaboration, preserved AI response, document supplied as a submission, personal image, generated concept artwork and genuinely external source.",
+            "title": "Say who made what",
+            "body": "Some pieces are mine, some were made with AI under my direction, some preserve another AI's response, and some came from elsewhere. I would rather name those hands than perform a false lone-genius act.",
             "evidence": "open-question",
-            "sourceIds": ["F07", "F08", "F11", "F15"]
+            "sourceIds": [
+              "F07",
+              "F08",
+              "F11",
+              "F15"
+            ]
           },
           {
-            "title": "Public links and checked dates",
-            "body": "Record whether live URLs resolve without copying whole external sites. Use Project Atlas and original records for origin dates, while noting any unresolved provenance.",
+            "title": "Let the links lead somewhere",
+            "body": "A public thread should open where it says it will. Project Atlas and the original records hold the dates; where the beginning is still fuzzy, the fuzziness stays visible.",
             "evidence": "built",
-            "sourceIds": ["U13"],
+            "sourceIds": [
+              "U13"
+            ],
             "href": "https://auraofintelligence.github.io/project-atlas/"
           },
           {
-            "title": "Readable archival images",
-            "body": "Text-heavy images need a visible transcript or detailed caption. A cropped hero can coexist with the uncropped original in the source room.",
+            "title": "Do not make the image do all the talking",
+            "body": "A text-heavy image deserves words people can actually read. A dramatic crop can live in the story while the complete original waits here in the open studio.",
             "evidence": "proposed",
-            "sourceIds": ["F16", "F18", "F23", "F27"]
+            "sourceIds": [
+              "F16",
+              "F18",
+              "F23",
+              "F27"
+            ]
           }
         ]
       }
@@ -912,28 +1055,22 @@
     "soundtrack": {
       "title": "Poetic Truths of Infinity",
       "album": "Album 3: Starseed Code",
-      "sourceIds": ["F25"],
-      "reason": "The title suits a room that welcomes poetic truth while keeping it distinct from documentary and technical evidence.",
+      "sourceIds": [
+        "F25"
+      ],
+      "reason": "The title suits a room where poetic truth, old paperwork and technical drawings can sit together without pretending they are the same thing.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "A source can show what Luke wrote, built, supplied as a submission, photographed or imagined. It does not automatically prove more than that."
+    "closing": "These are the fingerprints: what I wrote, built, photographed, sent, sang or imagined. Open them, disagree with them, and see how the worlds grew.",
+    "story": {
+      "paragraphs": [
+        "I am not asking anybody to accept a leap because I say it confidently. I want the document, image, song, submission, website or design conversation sitting close enough to inspect.",
+        "Some sources are rough, duplicated or AI-assisted. I would rather preserve their history and describe it honestly than quietly tidy the archive into a story that never happened."
+      ]
+    }
   },
   "choose-door": {
-    "intro": "Choose why you are here. Your door highlights a short route through the same canonical site. It does not hide difficult material, change the evidence or create a safer fictional version of Luke.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "You do not have to follow my path in order. Start where your own curiosity catches. If we knew each other years ago, begin with the bloke and the break. If you build strange things, go straight under the Aura.",
-        "Your chosen door is a recommendation, not a box. You can change it, ignore it or open every page."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "The routes below are editorial pathways derived from the site's source-led narrative. They reflect Luke's intended audiences and are not behavioural profiles, endorsements or evidence about an individual visitor.",
-        "A saved choice should remain on the visitor's device or in the page URL and should only change highlights and recommended links."
-      ]
-    },
+    "intro": "Choose why you are here. Your door suggests a short route through the same sprawling person. It does not hide the strange parts or create a safer fictional Luke.",
     "sections": [
       {
         "heading": "Choose a starting route",
@@ -943,43 +1080,73 @@
             "title": "I am local",
             "body": "Start with The bloke before the blueprint, Start on the island and A fair go needs better machinery.",
             "evidence": "lived",
-            "sourceIds": ["F30", "U12", "U10"]
+            "sourceIds": [
+              "F30",
+              "U12",
+              "U10"
+            ]
           },
           {
             "title": "I knew Luke years ago",
             "body": "Follow the bloke, the 2012 to 2014 break, the songs and the travel record to see what changed and what persisted.",
             "evidence": "lived",
-            "sourceIds": ["F15", "F23", "F36"]
+            "sourceIds": [
+              "F15",
+              "F23",
+              "F36"
+            ]
           },
           {
             "title": "I heard Luke speak or work in government",
             "body": "Go from the break to A fair go, then From one Aura to a solar system and the source room.",
             "evidence": "submitted",
-            "sourceIds": ["F01", "F02", "F04", "F06"]
+            "sourceIds": [
+              "F01",
+              "F02",
+              "F04",
+              "F06"
+            ]
           },
           {
             "title": "I might back something",
             "body": "Begin with the bloke, inspect the machinery, then compare island proposals and live tools against their sources. Nothing on this route implies funding readiness.",
             "evidence": "open-question",
-            "sourceIds": ["F07", "F12", "U09", "U13"]
+            "sourceIds": [
+              "F07",
+              "F12",
+              "U09",
+              "U13"
+            ]
           },
           {
             "title": "I am romantically curious",
             "body": "Begin with the bloke and personal Aura, then visit songs and Love is infrastructure too. The mature page stays non-explicit and consent-centred.",
             "evidence": "story",
-            "sourceIds": ["F11", "F24", "F25", "U22"]
+            "sourceIds": [
+              "F11",
+              "F24",
+              "F25",
+              "U22"
+            ]
           },
           {
             "title": "I build or research strange things",
-            "body": "Move from personal Aura to its machinery, Minjerribah models and the solar-system horizon, checking the frontier labels as you go.",
+            "body": "Move from personal Aura to its machinery, Minjerribah models and the solar-system horizon, following the doubts and unfinished edges as you go.",
             "evidence": "frontier",
-            "sourceIds": ["F08", "F09", "F13", "U08"]
+            "sourceIds": [
+              "F08",
+              "F09",
+              "F13",
+              "U08"
+            ]
           },
           {
             "title": "I followed a shiny reflection",
-            "body": "Pick any page, use the evidence filter, and let the next and previous links carry you around the mirror ball.",
+            "body": "Pick any page, follow whatever catches your eye, and let the next and previous links carry you around the horn torus.",
             "evidence": "open-question",
-            "sourceIds": ["U13"]
+            "sourceIds": [
+              "U13"
+            ]
           }
         ]
       }
@@ -987,26 +1154,22 @@
     "soundtrack": {
       "title": "Choose Your Own Protopia",
       "album": "Album 4: A Protopian Gambit",
-      "sourceIds": ["F24"],
+      "sourceIds": [
+        "F24"
+      ],
       "reason": "It makes the route personal and voluntary while refusing to turn one person's preferred future into everybody's destination.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "Choose a door, then wander. The highlights are yours; the evidence stays the same."
+    "closing": "Choose a door, then wander. The invitation is yours; the whole story stays open.",
+    "story": {
+      "paragraphs": [
+        "You do not have to follow my path in order. Start where your own curiosity catches. If we knew each other years ago, begin with the bloke and the break. If you build strange things, go straight under the Aura.",
+        "Your chosen door is a recommendation, not a box. You can change it, ignore it or open every page."
+      ]
+    }
   },
   "sitemap": {
-    "intro": "The complete map keeps every narrative page, evidence room and audience route visible in one place.",
-    "firstPerson": {
-      "heading": "In my words",
-      "paragraphs": [
-        "If the mirror ball feels too bright, use this plain map. It shows the path from my ordinary life to the farthest questions without asking you to take every step."
-      ]
-    },
-    "thirdPerson": {
-      "heading": "From the record",
-      "paragraphs": [
-        "This map reflects the intended narrative order in the supplied site blueprint. It is a navigation aid, not an evidence source. External project links remain documented in the source room and on the pages where they are discussed."
-      ]
-    },
+    "intro": "The complete map keeps every chapter, public world, source trail and visitor path visible in one quiet place.",
     "sections": [
       {
         "heading": "Meet the person",
@@ -1014,21 +1177,33 @@
         "cards": [
           {
             "title": "The Mind Behind the Man",
-            "body": "The portrait, mirror ball and evidence lens.",
+            "body": "The person, the colours and the 288-facet living index.",
             "evidence": "lived",
-            "sourceIds": ["F32", "F36"]
+            "sourceIds": [
+              "F32",
+              "F36"
+            ]
           },
           {
             "title": "The bloke before the blueprint",
             "body": "Names, practical work, place, humour and present boundaries.",
             "evidence": "lived",
-            "sourceIds": ["F30", "F36", "U12"]
+            "sourceIds": [
+              "F30",
+              "F36",
+              "U12"
+            ]
           },
           {
             "title": "I stopped accepting the default",
             "body": "The 2012 to 2014 historical break and its surviving artefacts.",
             "evidence": "lived",
-            "sourceIds": ["F15", "F16", "F23", "U14"]
+            "sourceIds": [
+              "F15",
+              "F16",
+              "F23",
+              "U14"
+            ]
           }
         ]
       },
@@ -1037,28 +1212,47 @@
         "intro": "Move from the metaphor into its creative, relational and technical facets.",
         "cards": [
           {
-            "title": "My Aura is a mirror ball",
+            "title": "My Aura has 288 facets",
             "body": "Self-authorship, connected facets and chosen boundaries.",
             "evidence": "modelled",
-            "sourceIds": ["F14", "F34", "U05"]
+            "sourceIds": [
+              "F14",
+              "F34",
+              "U05"
+            ]
           },
           {
             "title": "The machinery under the metaphor",
             "body": "Horn tori, memory relationships, Geode, Keystone and hardware paths.",
             "evidence": "frontier",
-            "sourceIds": ["F07", "F12", "F13", "U08"]
+            "sourceIds": [
+              "F07",
+              "F12",
+              "F13",
+              "U08"
+            ]
           },
           {
             "title": "Songs, stories and comedy",
             "body": "i C. infinity, Loose Goose, Story Forge and Cosmic Nexus.",
             "evidence": "story",
-            "sourceIds": ["F24", "F25", "U17", "U18", "U23"]
+            "sourceIds": [
+              "F24",
+              "F25",
+              "U17",
+              "U18",
+              "U23"
+            ]
           },
           {
             "title": "Love is infrastructure too",
             "body": "A mature, non-explicit account of love, larger families and imagined companions.",
             "evidence": "proposed",
-            "sourceIds": ["F11", "U22", "U26"]
+            "sourceIds": [
+              "F11",
+              "U22",
+              "U26"
+            ]
           }
         ]
       },
@@ -1070,43 +1264,69 @@
             "title": "Start on the island",
             "body": "Real work, proposed infrastructure, digital twins and imagined cities.",
             "evidence": "modelled",
-            "sourceIds": ["F01", "U06", "U09", "U10"]
+            "sourceIds": [
+              "F01",
+              "U06",
+              "U09",
+              "U10"
+            ]
           },
           {
             "title": "A fair go needs better machinery",
             "body": "Humour, submission documents, civic ledgers, compute and co-operative paths.",
             "evidence": "submitted",
-            "sourceIds": ["F03", "F06", "F26", "U07"]
+            "sourceIds": [
+              "F03",
+              "F06",
+              "F26",
+              "U07"
+            ]
           },
           {
             "title": "Every border can become a bridge",
             "body": "Travel memories and tools for lawful, useful invitations.",
             "evidence": "lived",
-            "sourceIds": ["F19", "F20", "F21", "F22", "U15"]
+            "sourceIds": [
+              "F19",
+              "F20",
+              "F21",
+              "F22",
+              "U15"
+            ]
           },
           {
             "title": "From one Aura to a solar system",
             "body": "Oceania, GAJRA Earth, Sensorium, Solar Swarm and future civilisation.",
             "evidence": "frontier",
-            "sourceIds": ["F02", "F04", "F09", "U03", "U20"]
+            "sourceIds": [
+              "F02",
+              "F04",
+              "F09",
+              "U03",
+              "U20"
+            ]
           }
         ]
       },
       {
         "heading": "Check and choose",
-        "intro": "Use the evidence room or take an audience route through the same material.",
+        "intro": "Open the studio archive or take a visitor route through the same material.",
         "cards": [
           {
             "title": "Show me the receipts",
             "body": "Original files, public URLs, dates, authorship, status and missing pieces.",
             "evidence": "built",
-            "sourceIds": ["U13"]
+            "sourceIds": [
+              "U13"
+            ]
           },
           {
             "title": "Why are you here?",
             "body": "Optional highlights for locals, old friends, public workers, backers, romantic visitors, builders and the simply curious.",
             "evidence": "open-question",
-            "sourceIds": ["U13"]
+            "sourceIds": [
+              "U13"
+            ]
           }
         ]
       }
@@ -1114,10 +1334,17 @@
     "soundtrack": {
       "title": "Weave The Aura",
       "album": "Album 3: Starseed Code",
-      "sourceIds": ["F25"],
+      "sourceIds": [
+        "F25"
+      ],
       "reason": "It suits a final map that gathers separate facets without pretending they have become one simple thing.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "I am not asking you to believe the whole mirror ball. I am showing you where the reflections came from. Follow the one that catches your eye. Ask a better question. Bring your own light."
+    "closing": "I am not asking you to believe the whole thing. I am showing you where its threads came from. Follow the one that catches your eye. Ask a better question. Bring your own light.",
+    "story": {
+      "paragraphs": [
+        "If the horn torus feels too wild, use this plain map. It shows the path from my ordinary life to the farthest questions without asking you to take every step."
+      ]
+    }
   }
 }

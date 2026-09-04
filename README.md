@@ -1,40 +1,39 @@
 # The Mind Behind the Man
 
-A guided self-portrait with receipts. This is a multi-page public record of Luke Nathan Hayes, his personal Aura, practical work, music, civic experiments, relationship worlds and long-horizon questions.
+A vivid, source-connected self-portrait of Luke Nathan Hayes. The site moves from one bloke on Minjerribah through his practical work, music, story worlds, relationships, civic experiments, personal Aura and far-horizon questions.
 
-The site is built as ordinary static HTML, CSS and JavaScript for GitHub Pages. It does not need a framework, database, account or tracking service.
-
-## Read the site
-
-The public address is intended to be:
+The public site is:
 
 `https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/`
+
+## The living index
+
+The homepage centres Luke's canonical horn-torus geometry: 12 rows by 24 columns, exactly 288 outside facets. Every registered document, image, public project and social link appears at least once. Dragging turns the torus, tapping opens a source thread, and zoom is clamped outside the form.
 
 ## Build and check it locally
 
 1. Open a terminal in this folder.
 2. Run `npm test`.
 3. Start any simple local web server in the folder.
-4. Open `index.html` through that local server.
+4. Open the local address in a browser.
 
-`npm test` rebuilds all fourteen HTML pages from the data files, then checks the page order, internal links, external-link safety, source references and punctuation rules.
+`npm test` rebuilds all fourteen pages and the facet map, then checks page order, internal links, source references, the 288-facet coverage, raster-only media and the outside zoom boundary.
 
-## Where the content lives
+## Where the story lives
 
-- `data/pages.json` holds the one canonical page order.
-- `data/site-content.json` holds the first-person and third-person page copy.
-- `data/controversies.json` keeps bold ideas beside their current status, gaps and change conditions.
-- `data/audiences.json` stores highlighted routes without hiding any page.
-- `sources/register.json` is the working source register.
+- `data/pages.json` holds the canonical chapter order.
+- `data/site-content.json` holds the single-voice story and chapter material.
+- `data/facets.json` is generated as the complete 288-facet source map.
+- `data/audiences.json` stores suggested visitor routes without hiding any page.
+- `sources/register.json` is the working archive and link register.
+- `scripts/horn-torus.js` draws and controls the interactive torus.
 - `scripts/build.mjs` generates the repeated site structure.
 
-## Source boundary
+## Media now and later
 
-The source room distinguishes live public links, locally held review candidates and files that are not currently on this laptop. Local originals are not automatically published. They need a specific privacy, cultural context, authorship and rights review first.
+This edition publishes the i C. infinity ring favicon, a Luke portrait, three music-world images and a speculative visual study already present in Luke's public archive. The *A Protopian Gambit* cover supplied for this project is now part of the artwork rather than a placeholder.
 
-## Media pass
-
-The current build uses a code-made music placeholder and no copied documentary images. The supplied *A Protopian Gambit* cover and i C. infinity ring photograph remain private until authorship, embedded metadata and reuse rights are reviewed. The intended portrait, historical images and selected song videos belong to a later media pass. Song cues from Albums 3, 4 and 5 are editorial placement notes, not a final release order.
+The song choices come from Albums 3, 4 and 5. Their titles and lyric themes set the intended placement until Luke brings the selected video files onto this laptop.
 
 ## Licence
 

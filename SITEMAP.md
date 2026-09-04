@@ -3,7 +3,7 @@
 1. [The Mind Behind the Man](index.html)
 2. [The bloke before the blueprint](the-bloke.html)
 3. [I stopped accepting the default](the-break.html)
-4. [My Aura is a mirror ball](personal-aura.html)
+4. [My Aura has 288 facets](personal-aura.html)
 5. [The machinery under the metaphor](under-the-aura.html)
 6. [I sing the system before I build it](songs-stories-comedy.html)
 7. [Love is infrastructure too](love-and-tribe.html)

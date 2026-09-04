@@ -51,8 +51,9 @@
     "primaryPage": "08",
     "status": "Working public draft",
     "notes": "Federated sovereign compute, civic stewardship and space horizon",
-    "availability": "local-reviewed-candidate",
-    "authorship": "Authorship to be confirmed"
+    "availability": "published-source",
+    "authorship": "Supplied and directed by Luke Nathan Hayes; composite source history is not fully recorded",
+    "publicPath": "assets/media/a-protopian-gambit.png"
   },
   {
     "id": "F06",
@@ -313,10 +314,11 @@
     "title": "A Protopian Gambit cover art",
     "location": "A Protopian Gambit.png",
     "primaryPage": "05",
-    "status": "Current creative artwork",
+    "status": "Published creative artwork",
     "notes": "i C. infinity cover with Australia, infinity ring and golden gambit",
-    "availability": "local-reviewed-candidate",
-    "authorship": "Authorship to be confirmed"
+    "availability": "published-source",
+    "authorship": "Supplied by Luke Nathan Hayes; composite production history not fully recorded",
+    "publicPath": "assets/media/a-protopian-gambit.png"
   },
   {
     "id": "F30",
@@ -769,5 +771,161 @@
     "url": "https://auraofintelligence.github.io/grey-area-commons/",
     "canonicalTitle": "Grey Area Commons",
     "checkedOn": "2026-09-04"
+  },
+  {
+    "id": "F38",
+    "type": "image",
+    "title": "i C. infinity ring photograph",
+    "location": "i c infinity.jpg",
+    "primaryPage": "00",
+    "status": "Personal creative photograph",
+    "notes": "The hand-held infinity ring that became the site's favicon and glowing home button",
+    "availability": "published-source",
+    "authorship": "Supplied by Luke Nathan Hayes; photographer not recorded in the file",
+    "publicPath": "assets/favicon.jpg"
+  },
+  {
+    "id": "F39",
+    "type": "image",
+    "title": "Luke with the many-coloured Aura",
+    "location": "luke-catalyst-portrait.webp",
+    "primaryPage": "01",
+    "status": "Personal portrait already published in Luke's music archive",
+    "notes": "Luke in a striped shirt beside a rainbow meditation figure",
+    "availability": "published-source",
+    "authorship": "Luke Nathan Hayes personal creative archive",
+    "publicPath": "assets/media/luke-aura-portrait.webp"
+  },
+  {
+    "id": "F40",
+    "type": "image",
+    "title": "Starseed Code cover",
+    "location": "cover-starseed.webp",
+    "primaryPage": "03",
+    "status": "Creative artwork already published in Luke's music archive",
+    "notes": "Colourful figures, birth, age and infinity gathered around a central light",
+    "availability": "published-source",
+    "authorship": "Luke-directed creative artwork",
+    "publicPath": "assets/media/starseed-code.webp"
+  },
+  {
+    "id": "F41",
+    "type": "image",
+    "title": "Songs of Straddie cover",
+    "location": "cover-straddie.webp",
+    "primaryPage": "07",
+    "status": "Creative artwork already published in Luke's music archive",
+    "notes": "The Straddie shoreline, pandanus and the hand-held infinity ring",
+    "availability": "published-source",
+    "authorship": "Luke Nathan Hayes personal creative archive",
+    "publicPath": "assets/media/straddie-fun.webp"
+  },
+  {
+    "id": "F42",
+    "type": "image",
+    "title": "Luke Universal Creator",
+    "location": "hero-luke-universal-creator.webp",
+    "primaryPage": "04",
+    "status": "Playful composite already published in Luke's music archive",
+    "notes": "Luke reaches towards a glowing pillar in a cosmic field",
+    "availability": "published-source",
+    "authorship": "Luke Nathan Hayes personal creative archive",
+    "publicPath": "assets/media/luke-universal-creator.webp"
+  },
+  {
+    "id": "F43",
+    "type": "image",
+    "title": "A Protopian Gambit visual study",
+    "location": "hero-a-protopian-gambit.webp",
+    "primaryPage": "10",
+    "status": "Generated concept artwork already published in a Luke-directed public project",
+    "notes": "A crystalline figure, human form and tunnel of light used as speculative visual worldbuilding",
+    "availability": "published-source",
+    "authorship": "Luke-directed generated concept artwork",
+    "publicPath": "assets/media/a-protopian-gambit.webp"
+  },
+  {
+    "id": "S01",
+    "type": "website",
+    "title": "Luke on Facebook",
+    "location": "https://www.facebook.com/hayzy123",
+    "primaryPage": "01",
+    "status": "Luke's public social profile",
+    "notes": "One of the places Luke has shared life, work and changing ideas in public",
+    "availability": "public-link",
+    "authorship": "Luke Nathan Hayes public profile",
+    "url": "https://www.facebook.com/hayzy123"
+  },
+  {
+    "id": "S02",
+    "type": "website",
+    "title": "Choose Infinity on X",
+    "location": "https://twitter.com/choose_infinity",
+    "primaryPage": "01",
+    "status": "Luke's public social profile",
+    "notes": "A public stream carrying the Choose Infinity voice",
+    "availability": "public-link",
+    "authorship": "Luke Nathan Hayes public profile",
+    "url": "https://twitter.com/choose_infinity"
+  },
+  {
+    "id": "S03",
+    "type": "website",
+    "title": "Luke Catalyst on Instagram",
+    "location": "https://www.instagram.com/lukecatalyst",
+    "primaryPage": "01",
+    "status": "Luke's public social profile",
+    "notes": "A visual trail through Luke Catalyst's public life and ideas",
+    "availability": "public-link",
+    "authorship": "Luke Nathan Hayes public profile",
+    "url": "https://www.instagram.com/lukecatalyst"
+  },
+  {
+    "id": "S04",
+    "type": "website",
+    "title": "Luke Catalyst on LinkedIn",
+    "location": "https://www.linkedin.com/in/lukecatalyst/",
+    "primaryPage": "01",
+    "status": "Luke's public professional profile",
+    "notes": "The professional thread through Luke's work, talks and experiments",
+    "availability": "public-link",
+    "authorship": "Luke Nathan Hayes public profile",
+    "url": "https://www.linkedin.com/in/lukecatalyst/"
+  },
+  {
+    "id": "S05",
+    "type": "website",
+    "title": "Luke Catalyst on Pinterest",
+    "location": "https://www.pinterest.com.au/lukecatalyst/",
+    "primaryPage": "05",
+    "status": "Luke's public visual collection",
+    "notes": "Images and references that have fed Luke's visual imagination",
+    "availability": "public-link",
+    "authorship": "Luke Nathan Hayes public profile",
+    "url": "https://www.pinterest.com.au/lukecatalyst/"
+  },
+  {
+    "id": "S06",
+    "type": "website",
+    "title": "Luke's YouTube channel",
+    "location": "https://www.youtube.com/channel/UC0mg83Rin_jsnFmbfcNuHtg",
+    "primaryPage": "05",
+    "status": "Luke's public video channel",
+    "notes": "The public home for moving images, talks and creative experiments",
+    "availability": "public-link",
+    "authorship": "Luke Nathan Hayes public profile",
+    "url": "https://www.youtube.com/channel/UC0mg83Rin_jsnFmbfcNuHtg"
+  },
+  {
+    "id": "S07",
+    "type": "website",
+    "title": "Luke's Spotify profile",
+    "location": "https://open.spotify.com/user/22riyjxhapaeyzi2tjrco34wi",
+    "primaryPage": "05",
+    "status": "Luke's public music profile",
+    "notes": "A public music doorway beside the i C. infinity lyric archive",
+    "availability": "public-link",
+    "authorship": "Luke Nathan Hayes public profile",
+    "url": "https://open.spotify.com/user/22riyjxhapaeyzi2tjrco34wi"
   }
 ]

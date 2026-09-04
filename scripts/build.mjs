@@ -17,18 +17,10 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const evidenceLabels = {
-  lived: 'Lived',
-  built: 'Built',
-  submitted: 'Submission document',
-  proposed: 'Proposed',
-  modelled: 'Modelled',
-  frontier: 'Frontier',
-  story: 'Story',
-  'open-question': 'Open question'
-};
 
 const sourceAuthorship = (record) => {
+  if (record.authorship) return record.authorship;
+  if (record.id.startsWith('S')) return 'Luke Nathan Hayes public profile';
   if (record.id === 'U01') return 'Third-party public video; creator attribution to be confirmed';
   if (record.id === 'U25') return 'Luke Nathan Hayes personal public site';
   if (record.id.startsWith('U')) return 'Luke-authored or Luke-directed public project';
@@ -51,22 +43,48 @@ const sourceStatus = (record) => {
 const liveLinkById = new Map(liveLinks.map((record) => [record.id, record]));
 const sources = sourceInput.map((record) => {
   const live = liveLinkById.get(record.id);
+  const isPublicLink = record.availability === 'public-link';
   return {
     ...record,
     status: sourceStatus(record),
     authorship: sourceAuthorship(record),
-    canonicalTitle: live?.canonicalTitle,
-    checkedOn: live?.checkedOn,
-    url: record.id.startsWith('U') ? (live?.finalUrl || record.location) : undefined,
-    publicPath: undefined,
-    availability: record.id === 'F29' ? 'local-reviewed-candidate' : record.availability
+    canonicalTitle: live?.canonicalTitle || record.canonicalTitle,
+    checkedOn: live?.checkedOn || record.checkedOn,
+    url: isPublicLink ? (live?.finalUrl || record.url || record.location) : undefined,
+    publicPath: record.publicPath
   };
 });
 
-const publicLinkCount = sources.filter((source) => source.id.startsWith('U')).length;
+const publicLinkCount = sources.filter((source) => source.availability === 'public-link').length;
 const heldSourceCount = sources.length - publicLinkCount;
 
 await writeFile(resolve(root, 'sources/register.json'), `${JSON.stringify(sources, null, 2)}\n`, 'utf8');
+
+const facetStory = (source) => {
+  const note = (source.notes || 'A thread in Luke\'s working archive').replace(/[.!?]?$/, '.');
+  if (source.availability === 'public-link') return `${note} Follow it into the live work.`;
+  if (source.availability === 'published-source') return `${note} Luke chose to show this source here.`;
+  if (source.availability === 'local-reviewed-candidate') return `${note} The original is on this laptop and its place in the story is public, while the complete file stays in Luke\'s working archive.`;
+  return `${note} It belongs to Luke\'s wider archive, but the original file was not on this laptop for this build.`;
+};
+
+const facetStride = 17;
+const facets = Array.from({ length: 12 * 24 }, (_, index) => {
+  const sourceOrder = (index * facetStride) % sources.length;
+  const source = sources[sourceOrder];
+  return {
+    number: index + 1,
+    row: Math.floor(index / 24),
+    column: index % 24,
+    sourceOrder,
+    sourceId: source.id,
+    title: source.title,
+    story: facetStory(source),
+    href: source.url || source.publicPath || ''
+  };
+});
+
+await writeFile(resolve(root, 'data/facets.json'), `${JSON.stringify(facets, null, 2)}\n`, 'utf8');
 
 const pageById = new Map(pages.map((page) => [page.id, page]));
 const sourceById = new Map(sources.map((source) => [source.id, source]));
@@ -98,17 +116,12 @@ function renderHeader(page) {
   <div class="recommendation-ribbon" data-recommendation-ribbon></div>
   <header class="site-header">
     <div class="page-shell header-inner">
-      <a class="home-mark" href="index.html#top" aria-label="The Mind Behind the Man home">∞</a>
+      <a class="home-mark" href="index.html#top" aria-label="The Mind Behind the Man home"><img src="assets/favicon.jpg" alt=""></a>
       <div class="chapter-progress">
         <strong>${escapeHtml(page.shortTitle)}</strong>
         <span>Chapter ${page.chapter} of 13</span>
       </div>
       <div class="header-actions">
-        <div class="perspective-control" role="group" aria-label="Opening voice">
-          <button class="perspective-button" type="button" data-perspective="both" aria-pressed="true">Both</button>
-          <button class="perspective-button" type="button" data-perspective="first" aria-pressed="false">First draft</button>
-          <button class="perspective-button" type="button" data-perspective="third" aria-pressed="false">Third person</button>
-        </div>
         <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-navigation">Menu</button>
       </div>
     </div>
@@ -116,61 +129,105 @@ function renderHeader(page) {
   <div class="nav-backdrop" data-nav-backdrop></div>
   <nav class="nav-drawer" id="site-navigation" data-nav-drawer aria-label="Complete site navigation" aria-hidden="true" inert>
     <div class="nav-drawer-header">
-      <strong>Follow a reflection</strong>
+      <strong>Wander through the whole story</strong>
       <button class="drawer-close" type="button" data-menu-close aria-label="Close menu">×</button>
     </div>
     <ol>${navigation}</ol>
   </nav>`;
 }
 
+const heroMedia = {
+  bloke: {
+    src: 'assets/media/luke-aura-portrait.webp',
+    alt: 'Luke in a bright striped shirt beside a many-coloured meditation figure',
+    caption: 'One bloke, many colours, no clean little box.',
+    sourceId: 'F39'
+  },
+  'personal-aura': {
+    src: 'assets/media/starseed-code.webp',
+    alt: 'Starseed Code album cover with colourful figures gathered around an infinity form',
+    caption: 'The inner architecture became colour, people and song.',
+    sourceId: 'F40'
+  },
+  'under-aura': {
+    src: 'assets/media/luke-universal-creator.webp',
+    alt: 'Luke reaching towards a glowing pillar in a playful cosmic scene',
+    caption: 'Engineering begins where wonder gets specific.',
+    sourceId: 'F42'
+  },
+  songs: {
+    src: 'assets/media/a-protopian-gambit.png',
+    alt: 'A Protopian Gambit cover with the i C. infinity ring, a glowing chess piece and a hand above Australia',
+    caption: 'A Protopian Gambit. The wager is that imagination can become practical care.',
+    sourceId: 'F29'
+  },
+  minjerribah: {
+    src: 'assets/media/straddie-fun.webp',
+    alt: 'Songs of Straddie cover with sea, pandanus leaves and the i C. infinity ring',
+    caption: 'The large horizon starts at the island edge.',
+    sourceId: 'F41'
+  },
+  'earth-infinity': {
+    src: 'assets/media/a-protopian-gambit.webp',
+    alt: 'A luminous speculative scene with a crystalline figure, a human form and a tunnel of light',
+    caption: 'A visual rehearsal for futures that do not exist yet.',
+    sourceId: 'F43'
+  }
+};
+
 function renderHero(page, pageContent) {
   const isHome = page.id === 'home';
-  const isSongs = page.id === 'songs';
   const origin = isHome
     ? 'Luke Catalyst Nathan Hayes | Minjerribah | Free thinking since 2012'
     : `Chapter ${page.chapter} of 13 | ${page.shortTitle}`;
   const actions = isHome
     ? `
-      <a class="button primary" href="the-bloke.html#top">Start with the bloke</a>
-      <a class="button secondary" href="under-the-aura.html#top">Show me the wild stuff</a>
-      <a class="button secondary" href="choose-your-door.html#top">Choose why you are here</a>`
+      <a class="button primary" href="#torus-map">Turn the living index</a>
+      <a class="button secondary" href="the-bloke.html#top">Meet the bloke</a>
+      <a class="button secondary" href="choose-your-door.html#top">Find your way in</a>`
     : `
-      <a class="button primary" href="#voices">Read this chapter</a>
-      <a class="button secondary" href="sources.html#source-register">Open the source room</a>`;
+      <a class="button primary" href="#story">Enter this chapter</a>
+      <a class="button secondary" href="sources.html#source-register">Open the studio archive</a>`;
 
   let stage;
   if (isHome) {
     stage = `
-      <div class="hero-stage">
-        <div class="hero-glow"></div>
-        <canvas class="mirror-canvas" data-mirror-ball aria-label="Mirror ball with facets for body, mind, place, work, love, music, civics and future">
-          A mirror ball representing the many facets of Luke's personal Aura.
+      <div class="hero-stage torus-stage" id="torus-map">
+        <canvas class="torus-canvas" data-horn-torus tabindex="0" aria-describedby="torus-instructions">
+          An interactive 288-facet horn torus carrying Luke's public links and source archive.
         </canvas>
-      </div>`;
-  } else if (isSongs) {
-    stage = `
-      <div class="hero-stage">
-        <div class="hero-glow"></div>
-        <div class="album-placeholder" aria-label="Code-made visual placeholder for A Protopian Gambit">
-          <span>i C. infinity</span>
-          <strong>A Protopian Gambit</strong>
-          <span>Album 4 lyric world</span>
+        <p class="torus-instructions" id="torus-instructions">Drag to turn it. Tap a facet to follow its thread. Scroll or pinch to move closer, but the view always stays outside.</p>
+        <div class="facet-whisper" aria-live="polite">
+          <span data-facet-address>Facet 001 of 288</span>
+          <strong data-facet-title>The torus is waking up</strong>
+          <p data-facet-story>Every public link and every document in this working archive has a place on the outside.</p>
+          <div class="facet-actions">
+            <button class="button facet-open" type="button" data-facet-open>Open this thread</button>
+            <button class="text-button" type="button" data-facet-shuffle>Surprise me</button>
+            <button class="text-button" type="button" data-torus-reset>Reset the view</button>
+          </div>
         </div>
-        <p class="hero-caption">Code-made visual placeholder. The supplied cover remains private until its authorship, embedded metadata and reuse rights are reviewed.</p>
       </div>`;
+  } else if (heroMedia[page.id]) {
+    const media = heroMedia[page.id];
+    stage = `
+      <figure class="hero-stage image-stage">
+        <div class="hero-glow"></div>
+        <img src="${media.src}" alt="${escapeHtml(media.alt)}" ${page.id === 'songs' ? 'fetchpriority="high"' : 'loading="lazy"'}>
+        <figcaption>${escapeHtml(media.caption)} <button class="source-thread inline" type="button" data-source="${media.sourceId}">See where it came from</button></figcaption>
+      </figure>`;
   } else {
     stage = `
       <div class="hero-stage" aria-hidden="true">
         <div class="hero-glow"></div>
-        <div class="hero-orbit"></div>
-        <div class="hero-wordmark">∞</div>
+        <div class="chapter-art"><span>${escapeHtml(page.chapter)}</span><strong>${escapeHtml(page.shortTitle)}</strong></div>
       </div>`;
   }
 
-  const mature = ['home', 'love'].includes(page.id) ? `
+  const mature = page.id === 'love' ? `
     <aside class="mature-notice">
-      <strong>Mature themes</strong>
-      <p>The main site is public and non-explicit. It discusses sexuality, non-monogamy, embodied AI, religion, politics, mortality and contested science. Adult-only branches are clearly marked before you leave.</p>
+      <strong>A grown-up chapter</strong>
+      <p>This is a frank but non-explicit story about love, sexuality, non-monogamy, family and imagined embodied companions. The separate adult-only branch still has a clear doorway before you leave this site.</p>
     </aside>` : '';
 
   return `
@@ -188,68 +245,33 @@ function renderHero(page, pageContent) {
   </section>`;
 }
 
-function renderPerspectiveBar() {
+function renderStory(pageContent) {
   return `
-  <div class="perspective-bar">
-    <div class="page-shell perspective-bar-inner">
-      <p>Switch the paired opening between a first-person draft and third-person context. The evidence sections below stay shared.</p>
-      <div class="perspective-control" role="group" aria-label="Opening voice">
-        <button class="perspective-button" type="button" data-perspective="both" aria-pressed="true">Both</button>
-        <button class="perspective-button" type="button" data-perspective="first" aria-pressed="false">First draft</button>
-        <button class="perspective-button" type="button" data-perspective="third" aria-pressed="false">Third person</button>
-      </div>
-    </div>
-  </div>`;
-}
-
-function renderVoices(pageContent) {
-  const renderVoice = (voice, className, label, heading = voice.heading) => `
-    <article class="voice-card ${className}">
-      <span class="voice-label">${label}</span>
-      <h2>${escapeHtml(heading)}</h2>
-      ${voice.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}
-    </article>`;
-
-  return `
-  <section class="section" id="voices">
-    <div class="page-shell voices">
-      ${renderVoice(pageContent.firstPerson, 'first-person', 'First-person draft', 'Drafted in my voice')}
-      ${renderVoice(pageContent.thirdPerson, 'third-person', 'Third person')}
+  <section class="story-opening" id="story">
+    <div class="page-shell story-flow">
+      ${pageContent.story.paragraphs.map((paragraph, index) => `<p${index === 0 ? ' class="story-lede"' : ''}>${escapeHtml(paragraph)}</p>`).join('')}
     </div>
   </section>`;
 }
 
-function renderEvidenceBar() {
-  return `
-  <div class="evidence-bar">
-    <div class="page-shell evidence-bar-inner">
-      <p>Evidence lens. All states are visible until you choose otherwise.</p>
-      <div class="evidence-controls" role="group" aria-label="Filter cards by evidence state">
-        ${Object.entries(evidenceLabels).map(([key, label]) => `<button class="evidence-toggle" type="button" data-evidence-toggle="${key}" aria-pressed="true">${label}</button>`).join('')}
-      </div>
-      <p class="visually-hidden" aria-live="polite" data-evidence-status></p>
-    </div>
-  </div>`;
-}
-
 function renderSourceButtons(ids = []) {
-  return ids.filter((id) => sourceById.has(id)).map((id) => `
-    <button class="source-chip" type="button" data-source="${escapeHtml(id)}" aria-label="Open source record ${escapeHtml(id)}">Source ${escapeHtml(id)}</button>`).join('');
+  return [...new Set(ids)].filter((id) => sourceById.has(id)).map((id) => {
+    const source = sourceById.get(id);
+    return `<button class="source-thread" type="button" data-source="${escapeHtml(id)}">${escapeHtml(source.title)}</button>`;
+  }).join('');
 }
 
-function renderStoryCard(card) {
-  const evidence = evidenceLabels[card.evidence] || card.evidence;
+function renderStoryCard(card, index) {
   const isAdult = card.href?.includes('grey-area-commons');
   let externalLink = '';
   if (card.href) {
     externalLink = isAdult
       ? `<button class="button secondary" type="button" data-adult-link="${escapeHtml(card.href)}">Read the adult boundary first</button>`
-      : `<a class="external-card-link" href="${escapeHtml(card.href)}"${externalAttributes(card.href)}>Open the public project</a>`;
+      : `<a class="external-card-link" href="${escapeHtml(card.href)}"${externalAttributes(card.href)}>Follow this into the live work</a>`;
   }
 
   return `
-  <article class="story-card" data-evidence-card="${escapeHtml(card.evidence)}">
-    <span class="evidence-chip" data-kind="${escapeHtml(card.evidence)}">${escapeHtml(evidence)}</span>
+  <article class="story-card story-card-${index % 6}">
     <h3>${escapeHtml(card.title)}</h3>
     <p>${escapeHtml(card.body)}</p>
     ${externalLink}
@@ -275,27 +297,26 @@ function renderSections(pageContent) {
 function renderIdentityPanel(pageId) {
   if (pageId !== 'bloke') return '';
   const identities = [
-    ['Luke Nathan Hayes', 'The person.'],
-    ['Luke Catalyst', 'The public systems, ideas and speaking identity.'],
-    ['Strange but True', "Luke's current sole-trader practice and practical local doorway."],
-    ['i C. infinity', 'The music and creative identity.'],
-    ['Aura of Intelligence', "Luke's personal cognitive architecture and long-horizon project constellation."],
-    ['GAJRA Earth', 'A proposed voluntary connective idea, not a planetary authority.'],
-    ['ready SET Co-op', 'The proposed ready sustainable employment and training cooperative. It does not currently exist.'],
-    ['Project Atlas', 'The public evidence and navigation layer, not an organisation.']
+    ['Luke Nathan Hayes', 'The person in the middle of all this: hands, doubts, appetite, memory and a very full hard drive.', []],
+    ['Luke Catalyst', 'The public systems thinker who turns an awkward question into a diagram, a talk or a working experiment.', ['U25']],
+    ['Strange but True', 'The bloke at the market table who helps with technology, art, local work and whatever odd problem walked in that morning.', ['U12']],
+    ['i C. infinity', 'The musical self who sings the emotional architecture before the rest of Luke has finished explaining it.', ['U23']],
+    ['Tiggy Bestmann', 'The romantic traveller: playful, slightly aloof, forever turning a map, a chance meeting or an impossible system into a love story.', ['U17']],
+    ['Australian Sire', 'The hotter adult-fantasy register: not a title simply worn, but a name the character earns through real wins, kept promises and adult trust.', ['U17']],
+    ['Aura of Intelligence', 'The long arc: one person trying to make mind, memory, sovereignty and relationship navigable without claiming to have finished the machine.', ['U05']],
+    ['GAJRA Earth', 'The planetary invitation, imagined as a harbour where different projects can meet without becoming one throne.', ['U20']],
+    ['ready SET Co-op', 'The still-proposed co-operative path from useful local work towards shared training, tools and infrastructure.', ['U09']],
+    ['Project Atlas', 'The map on the wall: a way to walk between Luke\'s public worlds and see how they connect.', ['U13']]
   ];
   return `
-  <section class="section compact">
+  <section class="section identity-section">
     <div class="page-shell">
       <div class="section-heading">
-        <h2>Who is who</h2>
-        <p>These names point to different parts of the same story. They do not all describe existing organisations.</p>
+        <h2>One man, several ways of speaking</h2>
+        <p>They are not a row of brands. They are names Luke writes, works, sings, dreams and sometimes misbehaves under.</p>
       </div>
-      <div class="source-table-wrap">
-        <table class="identity-table">
-          <thead><tr><th scope="col">Name</th><th scope="col">What it means here</th></tr></thead>
-          <tbody>${identities.map(([name, meaning]) => `<tr><th scope="row">${escapeHtml(name)}</th><td>${escapeHtml(meaning)}</td></tr>`).join('')}</tbody>
-        </table>
+      <div class="identity-constellation">
+        ${identities.map(([name, meaning, sourceIds], index) => `<article class="identity-card identity-card-${index % 5}"><h3>${escapeHtml(name)}</h3><p>${escapeHtml(meaning)}</p><div class="story-card-footer">${renderSourceButtons(sourceIds)}</div></article>`).join('')}
       </div>
     </div>
   </section>`;
@@ -304,28 +325,20 @@ function renderIdentityPanel(pageId) {
 function renderControversies(pageId) {
   const items = controversies.filter((item) => item.page === pageId);
   if (!items.length) return '';
-  const fields = [
-    ['The idea', 'idea'],
-    ['What Luke means', 'meaning'],
-    ['Why it matters to Luke', 'care'],
-    ['What exists now', 'exists'],
-    ['What does not exist yet', 'notYet'],
-    ["What could change Luke's view", 'change']
-  ];
   return `
   <section class="section">
     <div class="page-shell">
       <div class="section-heading">
-        <h2>Test the provocation</h2>
-        <p>Each bold idea is separated from its present evidence, its missing pieces and the things that could change it.</p>
+        <h2>Questions with their sleeves rolled up</h2>
+        <p>These ideas are allowed to be bold, funny and unfinished. The story says what exists, what does not, and what might make Luke change his mind.</p>
       </div>
       ${items.map((item) => `
-        <article class="controversy-card" data-evidence-card="${escapeHtml(item.evidence)}">
-          <span class="evidence-chip" data-kind="${escapeHtml(item.evidence)}">${escapeHtml(evidenceLabels[item.evidence])}</span>
+        <article class="controversy-card">
           <h3>${escapeHtml(item.title)}</h3>
-          <div class="controversy-grid">
-            ${fields.map(([label, key]) => `<div class="controversy-point"><strong>${label}</strong><p>${escapeHtml(item[key])}</p></div>`).join('')}
-          </div>
+          <p class="controversy-lede">${escapeHtml(item.idea)} ${escapeHtml(item.meaning)}</p>
+          <p>${escapeHtml(item.care)}</p>
+          <p>${escapeHtml(item.exists)} ${escapeHtml(item.notYet)}</p>
+          <p class="change-mind">${escapeHtml(item.change)}</p>
           <div class="story-card-footer">${renderSourceButtons(item.sourceIds)}</div>
         </article>`).join('')}
     </div>
@@ -337,27 +350,18 @@ function renderSoundtrack(soundtrack) {
   return `
   <section class="section compact">
     <div class="page-shell soundtrack-card">
-      <div class="soundtrack-disc" aria-hidden="true">∞</div>
+      <img class="soundtrack-disc" src="assets/favicon.jpg" alt="">
       <div>
-        <p>Soundtrack cue from the lyric archive</p>
+        <p>Let this chapter sound like</p>
         <h2>${escapeHtml(soundtrack.title)}</h2>
         <p>${escapeHtml(soundtrack.album)}</p>
         <p>${escapeHtml(soundtrack.reason)}</p>
-        <small>This is an editorial placement, not a claim about final release order.</small>
+        <small>The lyric is here now. Luke will add the video when the right recording reaches this laptop.</small>
         <div class="story-card-footer">${renderSourceButtons(soundtrack.sourceIds)}</div>
       </div>
-      <div class="media-slot">${escapeHtml(soundtrack.mediaStatus)}</div>
+      <div class="media-slot">The video is not on this laptop yet.</div>
     </div>
   </section>`;
-}
-
-function availabilityLabel(value) {
-  return {
-    'public-link': 'Live public link',
-    'published-source': 'Published source',
-    'local-reviewed-candidate': 'Held locally for review',
-    'missing-locally': 'Awaiting a later source pass'
-  }[value] || value;
 }
 
 function renderSourceRoom(pageId) {
@@ -365,20 +369,29 @@ function renderSourceRoom(pageId) {
   const records = sources.map((source) => {
     const link = source.url || source.publicPath;
     const primaryPage = pages.find((page) => page.chapter === source.primaryPage);
+    const archiveSentence = source.availability === 'public-link'
+      ? 'This thread already opens onto the public web.'
+      : source.availability === 'published-source'
+        ? 'Luke chose to show this source inside this site.'
+        : source.availability === 'local-reviewed-candidate'
+          ? 'The original is on this laptop, while the complete file stays in Luke\'s working archive.'
+          : 'The record remains, but the original is somewhere in Luke\'s wider archive rather than on this laptop.';
     return `
       <article class="source-record" data-source-record data-source-type="${escapeHtml(source.type)}" data-availability="${escapeHtml(source.availability)}">
         <span class="source-id">${escapeHtml(source.id)}</span>
         <div>
           <h3>${escapeHtml(source.title)}</h3>
-          <p>${escapeHtml(source.status)}. ${escapeHtml(source.notes)}</p>
-          <p>${escapeHtml(source.authorship)}</p>
-          ${primaryPage ? `<p>Used first in Chapter ${escapeHtml(primaryPage.chapter)}: ${escapeHtml(primaryPage.title)}</p>` : ''}
-          ${!source.id.startsWith('U') ? `<p>Registered filename: ${escapeHtml(source.location)}</p>` : ''}
-          ${source.canonicalTitle && source.canonicalTitle !== source.title ? `<p>Live page title: ${escapeHtml(source.canonicalTitle)}</p>` : ''}
-          ${source.checkedOn ? `<p>Link checked: ${escapeHtml(source.checkedOn)}</p>` : ''}
-          ${link ? `<a href="${escapeHtml(link)}"${externalAttributes(link)}>Open ${source.url ? 'live source' : 'published source'}</a>` : ''}
+          <p>${escapeHtml(source.notes)} ${escapeHtml(archiveSentence)}</p>
+          ${primaryPage ? `<p>It first enters the story in Chapter ${escapeHtml(primaryPage.chapter)}, ${escapeHtml(primaryPage.title)}.</p>` : ''}
+          <details class="source-provenance">
+            <summary>Where this came from</summary>
+            <p>${escapeHtml(source.status)}. ${escapeHtml(source.authorship)}.</p>
+            ${source.availability !== 'public-link' ? `<p class="archive-name">Archive name: ${escapeHtml(source.location)}</p>` : ''}
+            ${source.canonicalTitle && source.canonicalTitle !== source.title ? `<p>Live page title: ${escapeHtml(source.canonicalTitle)}</p>` : ''}
+            ${source.checkedOn ? `<p>Link checked: ${escapeHtml(source.checkedOn)}</p>` : ''}
+          </details>
+          ${link ? `<a href="${escapeHtml(link)}"${externalAttributes(link)}>Open ${source.url ? 'the live work' : 'the source'}</a>` : ''}
         </div>
-        <span class="availability ${escapeHtml(source.availability)}">${escapeHtml(availabilityLabel(source.availability))}</span>
       </article>`;
   }).join('');
 
@@ -386,21 +399,22 @@ function renderSourceRoom(pageId) {
   <section class="section" id="source-register">
     <div class="page-shell">
       <div class="section-heading">
-        <h2>The working source register</h2>
-        <p>The register currently contains ${sources.length} records: ${heldSourceCount} supplied or expected local records and ${publicLinkCount} checked public links. Local originals stay private until privacy, cultural context, authorship and source-specific rights are reviewed.</p>
+        <h2>The open studio archive</h2>
+        <p>There are ${sources.length} threads here: ${publicLinkCount} paths onto the public web and ${heldSourceCount} documents, images and creative traces from Luke's own archive. Some originals are on this laptop. Some are elsewhere. Nothing missing has been quietly invented to fill the gap.</p>
       </div>
       <div class="source-room-controls">
         <label class="visually-hidden" for="source-search">Search the source register</label>
         <input class="source-search" id="source-search" type="search" placeholder="Search titles, notes or source IDs" data-source-search>
         <label class="visually-hidden" for="source-filter">Filter the source register</label>
         <select class="source-select" id="source-filter" data-source-filter>
-          <option value="all">All source states</option>
+          <option value="all">Everything in the room</option>
           <option value="website">Websites</option>
           <option value="document">Documents</option>
           <option value="image">Images</option>
           <option value="video">Videos</option>
-          <option value="local-reviewed-candidate">Held locally for review</option>
-          <option value="missing-locally">Awaiting later pass</option>
+          <option value="published-source">Shown on this site</option>
+          <option value="local-reviewed-candidate">Original on this laptop</option>
+          <option value="missing-locally">Original elsewhere</option>
         </select>
       </div>
       <p aria-live="polite" data-source-count></p>
@@ -424,7 +438,7 @@ function renderAudienceDoors(pageId) {
     <div class="page-shell">
       <div class="section-heading">
         <h2>Choose a starting door</h2>
-        <p>Your choice changes the recommended order, not the facts and not what you are allowed to see.</p>
+        <p>Your choice changes the suggested order, not the story and not what you are allowed to see.</p>
       </div>
       <div class="door-grid">${cards}</div>
     </div>
@@ -442,13 +456,13 @@ function renderSitemap(pageId) {
   return `
   <section class="section">
     <div class="page-shell">
-      <div class="section-heading"><h2>Fourteen chapters</h2><p>The full narrative order, from one person to the wider horizon.</p></div>
+      <div class="section-heading"><h2>Fourteen chapters</h2><p>The whole wandering route, from one person to the wider horizon.</p></div>
       <ol class="site-map-list">${pageLinks}</ol>
     </div>
   </section>
   <section class="section">
     <div class="page-shell">
-      <div class="section-heading"><h2>Explore the public worlds</h2><p>These links lead to separate live projects. Their status descriptions come from the current source register.</p></div>
+      <div class="section-heading"><h2>Explore the public worlds</h2><p>These doors lead into the separate sites and experiments growing around this story.</p></div>
       <div class="source-register">${projectLinks}</div>
     </div>
   </section>`;
@@ -470,9 +484,10 @@ function renderSourceDialog() {
     <div class="source-dialog-inner">
       <button class="drawer-close" type="button" data-source-close aria-label="Close source record">×</button>
       <span class="dialog-id" data-dialog-id></span>
-      <h2 id="source-dialog-title" data-dialog-title>Source record</h2>
+      <h2 id="source-dialog-title" data-dialog-title>The thread behind this facet</h2>
       <p data-dialog-body></p>
-      <ul class="dialog-meta" data-dialog-meta></ul>
+      <p class="dialog-context" data-dialog-context></p>
+      <p class="archive-name" data-dialog-filename hidden></p>
       <a class="button primary" data-dialog-link hidden>Open source</a>
     </div>
   </dialog>`;
@@ -524,7 +539,7 @@ function renderFooter(page, index) {
           <div class="footer-links">${worlds}</div>
         </section>
       </div>
-      <p class="footer-note">Built solo on Minjerribah by Luke Nathan Hayes through Strange but True. A public working record. Sources and status are shown throughout.</p>
+      <p class="footer-note">Built solo on Minjerribah by Luke Nathan Hayes through Strange but True. Art, autobiography, unfinished systems and the paths back to their sources.</p>
       <div class="utility-links">
         <a href="sitemap.html#top">Complete site map</a>
         <a href="sources.html#source-register">Source room</a>
@@ -569,21 +584,21 @@ function renderPage(page, index) {
   <meta property="og:description" content="${escapeHtml(page.description)}">
   <meta property="og:url" content="${siteUrl}${page.file}">
   <link rel="canonical" href="${siteUrl}${page.file}">
+  <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+  <link rel="apple-touch-icon" href="assets/favicon.jpg">
   <link rel="stylesheet" href="styles/tokens.css">
   <link rel="stylesheet" href="styles/base.css">
   <link rel="stylesheet" href="styles/components.css">
   <link rel="stylesheet" href="styles/motion.css">
   ${personSchema}
 </head>
-<body data-page="${escapeHtml(page.id)}" data-theme="${escapeHtml(page.theme)}" data-perspective="both">
+<body data-page="${escapeHtml(page.id)}" data-theme="${escapeHtml(page.theme)}">
   ${renderHeader(page)}
   <main id="top" tabindex="-1">
     ${renderHero(page, pageContent)}
-    ${renderPerspectiveBar()}
     <div id="page-content" tabindex="-1">
-      ${renderVoices(pageContent)}
+      ${renderStory(pageContent)}
       ${renderIdentityPanel(page.id)}
-      ${renderEvidenceBar()}
       ${renderSections(pageContent)}
       ${renderControversies(page.id)}
       ${renderAudienceDoors(page.id)}
@@ -597,7 +612,7 @@ function renderPage(page, index) {
   ${renderSourceDialog()}
   ${renderAdultDialog()}
   <script>window.__AUDIENCE_ROUTES__ = ${audienceJson};</script>
-  <script type="module" src="scripts/app.js"></script>
+  <script type="module" src="scripts/app.js?v=20260904c"></script>
 </body>
 </html>
 `;
