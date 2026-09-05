@@ -6,18 +6,18 @@ const MIN_CAMERA_DISTANCE = 4.45;
 const MAX_CAMERA_DISTANCE = 7.8;
 const CONTENT_ROWS = [0, 1, 2, 3, 8, 9, 10, 11];
 const COLOURS = [
-  [61, 232, 221],
-  [61, 181, 255],
-  [72, 112, 255],
-  [119, 77, 255],
-  [179, 75, 255],
-  [244, 76, 211],
-  [255, 65, 145],
-  [255, 91, 94],
-  [255, 139, 54],
-  [255, 201, 55],
-  [184, 228, 71],
-  [68, 208, 128]
+  [176, 206, 215],
+  [160, 183, 210],
+  [148, 163, 199],
+  [175, 166, 199],
+  [201, 179, 203],
+  [219, 202, 214],
+  [225, 217, 204],
+  [209, 202, 181],
+  [188, 207, 204],
+  [169, 198, 210],
+  [205, 222, 227],
+  [225, 234, 231]
 ];
 
 function clamp(value, minimum, maximum) {
@@ -349,9 +349,9 @@ export function initialiseHornTorus() {
     context.clearRect(0, 0, width, height);
     const halo = context.createRadialGradient(width * 0.53, height * 0.46, 8, width * 0.53, height * 0.46, Math.min(width, height) * 0.62);
     halo.addColorStop(0, 'rgba(255,255,255,0.2)');
-    halo.addColorStop(0.18, 'rgba(68,238,228,0.16)');
-    halo.addColorStop(0.48, 'rgba(255,70,174,0.12)');
-    halo.addColorStop(1, 'rgba(255,198,66,0)');
+    halo.addColorStop(0.18, 'rgba(163,208,229,0.13)');
+    halo.addColorStop(0.48, 'rgba(177,165,209,0.07)');
+    halo.addColorStop(1, 'rgba(218,228,237,0)');
     context.fillStyle = halo;
     context.fillRect(0, 0, width, height);
 
@@ -403,11 +403,12 @@ export function initialiseHornTorus() {
     polygons.forEach((polygon) => {
       const facet = facets[polygon.index];
       const interactive = Boolean(facet?.interactive);
-      const colour = COLOURS[((facet?.sourceOrder ?? polygon.index) + polygon.row * 2 + polygon.column) % COLOURS.length];
+      const colour = COLOURS[(polygon.row + Math.floor(polygon.column / 3)) % COLOURS.length];
       const brightness = (polygon.brightness + 0.25) / 1.25;
       const luminance = 30 + brightness * 43;
-      const lightLevel = 0.62 + brightness * 0.38;
-      const [red, green, blue] = colour.map((channel) => Math.round(channel * lightLevel));
+      const lightLevel = 0.28 + brightness * 0.58;
+      const reflection = Math.pow(brightness, 12) * 95;
+      const [red, green, blue] = colour.map((channel) => Math.min(255, Math.round(channel * lightLevel + reflection)));
       const selected = interactive && polygon.index === state.selected;
       const hovered = interactive && polygon.index === state.hovered;
 

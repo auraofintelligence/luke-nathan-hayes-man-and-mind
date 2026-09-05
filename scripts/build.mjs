@@ -17,7 +17,7 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const assetVersion = '20260905a';
+const assetVersion = '20260905-luminous';
 const sourceIconPaths = {
   U01: 'assets/favicons/u01.ico',
   U02: 'assets/favicons/u02.png',
@@ -676,6 +676,7 @@ function renderPage(page, index) {
   <link rel="stylesheet" href="styles/base.css?v=${assetVersion}">
   <link rel="stylesheet" href="styles/components.css?v=${assetVersion}">
   <link rel="stylesheet" href="styles/motion.css?v=${assetVersion}">
+  <link rel="stylesheet" href="styles/luminous.css?v=${assetVersion}">
   ${personSchema}
 </head>
 <body data-page="${escapeHtml(page.id)}" data-theme="${escapeHtml(page.theme)}">
