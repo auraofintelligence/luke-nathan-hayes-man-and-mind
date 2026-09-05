@@ -17,7 +17,7 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const assetVersion = '20260905-prismatic';
+const assetVersion = '20260905-my-voice';
 const sourceIconPaths = {
   U01: 'assets/favicons/u01.ico',
   U02: 'assets/favicons/u02.png',
@@ -97,11 +97,11 @@ const heldSourceCount = sources.length - publicLinkCount;
 await writeFile(resolve(root, 'sources/register.json'), `${JSON.stringify(sources, null, 2)}\n`, 'utf8');
 
 const facetStory = (source) => {
-  const note = (source.notes || 'A thread in Luke\'s working archive').replace(/[.!?]?$/, '.');
+  const note = (source.notes || 'A source from my archive').replace(/[.!?]?$/, '.');
   if (source.availability === 'public-link') return `${note} Follow it into the live work.`;
-  if (source.availability === 'published-source') return `${note} Luke chose to show this source here.`;
-  if (source.availability === 'local-reviewed-candidate') return `${note} The original is on this laptop and its place in the story is public, while the complete file stays in Luke\'s working archive.`;
-  return `${note} It belongs to Luke\'s wider archive, but the original file was not on this laptop for this build.`;
+  if (source.availability === 'published-source') return `${note} You can open the source here.`;
+  if (source.availability === 'local-reviewed-candidate') return `${note} I have the original locally; the complete file is not published here.`;
+  return `${note} I still need to locate the original in my wider archive.`;
 };
 
 const facetStride = 17;
@@ -412,29 +412,6 @@ function renderIdentityPanel(pageId) {
   </section>`;
 }
 
-function renderControversies(pageId) {
-  const items = controversies.filter((item) => item.page === pageId);
-  if (!items.length) return '';
-  return `
-  <section class="section">
-    <div class="page-shell">
-      <div class="section-heading">
-        <h2>Questions with their sleeves rolled up</h2>
-        <p>These ideas are allowed to be bold, funny and unfinished. The story says what exists, what does not, and what might make Luke change his mind.</p>
-      </div>
-      ${items.map((item) => `
-        <article class="controversy-card">
-          <h3>${escapeHtml(item.title)}</h3>
-          <p class="controversy-lede">${escapeHtml(item.idea)} ${escapeHtml(item.meaning)}</p>
-          <p>${escapeHtml(item.care)}</p>
-          <p>${escapeHtml(item.exists)} ${escapeHtml(item.notYet)}</p>
-          <p class="change-mind">${escapeHtml(item.change)}</p>
-          <div class="story-card-footer">${renderSourceButtons(item.sourceIds)}</div>
-        </article>`).join('')}
-    </div>
-  </section>`;
-}
-
 function renderSoundtrack(soundtrack) {
   if (!soundtrack?.title) return '';
   const artwork = soundtrackArtwork[soundtrack.album] || 'assets/favicon.jpg';
@@ -447,7 +424,7 @@ function renderSoundtrack(soundtrack) {
         <h2>${escapeHtml(soundtrack.title)}</h2>
         <p>${escapeHtml(soundtrack.album)}</p>
         <p>${escapeHtml(soundtrack.reason)}</p>
-        <small>The lyric is here now. Luke will add the video when the right recording reaches this laptop.</small>
+        <small>The lyrics are here. I’m gathering the recordings for these video spaces.</small>
         <div class="story-card-footer">${renderSourceButtons(soundtrack.sourceIds)}</div>
       </div>
       <div class="soundtrack-phone" role="img" aria-label="Smartphone placeholder for a future video of ${escapeHtml(soundtrack.title)}">
@@ -472,10 +449,10 @@ function renderSourceRoom(pageId) {
     const archiveSentence = source.availability === 'public-link'
       ? 'This thread already opens onto the public web.'
       : source.availability === 'published-source'
-        ? 'Luke chose to show this source inside this site.'
+        ? 'You can open this source here.'
         : source.availability === 'local-reviewed-candidate'
-          ? 'The original is on this laptop, while the complete file stays in Luke\'s working archive.'
-          : 'The record remains, but the original is somewhere in Luke\'s wider archive rather than on this laptop.';
+          ? 'I have the original locally; the complete file is not published here.'
+          : 'I still need to locate the original in my wider archive.';
     return `
       <article class="source-record" data-source-record data-source-type="${escapeHtml(source.type)}" data-availability="${escapeHtml(source.availability)}">
         <span class="source-id">${escapeHtml(source.id)}</span>
@@ -500,7 +477,7 @@ function renderSourceRoom(pageId) {
     <div class="page-shell">
       <div class="section-heading">
         <h2>The open studio archive</h2>
-        <p>There are ${sources.length} threads here: ${publicLinkCount} paths onto the public web and ${heldSourceCount} documents, images and creative traces from Luke's own archive. Some originals are on this laptop. Some are elsewhere. Nothing missing has been quietly invented to fill the gap.</p>
+        <p>I’ve listed ${sources.length} sources here: ${publicLinkCount} public links and ${heldSourceCount} documents, images and creative records. Some originals are available here; others are still in my archive.</p>
       </div>
       <div class="source-room-controls">
         <label class="visually-hidden" for="source-search">Search the source register</label>
@@ -538,7 +515,7 @@ function renderAudienceDoors(pageId) {
     <div class="page-shell">
       <div class="section-heading">
         <h2>Choose a starting door</h2>
-        <p>Your choice changes the suggested order, not the story and not what you are allowed to see.</p>
+        <p>Choose a suggested route, or explore all the pages through the menu.</p>
       </div>
       <div class="door-grid">${cards}</div>
     </div>
@@ -702,7 +679,6 @@ function renderPage(page, index) {
       ${renderNarrative(pageContent)}
       ${renderSections(pageContent)}
       ${renderIdentityPanel(page.id)}
-      ${renderControversies(page.id)}
       ${renderAudienceDoors(page.id)}
       ${renderSourceRoom(page.id)}
       ${renderSitemap(page.id)}

@@ -3,7 +3,7 @@ let dialogElements;
 
 function loadRegister() {
   if (!registerPromise) {
-    registerPromise = fetch('sources/register.json?v=20260905-prismatic').then((response) => {
+    registerPromise = fetch('sources/register.json?v=20260905-my-voice').then((response) => {
       if (!response.ok) throw new Error('The source register could not be loaded.');
       return response.json();
     });
@@ -19,11 +19,11 @@ function sourceStory(record) {
   if (record.availability === 'public-link') {
     sentences.push('This thread is already public and can be opened from here.');
   } else if (record.availability === 'published-source') {
-    sentences.push('Luke chose to show this source on this site.');
+    sentences.push('You can open this source here.');
   } else if (record.availability === 'local-reviewed-candidate') {
-    sentences.push('The original is on this laptop. Its place in the story is public here, while the complete file stays in Luke\'s working archive.');
+    sentences.push('I have the original locally; the complete file is not published here.');
   } else if (record.availability === 'missing-locally') {
-    sentences.push('This belongs to Luke\'s wider archive, but the original file was not on this laptop for this build.');
+    sentences.push('I still need to locate the original in my wider archive.');
   }
 
   if (record.checkedOn) sentences.push(`The public link was last checked on ${record.checkedOn}.`);
@@ -41,7 +41,7 @@ export async function openSourceRecord(sourceId) {
 
     id.textContent = record.id;
     title.textContent = record.title;
-    body.textContent = record.notes || 'This source is present in Luke\'s working record.';
+    body.textContent = record.notes || 'A source from my archive.';
     context.textContent = sourceStory(record);
 
     const localFilename = record.availability !== 'public-link' ? record.location : '';

@@ -640,7 +640,7 @@ export function initialiseHornTorus() {
   }, { threshold: 0.02 });
   visibilityObserver.observe(canvas);
 
-  fetch('data/facets.json?v=20260905-prismatic')
+  fetch('data/facets.json?v=20260905-my-voice')
     .then((response) => {
       if (!response.ok) throw new Error('The facet map could not be loaded.');
       return response.json();

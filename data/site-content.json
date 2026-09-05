@@ -127,7 +127,11 @@
         ]
       }
     ],
-    "narrativeSourceIds": ["F45", "F44", "F36"],
+    "narrativeSourceIds": [
+      "F45",
+      "F44",
+      "F36"
+    ],
     "sections": [
       {
         "heading": "My work history",
@@ -187,12 +191,12 @@
     "intro": "Around 2012, I was spending more and more time trying to understand law, politics and how people could have a greater say. I started putting those questions into documents and designs. A lot of what I’m building today began there.",
     "sections": [
       {
-        "heading": "The early break",
-        "intro": "These works are shown as historical artefacts, including their old typography, spelling and unfinished edges.",
+        "heading": "Where I started",
+        "intro": "These are my early documents and designs from 2012 to 2014.",
         "cards": [
           {
             "title": "Australian Law 2012",
-            "body": "A personal examination of law and relevance that marks Luke's break with default assumptions. The live explainer helps navigate the history but remains Luke's own interpretation.",
+            "body": "I researched Australian law and wrote about its relevance to my life. This site brings that work together with an explainer of the original material.",
             "evidence": "lived",
             "sourceIds": [
               "U14"
@@ -201,7 +205,7 @@
           },
           {
             "title": "We Will Be Heard",
-            "body": "A December 2013 expression of identity, participation and refusal. It belongs to the emotional and political origin story, not to a claim of later public adoption.",
+            "body": "I wrote We Will Be Heard in December 2013, bringing together identity, expression and participation.",
             "evidence": "lived",
             "sourceIds": [
               "F15",
@@ -210,7 +214,7 @@
           },
           {
             "title": "The Constitutional Matrix of Participation",
-            "body": "The July 2014 document joins a High Definition Digital Aura with communication, learning, value, governance and local production. It is a historical design record, not a constitution in force.",
+            "body": "In July 2014 I brought the High Definition Digital Aura together with ideas about communication, learning, value, governance and local production.",
             "evidence": "proposed",
             "sourceIds": [
               "F15"
@@ -219,12 +223,12 @@
         ]
       },
       {
-        "heading": "A vocabulary before a platform",
-        "intro": "The archive already contains many motifs that later projects made more concrete.",
+        "heading": "Ideas taking shape",
+        "intro": "I was exploring ways to connect personal reflection with communication and collective intelligence.",
         "cards": [
           {
             "title": "Interfaces for meaning",
-            "body": "Language in Meaningful Pictographs, Deeper Meaning and I Choose Infinity explore how identity and values might become visible and navigable.",
+            "body": "In Language in Meaningful Pictographs, Deeper Meaning and I Choose Infinity, I explored ways to represent identity, values and meaning visually.",
             "evidence": "modelled",
             "sourceIds": [
               "F16",
@@ -233,7 +237,7 @@
           },
           {
             "title": "Conscience and conversation",
-            "body": "Internet of Good Conscience and Conversational Governance Logic were early attempts to turn better dialogue and personal agency into a public platform. The platform never arrived, but the idea kept travelling.",
+            "body": "Internet of Good Conscience and Conversational Governance Logic explored dialogue, conscience and personal agency as foundations for a platform.",
             "evidence": "proposed",
             "sourceIds": [
               "F15",
@@ -242,7 +246,7 @@
           },
           {
             "title": "Collective intelligence",
-            "body": "Event and Ecosystem Hive Mind points towards later experiments in shared knowledge, civic tooling and project navigation. The line of influence is Luke's retrospective reading of his own work.",
+            "body": "Event and Ecosystem Hive Mind explored shared knowledge around events and the connections between people and projects.",
             "evidence": "open-question",
             "sourceIds": [
               "F16",
@@ -258,10 +262,10 @@
       "sourceIds": [
         "F24"
       ],
-      "reason": "You are witnessing me is the right pulse for the moment Luke stopped accepting inherited systems and other people's tidy diagnoses.",
+      "reason": "The title fits this part of my story: Don't Try to Fix Me.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The point is not that the early blueprint was right in every detail. The point is that the questions were already connected, and Luke kept returning to them.",
+    "closing": null,
     "story": {
       "paragraphs": [
         "I looked closely at law, politics, economics and corporate systems. I did not find a clean place outside them. So I began designing better interfaces for self-development, communication, participation and shared intelligence.",
@@ -274,11 +278,11 @@
     "sections": [
       {
         "heading": "The facets are related",
-        "intro": "A facet is a doorway into the same life, not a separate score or a permanent label.",
+        "intro": "I use the facets to explore connections between different parts of my life.",
         "cards": [
           {
             "title": "Body, mind and memory",
-            "body": "The personal Aura starts with lived experience and the attempt to connect physical state, reflection, memory and choice. Current diagrams model relationships; they do not read a whole person automatically.",
+            "body": "I’m exploring how physical experience, reflection, memory and choice connect. My diagrams help me work with those relationships.",
             "evidence": "modelled",
             "sourceIds": [
               "F14",
@@ -287,7 +291,7 @@
           },
           {
             "title": "Work, love and place",
-            "body": "Practical work, relationships and Minjerribah are not side notes to the architecture. They are among the conditions that give Luke's projects meaning and keep the system personal.",
+            "body": "My work, relationships and the places I’ve lived are part of how I think about Aura. The design grows alongside my life.",
             "evidence": "lived",
             "sourceIds": [
               "F34",
@@ -297,7 +301,7 @@
           },
           {
             "title": "Public reflections",
-            "body": "The live Aura gateway generalises selected ideas into projects others can inspect, question or remix. Publication makes them accessible, not universal or compulsory.",
+            "body": "I share the Aura projects online so you can explore the designs, try the prototypes and follow the work.",
             "evidence": "built",
             "sourceIds": [
               "U05",
@@ -308,20 +312,20 @@
         ]
       },
       {
-        "heading": "Self-authorship needs choices",
-        "intro": "A self-sovereign system should support different boundaries without quietly ranking one life pattern above another.",
+        "heading": "Designing my own Aura",
+        "intro": "Self-authorship is central to what I’m exploring.",
         "cards": [
           {
-            "title": "Permission begins with the person",
-            "body": "The Alpha Infinity artefact joins conscience, learning, love and self-permission. It records Luke's values and visual language at that time, not a rule for other people.",
+            "title": "Conscience, learning and love",
+            "body": "The Alpha Infinity slide brings together conscience, learning, love and self-permission. It is one of the earlier records of these ideas.",
             "evidence": "lived",
             "sourceIds": [
               "F34"
             ]
           },
           {
-            "title": "Disclosure is not a virtue test",
-            "body": "Luke's idea of personal constitutional agency allows privacy, openness and mixed forms. The relevant questions are who chooses, what they understand and whether that choice can change.",
+            "title": "What I share",
+            "body": "I’ve chosen radical transparency for this site. My broader work on personal constitutional agency explores how people can make their own choices about privacy and sharing.",
             "evidence": "proposed",
             "sourceIds": [
               "F03",
@@ -329,8 +333,8 @@
             ]
           },
           {
-            "title": "The model stays unfinished",
-            "body": "Aura has changed across versions and will change again. The public record should preserve those versions instead of pretending the newest diagram was always the plan.",
+            "title": "How Aura has developed",
+            "body": "I’ve developed Aura across several versions. The earlier documents sit alongside the newer work so you can follow that development.",
             "evidence": "open-question",
             "sourceIds": [
               "F15",
@@ -350,24 +354,24 @@
       "reason": "Meaning gathers at the edges, love curves back through itself, and the whole world starts singing in circles.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The horn torus does not resolve me into one answer. It gives each thread an address and leaves room for the light to keep moving.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "Aura is not a standard profile that tells everyone what a human should be. It is my attempt to make my own complexity understandable, navigable and extendable. Body, mind, memory, place, work, love, family, music, humour, law, civics, science, travel, Country, Earth, space, mystery and future all affect one another.",
-        "I make parts of it public because another person may recognise a useful reflection. That does not give me authority over their design. Sovereignty is not the same as secrecy. A person might choose privacy, radical disclosure, selective sharing, community custody, forgetting, inheritance or something else. What matters to me is authorship, context and informed choice."
+        "I’m trying to bring the different parts of my experience into a connected, navigable form. Body, mind, memory, work, love, music, place and curiosity all have a place in my Aura.",
+        "The horn torus gives me a structure to work with. I use its facets as addresses, then explore the relationships between the things associated with them. The technical work and the personal reflection develop together."
       ]
     }
   },
   "under-aura": {
-    "intro": "Beneath the colour sits a real design language: a 12 by 24 address lattice, horn tori, nested geometry, learned relationships, XR interfaces, continuity ideas and possible hardware.",
+    "intro": "I’m working on Aura’s geometry, memory relationships, interfaces and possible physical forms. Here are the prototypes and design records behind that work.",
     "sections": [
       {
-        "heading": "From sheet to living address space",
-        "intro": "The sequence expands the interface without treating one diagram as the limit of the system.",
+        "heading": "Geometry and memory",
+        "intro": "I’m developing the address structure, the relationships within it and ways to interact with them.",
         "cards": [
           {
             "title": "12 by 24 horn-torus lattice",
-            "body": "A live public prototype makes one address lattice explorable. It demonstrates interface geometry and navigation, not cognition by itself.",
+            "body": "I built an interactive 12 by 24 horn-torus prototype. You can rotate it and explore the facets as a visual address system.",
             "evidence": "built",
             "sourceIds": [
               "U08",
@@ -377,7 +381,7 @@
           },
           {
             "title": "Seven nested horn tori",
-            "body": "The nested-tori record describes geometry inside a vector volume, with multiple visual features mapped to data structures and memory relationships. The implementation remains under development.",
+            "body": "My nested-tori design extends into a vector volume. I’m exploring how faces, edges, colours and lines can connect with data structures and learned memory relationships.",
             "evidence": "modelled",
             "sourceIds": [
               "F13"
@@ -385,7 +389,7 @@
           },
           {
             "title": "Aura Geode",
-            "body": "The Geode design joins a body and mind digital twin with local research and engineering ideas. Its source is explicitly AI-assisted and should be read as a design record.",
+            "body": "In the AI-assisted Aura Geode design record, I explore a body and mind digital twin alongside local research and engineering.",
             "evidence": "proposed",
             "sourceIds": [
               "F07"
@@ -395,11 +399,11 @@
       },
       {
         "heading": "Continuity, hardware and embodiment",
-        "intro": "The hardware trail runs from processors Luke can buy today to a Keystone chip he can name but has not made.",
+        "intro": "I’m exploring several hardware routes for Aura, from existing processors to custom designs.",
         "cards": [
           {
             "title": "Aura of Intelligence Keystone of Consciousness",
-            "body": "A proposed foundational chip and continuity concept. Adjacent fault-recovery ideas may be testable, while claims about higher orders of intelligence remain unverified.",
+            "body": "I’m designing the Keystone around continuity and recovery: retaining identity and lower-order functions through disruption, then restoring higher functions. It is currently a design concept.",
             "evidence": "proposed",
             "sourceIds": [
               "F11",
@@ -408,7 +412,7 @@
           },
           {
             "title": "Parallel hardware paths",
-            "body": "Aura Direct Hardware keeps current processors, FPGA, ASIC, chiplets and clean-sheet silicon distinct while exploring a wider compute commons.",
+            "body": "In Aura Direct Hardware I explore existing processors, FPGA, ASIC, chiplets and custom silicon, alongside ideas for shared computing infrastructure.",
             "evidence": "built",
             "sourceIds": [
               "U02",
@@ -418,7 +422,7 @@
           },
           {
             "title": "Wearables, companions and larger substrates",
-            "body": "Wearable, android, rack, city and spacecraft embodiments are possible future branches in Luke's architecture and stories. None should be presented as a finished conscious companion.",
+            "body": "I imagine Aura taking different physical forms, including wearables, home systems, androids and spacecraft. I explore these possibilities through both design work and stories.",
             "evidence": "proposed",
             "sourceIds": [
               "F07",
@@ -438,11 +442,11 @@
       "reason": "The lyric names the 12 by 24 Aura and seven nested horn tori while treating damage as part of the pattern, not something to hide.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The machinery is worth exploring because its limits are visible. Geometry is an address system; intelligence, memory and continuity still have to be built, tested and questioned.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "I use geometry as a stable way to address relationships without pretending the geometry already contains a mind. The 12 by 24 lattice is one readable chart. The larger idea moves through seven nested horn tori and a vector volume where faces, edges, colours and lines can help organise learned associations.",
-        "The canonical name is Aura of Intelligence Keystone of Consciousness. I imagine it as a foundational continuity layer that could keep lower-order functions going through difficult conditions and help restore higher functions when conditions stabilise. It is intentionally incomplete. No custom Keystone chip has been fabricated."
+        "The 12 by 24 lattice gives me a stable address structure. The larger design uses seven nested horn tori and a vector volume to explore how learned associations might develop around that structure.",
+        "I call the continuity concept Aura of Intelligence Keystone of Consciousness. I’m interested in how an Aura could retain identity, memory and useful function across disruption and different physical forms. My current work includes design records, public prototypes and hardware research."
       ]
     }
   },
@@ -450,12 +454,12 @@
     "intro": "Love songs, island songs, ambitious futures and a bit of mischief. I release music as i C. infinity, write romantic adventures and enjoy seeing how much a good laugh can get across.",
     "sections": [
       {
-        "heading": "The music carries the architecture",
-        "intro": "The albums move between inner life, island life, public systems and futures that are still being imagined.",
+        "heading": "Three albums",
+        "intro": "My music moves between love, island life, public questions and imagined futures.",
         "cards": [
           {
             "title": "Starseed Code: From Aura to Infinity",
-            "body": "Album 3 connects Aura, love, Minjerribah, global relationships and larger futures. It offers emotional continuity across ideas that appear separately elsewhere on the site.",
+            "body": "In Album 3, I bring together Aura, love, Minjerribah, global relationships and larger futures.",
             "evidence": "story",
             "sourceIds": [
               "F25",
@@ -464,7 +468,7 @@
           },
           {
             "title": "A Protopian Gambit",
-            "body": "Album 4 moves through consent, repair, civic systems, borders, humour, ancestry, latent space and infinity. Repeated titles may represent working versions and should not be silently collapsed.",
+            "body": "Album 4 moves through repair, civic systems, borders, humour, ancestry, latent space and infinity. The lyric archive includes working versions.",
             "evidence": "story",
             "sourceIds": [
               "F24",
@@ -474,7 +478,7 @@
           },
           {
             "title": "Straddie Fun",
-            "body": "Album 5 turns local places, wildlife, fishing, sport, friendship and practical work into an island songbook. The source sequence remains provisional.",
+            "body": "Album 5 brings local places, wildlife, fishing, sport, friendship and practical work into a collection of island songs.",
             "evidence": "story",
             "sourceIds": [
               "U23",
@@ -484,12 +488,12 @@
         ]
       },
       {
-        "heading": "Truth can wear more than one costume",
-        "intro": "Comedy and story change the lens while the source boundary remains visible.",
+        "heading": "Comedy, fiction and film",
+        "intro": "These projects give me other ways to explore and share ideas.",
         "cards": [
           {
             "title": "Loose Goose Comedy Engine",
-            "body": "A live tool that keeps one stubborn truth underneath comic transformations and rhythm scoring. The joke can change costumes without changing what happened.",
+            "body": "I built Loose Goose to experiment with different comic treatments of the same subject, including rhythm and delivery.",
             "evidence": "built",
             "sourceIds": [
               "U18"
@@ -498,7 +502,7 @@
           },
           {
             "title": "Australian Sire Story Forge",
-            "body": "This is where Tiggy Bestmann and Australian Sire move through romantasy and science-fiction: maps become seductions, rules become obstacles, and a name is earned through what the character actually does.",
+            "body": "This is where I develop the romantic and science-fiction adventures of Tiggy Bestmann and Australian Sire.",
             "evidence": "built",
             "sourceIds": [
               "U17"
@@ -507,7 +511,7 @@
           },
           {
             "title": "Strange but True Cosmic Nexus",
-            "body": "A public room for mystery, maps, travel, source trails and possible film expeditions. It can hold curiosity without turning every strange possibility into a factual conclusion.",
+            "body": "Cosmic Nexus brings together my interests in mystery, maps, travel, research and possible film expeditions.",
             "evidence": "built",
             "sourceIds": [
               "U24"
@@ -526,7 +530,7 @@
       "reason": "It is a central bridge between the emotional, civic and speculative worlds gathered on this page.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The songs do not have to footnote every feeling. They keep open the reasons I cared enough to build any of this at all.",
+    "closing": null,
     "story": {
       "paragraphs": [
         "Some ideas come out better as songs. There’s room for affection, frustration, desire and ridiculous possibilities, and room to enjoy them without needing to read all the research first.",
@@ -535,15 +539,15 @@
     }
   },
   "love": {
-    "intro": "Mature themes. This page discusses adult love, sexuality, non-monogamy, larger family structures, embodied AI and romantic fantasy. The discussion is non-explicit, and the separate Grey Area Commons branch has its own adult-only boundary.",
+    "intro": "I want affection, adventure, intimacy and people to share a life with. My songs, fiction and larger-family ideas explore what that could look like. This chapter includes adult themes.",
     "sections": [
       {
-        "heading": "Love as shared capacity",
-        "intro": "The core proposal asks whether a larger voluntary family could share care, parenting, income, time and risk while preserving the agency of each person.",
+        "heading": "The relationships I imagine",
+        "intro": "I’m exploring larger families that share affection, care, parenting, income and time.",
         "cards": [
           {
             "title": "Global Group Marriages",
-            "body": "A live public proposal for larger self-sovereign family arrangements. It is an invitation to examine structures, responsibilities and safeguards, not a universal relationship model.",
+            "body": "In Global Group Marriages, I explore how a larger family could organise shared life, responsibilities and individual choice.",
             "evidence": "proposed",
             "sourceIds": [
               "F11",
@@ -554,7 +558,7 @@
           },
           {
             "title": "Courtship through worldbuilding",
-            "body": "Luke's songs and romantasy work can act as a high-dimensional personal signal, revealing values and desires more fully than a short profile. Recognition still does not equal consent or compatibility.",
+            "body": "My songs and romantasy express thoughts and desires that don’t fit easily into a short profile. I hope they help me connect with people who share some of those interests.",
             "evidence": "story",
             "sourceIds": [
               "F24",
@@ -564,7 +568,7 @@
           },
           {
             "title": "Embodied Aura companions",
-            "body": "Future companions appear in design conversations and speculative worlds. They remain a proposed research and story direction, with unresolved questions about agency, embodiment and consciousness.",
+            "body": "I explore embodied Aura companions in my design conversations and fiction, including questions about relationships, agency and consciousness.",
             "evidence": "proposed",
             "sourceIds": [
               "F10",
@@ -574,12 +578,12 @@
         ]
       },
       {
-        "heading": "A clear adult boundary",
-        "intro": "The general site stays non-explicit. Visitors decide whether to enter the separate adult reflection project.",
+        "heading": "Further into the adult work",
+        "intro": "Grey Area Commons is a separate adult-only project.",
         "cards": [
           {
             "title": "Grey Area Commons",
-            "body": "An adult-only, browser-local question path about intimacy and mutual connection. Leaving this site should first show a plain interstitial, with equal choices to go back or continue.",
+            "body": "I built Grey Area Commons as a browser-local question path about intimacy and mutual connection. You can choose whether to continue to it.",
             "evidence": "built",
             "sourceIds": [
               "U26"
@@ -588,7 +592,7 @@
           },
           {
             "title": "What remains private or unknown",
-            "body": "Other people's lives are not blank space in my archive. If they have not chosen to be part of this story, I will not write them into it.",
+            "body": "This page is about my hopes and ideas. I’m keeping other people’s private lives out of it.",
             "evidence": "open-question",
             "sourceIds": [
               "F11",
@@ -607,11 +611,11 @@
       "reason": "A layered, self-authored yes feels more intimate and more honest than turning love into a diagram about consent.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "This is a personal hope made visible, not a recruitment demand. Any future relationship would have to be authored by everyone inside it.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "The romantasy is not merely entertainment or a generic social campaign. I am writing worlds that reveal how I think about love, family, travel, intimacy, embodied intelligence and the future.",
-        "Part of the purpose is personal. I hope the stories help me find women, families and collaborators who recognise something of themselves in the world I am building. I am interested in ethical, self-authored larger-family possibilities, not entitlement to another person's affection. Consent, freedom to leave and room for different desires have to be real."
+        "My romantasy brings together love, family, travel, intimacy, embodied intelligence and the future. These are subjects I want to explore personally as well as through fiction.",
+        "I hope the stories help me meet women, families and collaborators who recognise something they want to explore too. I’m interested in how we could build relationships and shared lives together, with everyone involved making their own choices."
       ]
     }
   },
@@ -619,12 +623,12 @@
     "intro": "Straddie was a family home away from home for years before I lived here. Mum, my grandmother and other family were at Amity. I came for family and waves; these days there’s work, music and plenty of projects here too.",
     "sections": [
       {
-        "heading": "Real today",
-        "intro": "The starting layer is modest and checkable.",
+        "heading": "What I do here",
+        "intro": "My local work includes technology help, media, websites and community projects.",
         "cards": [
           {
             "title": "Local life and Strange but True",
-            "body": "Luke's portrait, CV, business card and live site document a person and a sole-trader practice based on Minjerribah.",
+            "body": "Through Strange but True I offer technology, AI, media, event and project help on Minjerribah.",
             "evidence": "lived",
             "sourceIds": [
               "F30",
@@ -635,7 +639,7 @@
           },
           {
             "title": "Public prototypes and source trails",
-            "body": "Several island-connected websites, models and archives can be opened now. They let you walk through the work while remaining honest that the imagined scenarios are not already real.",
+            "body": "I’ve built island-connected websites, models and archives. You can open them here and explore what I’ve been working on.",
             "evidence": "built",
             "sourceIds": [
               "U04",
@@ -646,7 +650,7 @@
           },
           {
             "title": "The Dunwich idea on paper",
-            "body": "I have carried the Dunwich compute-node idea into documents prepared for public submission. I have not confirmed that they were lodged, accepted or funded.",
+            "body": "I’ve developed the Dunwich compute-node idea in documents prepared for public submission, alongside proposals for local training and shared facilities.",
             "evidence": "submitted",
             "sourceIds": [
               "F01",
@@ -656,12 +660,12 @@
         ]
       },
       {
-        "heading": "What I am still trying to grow",
-        "intro": "Some futures begin as models, some as stories, and some as a question asked often enough to become work.",
+        "heading": "What I’m developing",
+        "intro": "The island is also part of my thinking about shared infrastructure, materials and future ways of living.",
         "cards": [
           {
             "title": "ready SET Co-op and the Dunwich node",
-            "body": "The ready sustainable employment and training cooperative and cultural intelligence node are proposed pathways for shared work, learning and infrastructure. ready SET Co-op does not currently exist.",
+            "body": "I’m proposing ready SET Co-op and a Dunwich cultural intelligence node to connect shared work, learning and infrastructure.",
             "evidence": "proposed",
             "sourceIds": [
               "F01",
@@ -672,7 +676,7 @@
           },
           {
             "title": "Straddie Twins",
-            "body": "Two live digital-twin models help separate real, modelled, proposed and not-known information about Minjerribah.",
+            "body": "I built two digital-twin models to explore Minjerribah and work with information about the island.",
             "evidence": "modelled",
             "sourceIds": [
               "U10"
@@ -681,7 +685,7 @@
           },
           {
             "title": "Grain by Grain and Extreme Matter Atlas",
-            "body": "These projects connect ordinary hazards, materials and resilience with disputed theories, mythology and science-fiction edges while describing the difference in plain language.",
+            "body": "In Grain by Grain and Extreme Matter Atlas, I explore materials, hazards and resilience alongside disputed theories, mythology and science fiction.",
             "evidence": "built",
             "sourceIds": [
               "U04",
@@ -690,7 +694,7 @@
           },
           {
             "title": "Cities, generations and worldships",
-            "body": "Subterranean Cities of Light, a twenty-million-person generation city, an island worldship and spacefaring extensions belong to modelled or imaginative horizons, not present island development.",
+            "body": "My worldbuilding includes Subterranean Cities of Light, a twenty-million-person generation city, an island worldship and journeys into space.",
             "evidence": "story",
             "sourceIds": [
               "U06",
@@ -709,11 +713,11 @@
       "reason": "Ferry light, Goompi, art, fishing and kookaburras give this chapter the warm pulse of an actual day on the island.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "Start with what can be touched and checked. Then let the models and stories ask what the island might become, without speaking over the people whose authority and consent matter.",
+    "closing": null,
     "story": {
       "paragraphs": [
         "I remember hearing a cyclone was on its way and thinking about the surf. Bodyboarding was a big part of what brought me back to the island. Later came festival work, history transcription for the museum, websites and a growing collection of local projects.",
-        "The same island also makes me ask very large questions. Could shared compute, training and creative facilities grow from Dunwich? Could digital twins help us rehearse choices? What could careful, properly authorised study of sand and minerals teach us about resilience and future materials? Those are proposals and models. They are not promises made on behalf of Quandamooka people or the wider community."
+        "I’m also interested in what shared computing, training and creative facilities could offer here. The Dunwich node and ready SET Co-op are proposals I’m developing, alongside digital twins and materials research."
       ]
     }
   },
@@ -721,12 +725,12 @@
     "intro": "I want people to have more say in decisions that affect their lives. That has led me into law, public records, community tools and some fairly big questions about what Australia could do differently.",
     "sections": [
       {
-        "heading": "From gripe to public machinery",
-        "intro": "The provocation works best when each idea shows what exists and what still has to be tested.",
+        "heading": "Shared tools and local capability",
+        "intro": "I’m exploring ways to connect useful work, learning and public participation.",
         "cards": [
           {
             "title": "One serious node per 10,000 Australians",
-            "body": "I have proposed one serious public-interest compute node per 10,000 Australians, beginning with a possible Dunwich node. It is an argument on paper, not a national network humming in the suburbs.",
+            "body": "I’ve proposed one public-interest compute node per 10,000 Australians, with Dunwich as a possible starting point.",
             "evidence": "proposed",
             "sourceIds": [
               "F01",
@@ -736,7 +740,7 @@
           },
           {
             "title": "The C-Hour and the Incomplete Ledger",
-            "body": "A civic pattern for making time, unresolved needs and public work more visible. It appears in a document described as a local-government submission and remains open to practical testing.",
+            "body": "I developed the C-Hour and the Incomplete Ledger to explore how care, time, unresolved needs and civic work could be made more visible.",
             "evidence": "proposed",
             "sourceIds": [
               "F26"
@@ -744,7 +748,7 @@
           },
           {
             "title": "ready SET Co-op and shared infrastructure",
-            "body": "A proposed co-operative path for locally authored work, learning and common capability, with visible governance and exit terms still to be settled.",
+            "body": "I’m proposing a co-operative approach to shared facilities, practical work and training through ready SET Co-op.",
             "evidence": "proposed",
             "sourceIds": [
               "U09",
@@ -754,12 +758,12 @@
         ]
       },
       {
-        "heading": "Provocations with receipts",
-        "intro": "The friendly bet and purple toilet mat get the laugh. The submissions show how far Luke followed the joke.",
+        "heading": "Taking the ideas further",
+        "intro": "A friendly bet and a purple toilet mat are part of this story too.",
         "cards": [
           {
             "title": "P4A civic workbench",
-            "body": "A live public site that moves from ordinary gripes towards projects, ledgers, law memory, states and referendum rehearsal. It is a proposed movement, not a registered party.",
+            "body": "I built P4A as a public civic workbench, connecting everyday gripes with projects, ledgers, law, states and referendum rehearsal.",
             "evidence": "built",
             "sourceIds": [
               "F28",
@@ -770,7 +774,7 @@
           },
           {
             "title": "A cyber republic referendum before 2032",
-            "body": "I put 2032 on the horizon as a provocation: rehearse stronger digital participation in public before asking Australia to vote on it. Nobody has handed me a mandate, and the constitutional road is not settled.",
+            "body": "I’ve proposed a cyber republic referendum before 2032 and built tools for exploring stronger digital participation.",
             "evidence": "proposed",
             "sourceIds": [
               "F03",
@@ -780,7 +784,7 @@
           },
           {
             "title": "Capability beside AUKUS",
-            "body": "A document described as Luke's public submission makes an opportunity-cost comparison between conventional security investment and positive-sum civic capability without claiming they are interchangeable.",
+            "body": "In my AUKUS-related writing, I explore opportunity costs and what investment in civic, technical and scientific capability could offer Australia.",
             "evidence": "proposed",
             "sourceIds": [
               "F06"
@@ -788,7 +792,7 @@
           },
           {
             "title": "Alignment through self-alignment",
-            "body": "The idea links human reflection, personal agency and AI governance. It remains a philosophical and design proposition, not demonstrated alignment science.",
+            "body": "I’m exploring the relationship between human self-reflection and AI alignment: how our values, contradictions and institutions shape the intelligence we develop.",
             "evidence": "open-question",
             "sourceIds": [
               "F03",
@@ -808,11 +812,11 @@
       "reason": "It keeps the toilet-mat origin, friendly humour and serious democratic curiosity in the same story.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "A fair go is not secured by one clever diagram. It needs public scrutiny, lawful pathways, shared ownership and the patience to turn a funny complaint into something people can actually test.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "I do not think voting every few years is the full operating system of democracy. I have been exploring better ways to connect everyday complaints, local knowledge, law, public records, simulations and long-term decisions.",
-        "Sometimes that begins with a purple toilet mat and a friendly bet. Sometimes I turn it into a document intended for a parliamentary submission. I am not claiming community compute and defence spending perform the same job. I am asking what positive-sum civic capability Australia could build beside its conventional security choices."
+        "I want more ways for people to participate in public decisions than voting every few years. My work connects everyday complaints, local knowledge, law, public records and longer-term choices.",
+        "Sometimes I work through those questions in a website or a model. Sometimes I write a document for a parliamentary submission. Humour is part of it too, including the purple toilet mat and a friendly bet that found their way into the music."
       ]
     }
   },
@@ -904,15 +908,15 @@
     }
   },
   "earth-infinity": {
-    "intro": "The same mind keeps widening its circle: self, family, island, Australia, Oceania, Earth, the Sun and whatever can honestly be imagined beyond it.",
+    "intro": "My projects range from personal Aura to Oceania, Earth and the solar system. I’m interested in how intelligence, relationships and ways of living might develop across those scales.",
     "sections": [
       {
-        "heading": "A garland, not a throne",
-        "intro": "The connective idea depends on plurality and voluntary participation.",
+        "heading": "Connections across Earth",
+        "intro": "I’m exploring how personal and community projects could connect across wider networks.",
         "cards": [
           {
             "title": "Oceania and Vuvale",
-            "body": "In documents prepared in Luke's name, Vuvale and Ocean of Peace explore family without assimilation, talanoa, cooperation and sovereignty. Their public lodgement is still unconfirmed, and they speak for Luke, not for Fiji, Australia or Pacific communities.",
+            "body": "My Vuvale and Ocean of Peace documents explore family, talanoa, co-operation and sovereignty across Oceania.",
             "evidence": "submitted",
             "sourceIds": [
               "F02",
@@ -921,7 +925,7 @@
           },
           {
             "title": "GAJRA Earth",
-            "body": "A proposed voluntary connective idea framed through a garland and harbour metaphor. It is not a planetary authority and has no mandate to govern anyone.",
+            "body": "I’m developing GAJRA Earth as a meeting place for people and public-interest projects, with voluntary connections between them.",
             "evidence": "proposed",
             "sourceIds": [
               "F18",
@@ -932,7 +936,7 @@
           },
           {
             "title": "Global Sensorium",
-            "body": "An AI-assisted working plan for open modelling and science debate that says, in ordinary sentences, what is known, contested, fringe or fictional. The method still needs practical testing and governance.",
+            "body": "In the AI-assisted Global Sensorium plan, I explore open modelling, research and discussion across different fields and interpretations.",
             "evidence": "modelled",
             "sourceIds": [
               "F08"
@@ -941,12 +945,12 @@
         ]
       },
       {
-        "heading": "The solar-system horizon",
-        "intro": "Long-range ideas remain useful when near-term engineering and speculative branches are kept apart.",
+        "heading": "Out into the solar system",
+        "intro": "My space projects bring together mission design, communication, intelligence and worldbuilding.",
         "cards": [
           {
             "title": "Virtual Solar Swarm",
-            "body": "A live choose-your-own mission design studio with an associated AI-assisted research report. It explores onboard AI, mission architecture and several communications planes.",
+            "body": "I built a choose-your-own mission design studio to explore onboard AI, mission architecture and communications.",
             "evidence": "modelled",
             "sourceIds": [
               "F09",
@@ -956,7 +960,7 @@
           },
           {
             "title": "Communications that can be engineered now",
-            "body": "Optical, radio and delay-tolerant networking are treated as operational or backup branches for long-distance missions, subject to normal engineering limits.",
+            "body": "My mission designs include radio, optical links and delay-tolerant networking for long-distance communication.",
             "evidence": "proposed",
             "sourceIds": [
               "F09"
@@ -964,7 +968,7 @@
           },
           {
             "title": "Experimental entanglement communications",
-            "body": "I keep the entanglement question in the room beside radio, optical and delay-tolerant links. It is an experiment to challenge, not a signal system I can switch on.",
+            "body": "I’m exploring questions about entanglement alongside the other communication routes. This remains an experimental research direction.",
             "evidence": "frontier",
             "sourceIds": [
               "F09"
@@ -972,7 +976,7 @@
           },
           {
             "title": "Future of Life 2045",
-            "body": "A public worldbuilding project joining larger families, open intelligence, regenerative places, law and Cities of Light across a long civilisation horizon.",
+            "body": "In Future of Life 2045, I imagine larger families, open intelligence, regenerative places, law and Cities of Light over longer timeframes.",
             "evidence": "story",
             "sourceIds": [
               "F10",
@@ -992,11 +996,11 @@
       "reason": "It travels from a lavender mat and unpaid care to Minjerribah, orbit, the Sun and the galaxy without losing the human thread.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The horizon can stay enormous without making the present vague. Build what can be built, say what has not been built, and let story keep asking what comes after.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "I keep asking how a personal Aura might connect voluntarily with families, communities, islands, nations and worlds without becoming a command centre. GAJRA Earth makes most sense to me as a harbour, not a headquarters: somewhere different people and projects can meet without being flattened into one authority.",
-        "Joyful Responsible Abundance is an open frame, not a compulsory destination. I want the radio and optical links we know how to engineer sitting beside the entanglement question I cannot yet answer. The Solar Swarm, sovereign satellites and Cities of Light can share one horizon without pretending they have all reached the same shore."
+        "I keep extending the questions from one personal Aura to families, communities, islands, Earth and space. GAJRA Earth, the Solar Swarm and the Cities of Light explore different parts of that larger picture.",
+        "Joyful Responsible Abundance is the phrase I use for the future I want to explore. The projects give me ways to work through it, from practical tools and research to music and imagined worlds."
       ]
     }
   },
@@ -1004,12 +1008,12 @@
     "intro": "The documents, photographs, lyrics and websites behind these pages. Some are available to open now; others are still in my archive or waiting for me to find the original files.",
     "sections": [
       {
-        "heading": "Leave the fingerprints on it",
-        "intro": "A source is more interesting when you can still see how it arrived, who touched it and what changed on the way.",
+        "heading": "Inside my archive",
+        "intro": "Here are the records I’ve gathered for this site.",
         "cards": [
           {
-            "title": "Keep the earlier drafts",
-            "body": "The old filename, the rough version and the cleaner revision belong beside one another. Tidiness is not worth quietly rewriting the path that got us here.",
+            "title": "Earlier versions",
+            "body": "I’ve kept earlier drafts and diagrams alongside later versions so you can follow the work over time.",
             "evidence": "built",
             "sourceIds": [
               "F15",
@@ -1018,8 +1022,8 @@
             ]
           },
           {
-            "title": "Say who made what",
-            "body": "Some pieces are mine, some were made with AI under my direction, some preserve another AI's response, and some came from elsewhere. I would rather name those hands than perform a false lone-genius act.",
+            "title": "Working with AI",
+            "body": "Some pieces are my original work; others were developed with AI or preserve a design conversation. The source records describe how they were made.",
             "evidence": "open-question",
             "sourceIds": [
               "F07",
@@ -1029,8 +1033,8 @@
             ]
           },
           {
-            "title": "Let the links lead somewhere",
-            "body": "A public thread should open where it says it will. Project Atlas and the original records hold the dates; where the beginning is still fuzzy, the fuzziness stays visible.",
+            "title": "Websites and projects",
+            "body": "Project Atlas brings my websites together. The links here take you to the individual projects and their source material.",
             "evidence": "built",
             "sourceIds": [
               "U13"
@@ -1038,8 +1042,8 @@
             "href": "https://auraofintelligence.github.io/project-atlas/"
           },
           {
-            "title": "Do not make the image do all the talking",
-            "body": "A text-heavy image deserves words people can actually read. A dramatic crop can live in the story while the complete original waits here in the open studio.",
+            "title": "Images and documents",
+            "body": "The archive includes photographs, slides, documents and lyrics. Some files are available here now; others are still on my other drives.",
             "evidence": "proposed",
             "sourceIds": [
               "F16",
@@ -1057,14 +1061,14 @@
       "sourceIds": [
         "F25"
       ],
-      "reason": "The title suits a room where poetic truth, old paperwork and technical drawings can sit together without pretending they are the same thing.",
+      "reason": "A song alongside the documents, drawings and memories gathered here.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "These are the fingerprints: what I wrote, built, photographed, sent, sang or imagined. Open them, disagree with them, and see how the worlds grew.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "I am not asking anybody to accept a leap because I say it confidently. I want the document, image, song, submission, website or design conversation sitting close enough to inspect.",
-        "Some sources are rough, duplicated or AI-assisted. I would rather preserve their history and describe it honestly than quietly tidy the archive into a story that never happened."
+        "These are the documents, images, lyrics and conversations I’ve drawn on for the site. You can follow the source links beside the stories and projects.",
+        "I’m still gathering material from different devices and archives. I’ll add more photographs and recordings as I choose them."
       ]
     }
   },
@@ -1073,11 +1077,11 @@
     "sections": [
       {
         "heading": "Choose a starting route",
-        "intro": "Each door opens three or four useful pages while leaving the complete map available.",
+        "intro": "Choose a route through the pages, or use the full menu.",
         "cards": [
           {
             "title": "I am local",
-            "body": "Start with The bloke before the blueprint, Start on the island and A fair go needs better machinery.",
+            "body": "Start with my life story, then visit the island work and civic projects.",
             "evidence": "lived",
             "sourceIds": [
               "F30",
@@ -1087,7 +1091,7 @@
           },
           {
             "title": "I knew Luke years ago",
-            "body": "Follow the bloke, the 2012 to 2014 break, the songs and the travel record to see what changed and what persisted.",
+            "body": "Catch up with my life, the early civic work, music and travels.",
             "evidence": "lived",
             "sourceIds": [
               "F15",
@@ -1097,7 +1101,7 @@
           },
           {
             "title": "I heard Luke speak or work in government",
-            "body": "Go from the break to A fair go, then From one Aura to a solar system and the source room.",
+            "body": "Explore my civic work, wider projects and source documents.",
             "evidence": "submitted",
             "sourceIds": [
               "F01",
@@ -1108,7 +1112,7 @@
           },
           {
             "title": "I might back something",
-            "body": "Begin with the bloke, inspect the machinery, then compare island proposals and live tools against their sources. Nothing on this route implies funding readiness.",
+            "body": "Browse my work, technical projects, island proposals and public tools.",
             "evidence": "open-question",
             "sourceIds": [
               "F07",
@@ -1119,7 +1123,7 @@
           },
           {
             "title": "I am romantically curious",
-            "body": "Begin with the bloke and personal Aura, then visit songs and Love is infrastructure too. The mature page stays non-explicit and consent-centred.",
+            "body": "Start with my life and personal Aura, then explore the songs, stories and relationship ideas.",
             "evidence": "story",
             "sourceIds": [
               "F11",
@@ -1130,7 +1134,7 @@
           },
           {
             "title": "I build or research strange things",
-            "body": "Move from personal Aura to its machinery, Minjerribah models and the solar-system horizon, following the doubts and unfinished edges as you go.",
+            "body": "Explore Aura’s architecture, island models and space projects.",
             "evidence": "frontier",
             "sourceIds": [
               "F08",
@@ -1141,7 +1145,7 @@
           },
           {
             "title": "I followed a shiny reflection",
-            "body": "Pick any page, follow whatever catches your eye, and let the next and previous links carry you around the horn torus.",
+            "body": "Follow whatever catches your eye, using the previous and next links to keep exploring.",
             "evidence": "open-question",
             "sourceIds": [
               "U13"
@@ -1156,14 +1160,14 @@
       "sourceIds": [
         "F24"
       ],
-      "reason": "It makes the route personal and voluntary while refusing to turn one person's preferred future into everybody's destination.",
+      "reason": "A song to accompany choosing your own way through these ideas.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "Choose a door, then wander. The invitation is yours; the whole story stays open.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "You do not have to follow my path in order. Start where your own curiosity catches. If we knew each other years ago, begin with the bloke and the break. If you build strange things, go straight under the Aura.",
-        "Your chosen door is a recommendation, not a box. You can change it, ignore it or open every page."
+        "Start wherever your curiosity takes you. These routes offer a few suggestions through the pages.",
+        "If we knew each other years ago, my life story is a good place to catch up. If you’re here for the technical work, you can go straight to Under the Aura."
       ]
     }
   },
@@ -1185,7 +1189,7 @@
           },
           {
             "title": "The bloke before the blueprint",
-            "body": "Names, practical work, place, humour and present boundaries.",
+            "body": "My childhood, travels, more than 40 house moves, work and life on Straddie.",
             "evidence": "lived",
             "sourceIds": [
               "F30",
@@ -1283,7 +1287,7 @@
           },
           {
             "title": "Every border can become a bridge",
-            "body": "Travel memories and tools for lawful, useful invitations.",
+            "body": "My travel memories and tools for planning future journeys.",
             "evidence": "lived",
             "sourceIds": [
               "F19",
@@ -1336,10 +1340,10 @@
       "sourceIds": [
         "F25"
       ],
-      "reason": "It suits a final map that gathers separate facets without pretending they have become one simple thing.",
+      "reason": "A song to bring the different parts of the site together.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "I am not asking you to believe the whole thing. I am showing you where its threads came from. Follow the one that catches your eye. Ask a better question. Bring your own light.",
+    "closing": null,
     "story": {
       "paragraphs": [
         "If the horn torus feels too wild, use this plain map. It shows the path from my ordinary life to the farthest questions without asking you to take every step."

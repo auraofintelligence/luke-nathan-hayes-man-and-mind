@@ -2,49 +2,89 @@
   {
     "id": "local",
     "label": "I am local",
-    "invitation": "Start with the bloke at the market table, then follow the island work and the practical machinery for a fair go.",
-    "pages": ["bloke", "minjerribah", "fair-go", "choose-door"]
+    "invitation": "Start with my life story, then visit the island work and civic projects.",
+    "pages": [
+      "bloke",
+      "minjerribah",
+      "fair-go",
+      "choose-door"
+    ]
   },
   {
     "id": "old-friend",
     "label": "I knew Luke years ago",
-    "invitation": "See the bloke you knew, the break that changed his path, the songs that carried it and the places he travelled next.",
-    "pages": ["bloke", "break", "songs", "every-border"]
+    "invitation": "Catch up with my life, early projects, music and travels.",
+    "pages": [
+      "bloke",
+      "break",
+      "songs",
+      "every-border"
+    ]
   },
   {
     "id": "speaking-attendee",
     "label": "I heard Luke speak",
-    "invitation": "Follow the ideas from their early civic roots to the public proposals, long horizon and source room.",
-    "pages": ["break", "fair-go", "earth-infinity", "sources"]
+    "invitation": "Follow my civic ideas, wider projects and source documents.",
+    "pages": [
+      "break",
+      "fair-go",
+      "earth-infinity",
+      "sources"
+    ]
   },
   {
     "id": "government",
     "label": "I work in government",
-    "invitation": "Begin with the civic machinery, test it against the island proposals and wider horizon, then inspect the sources.",
-    "pages": ["fair-go", "minjerribah", "earth-infinity", "sources"]
+    "invitation": "Explore my civic work, island proposals and supporting documents.",
+    "pages": [
+      "fair-go",
+      "minjerribah",
+      "earth-infinity",
+      "sources"
+    ]
   },
   {
     "id": "backer",
     "label": "I might invest, sponsor or become a patron",
-    "invitation": "Meet the person, inspect the technical architecture, see what is grounded on Minjerribah and check the receipts.",
-    "pages": ["bloke", "under-aura", "minjerribah", "sources"]
+    "invitation": "Meet me, explore the technical work and see the island projects.",
+    "pages": [
+      "bloke",
+      "under-aura",
+      "minjerribah",
+      "sources"
+    ]
   },
   {
     "id": "romantically-curious",
     "label": "I am romantically curious",
-    "invitation": "Meet the human, understand his personal Aura, hear the emotional architecture and enter the non-explicit love story.",
-    "pages": ["bloke", "personal-aura", "songs", "love"]
+    "invitation": "Get to know me through my life story, personal Aura, music and relationship ideas.",
+    "pages": [
+      "bloke",
+      "personal-aura",
+      "songs",
+      "love"
+    ]
   },
   {
     "id": "builder-researcher",
     "label": "I build or research strange things",
-    "invitation": "Explore the personal model, its technical machinery, the island test ground and the frontier beyond Earth.",
-    "pages": ["personal-aura", "under-aura", "minjerribah", "earth-infinity"]
+    "invitation": "Explore Aura, the technical work, island models and projects beyond Earth.",
+    "pages": [
+      "personal-aura",
+      "under-aura",
+      "minjerribah",
+      "earth-infinity"
+    ]
   },
   {
     "id": "shiny-reflection",
     "label": "I simply followed a shiny reflection",
-    "invitation": "Start at the horn torus, let a song or an island colour catch your eye, then choose your own next door.",
-    "pages": ["home", "personal-aura", "songs", "minjerribah"]
+    "invitation": "Start at the horn torus and follow whatever interests you.",
+    "pages": [
+      "home",
+      "personal-aura",
+      "songs",
+      "minjerribah"
+    ]
   }
 ]

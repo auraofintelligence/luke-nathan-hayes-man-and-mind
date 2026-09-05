@@ -32,6 +32,8 @@ for (const requiredSource of ['F24', 'F25', 'F29', 'F37', 'F38', 'U08', 'U17']) 
 const referencedSources = new Set();
 for (const [pageId, pageContent] of Object.entries(content)) {
   if (!pageIds.has(pageId)) addError(`Content exists for unknown page ${pageId}.`);
+  const prose = [pageContent.intro, pageContent.closing, ...(pageContent.story?.paragraphs || []), ...(pageContent.sections || []).flatMap(section => [section.intro, ...(section.cards || []).map(card => card.body)])].filter(Boolean).join(' ');
+  if (/Luke(?:['’]s| wants| will| kept)|his projects|he can name|allowed to be|has to be earned|false lone-genius|not a recruitment demand/i.test(prose)) addError(`${pageId}: editorial or third-person narration has returned.`);
   if ('firstPerson' in pageContent || 'thirdPerson' in pageContent) addError(`${pageId}: discarded split voice remains in content.`);
   if (pageContent.story !== null && (!Array.isArray(pageContent.story?.paragraphs) || !pageContent.story.paragraphs.length)) addError(`${pageId}: story opening must contain paragraphs or be explicitly omitted with null.`);
   for (const section of pageContent.sections || []) {
@@ -148,6 +150,7 @@ for (const page of pages) {
   }
 
   if (!html.includes('<html lang="en-AU">')) addError(`${page.file}: missing Australian language declaration.`);
+  if (/Questions with their sleeves rolled up|These ideas are allowed|earned in silicon|what might make Luke change/i.test(html)) addError(`${page.file}: removed editorial commentary has returned.`);
   const documentIds = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   if (new Set(documentIds).size !== documentIds.length) addError(`${page.file}: duplicate element IDs.`);
   if (!documentIds.includes('story')) addError(`${page.file}: chapter entry has no story destination.`);

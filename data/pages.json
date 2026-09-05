@@ -6,7 +6,7 @@
     "shortTitle": "Home",
     "chapter": "00",
     "theme": "prismatic-horn",
-    "description": "A vivid self-portrait of Luke Nathan Hayes told through one life, a 288-facet horn torus and the worlds connected to it."
+    "description": "I’m Luke. I’ve moved house more than 40 times, worked all sorts of jobs and followed my curiosity overseas. These days I’m on Minjerribah, making music, building things and still asking far too many questions."
   },
   {
     "id": "bloke",
@@ -15,7 +15,7 @@
     "shortTitle": "The bloke",
     "chapter": "01",
     "theme": "warm-sand",
-    "description": "Meet the practical human behind the larger ideas through island life, work, travel, humour and the identities he uses in public."
+    "description": "More than 40 house moves, a lot of different jobs and plenty of reasons to keep exploring. I live at Amity now, but my story starts in Ningi and takes a few trips around the world before it gets here."
   },
   {
     "id": "break",
@@ -24,7 +24,7 @@
     "shortTitle": "The break",
     "chapter": "02",
     "theme": "archive-violet",
-    "description": "Follow the early civic work and the period when Luke stopped accepting inherited systems as the only possible systems."
+    "description": "Around 2012, I was spending more and more time trying to understand law, politics and how people could have a greater say. I started putting those questions into documents and designs. A lot of what I’m building today began there."
   },
   {
     "id": "personal-aura",
@@ -33,7 +33,7 @@
     "shortTitle": "Personal Aura",
     "chapter": "03",
     "theme": "prismatic-aura",
-    "description": "Explore Luke's personal Aura through a horn torus whose facets connect body, mind, place, work, love, music, civics and future."
+    "description": "I want an AI that can learn with me over time, remember what matters and help me make sense of my life. Aura is where I explore how that might work, from the shape of its memory to the relationships it could develop."
   },
   {
     "id": "under-aura",
@@ -42,16 +42,16 @@
     "shortTitle": "Under the Aura",
     "chapter": "04",
     "theme": "torus-cyan",
-    "description": "Look beneath the Aura metaphor at its geometry, memory ideas, digital-twin designs, hardware paths and open engineering questions."
+    "description": "I’m working on Aura’s geometry, memory relationships, interfaces and possible physical forms. Here are the prototypes and design records behind that work."
   },
   {
     "id": "songs",
     "file": "songs-stories-comedy.html",
-    "title": "I sing the system before I build it",
+    "title": "Songs, stories and comedy",
     "shortTitle": "Songs and stories",
     "chapter": "05",
     "theme": "protopian-gold",
-    "description": "Enter the songs, comedy and story worlds Luke uses to feel, test and communicate systems before the technical language catches up."
+    "description": "Love songs, island songs, ambitious futures and a bit of mischief. I release music as i C. infinity, write romantic adventures and enjoy seeing how much a good laugh can get across."
   },
   {
     "id": "love",
@@ -60,7 +60,7 @@
     "shortTitle": "Love and tribe",
     "chapter": "06",
     "theme": "constellation-magenta",
-    "description": "A candid, non-explicit account of love, consent, non-monogamy, larger family possibilities and the personal hopes inside Luke's story worlds."
+    "description": "I want affection, adventure, intimacy and people to share a life with. My songs, fiction and larger-family ideas explore what that could look like. This chapter includes adult themes."
   },
   {
     "id": "minjerribah",
@@ -69,7 +69,7 @@
     "shortTitle": "Minjerribah",
     "chapter": "07",
     "theme": "island-cyan",
-    "description": "Begin on Minjerribah, where Luke's practical work, music, local prototypes and enormous future questions meet."
+    "description": "Straddie was a family home away from home for years before I lived here. Mum, my grandmother and other family were at Amity. I came for family and waves; these days there’s work, music and plenty of projects here too."
   },
   {
     "id": "fair-go",
@@ -78,7 +78,7 @@
     "shortTitle": "A fair go",
     "chapter": "08",
     "theme": "civic-purple",
-    "description": "From a purple toilet mat to civic ledgers and shared compute, explore Luke's proposals for making a fair go more practical."
+    "description": "I want people to have more say in decisions that affect their lives. That has led me into law, public records, community tools and some fairly big questions about what Australia could do differently."
   },
   {
     "id": "every-border",
@@ -87,7 +87,7 @@
     "shortTitle": "Every border",
     "chapter": "09",
     "theme": "saffron-sky",
-    "description": "Travel through India, Nepal and a wider world of invitations, hosts, useful work, art, relationships and cross-border tools."
+    "description": "A year in England, three trips to Thailand, time in New Zealand, and longer stays in India with visits to Nepal. I’ve travelled for work, love and curiosity. There are still plenty of places I want to go."
   },
   {
     "id": "earth-infinity",
@@ -96,7 +96,7 @@
     "shortTitle": "Earth to infinity",
     "chapter": "10",
     "theme": "cosmic-aurora",
-    "description": "Follow Luke's widening path from one personal Aura through Oceania and Earth to the Sun, satellites and the questions beyond them."
+    "description": "My projects range from personal Aura to Oceania, Earth and the solar system. I’m interested in how intelligence, relationships and ways of living might develop across those scales."
   },
   {
     "id": "sources",
@@ -105,7 +105,7 @@
     "shortTitle": "Sources",
     "chapter": "11",
     "theme": "archive-light",
-    "description": "Walk through Luke's open studio of old documents, live links, rough drafts, AI conversations, missing pieces and changing versions."
+    "description": "The documents, photographs, lyrics and websites behind these pages. Some are available to open now; others are still in my archive or waiting for me to find the original files."
   },
   {
     "id": "choose-door",
@@ -114,7 +114,7 @@
     "shortTitle": "Choose your door",
     "chapter": "12",
     "theme": "path-glow",
-    "description": "Choose a short route through the same open story based on what brought you here, without hiding the rest of the site."
+    "description": "Here for the music, curious about Aura, or catching up after a few years? Pick a starting point and I’ll suggest a few pages. You can wander off whenever you like."
   },
   {
     "id": "sitemap",
@@ -123,6 +123,6 @@
     "shortTitle": "Site map",
     "chapter": "13",
     "theme": "constellation-map",
-    "description": "See every chapter and public project link in one clear map of The Mind Behind the Man."
+    "description": "The complete map keeps every chapter, public world, source trail and visitor path visible in one quiet place."
   }
 ]
