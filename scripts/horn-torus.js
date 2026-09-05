@@ -4,6 +4,7 @@ const FACET_COUNT = ROWS * COLUMNS;
 const TAU = Math.PI * 2;
 const MIN_CAMERA_DISTANCE = 4.45;
 const MAX_CAMERA_DISTANCE = 7.8;
+const CONTENT_ROWS = [0, 1, 2, 3, 8, 9, 10, 11];
 const COLOURS = [
   [61, 232, 221],
   [61, 181, 255],
@@ -86,6 +87,134 @@ function distanceBetween(points) {
   return Math.hypot(values[0].x - values[1].x, values[0].y - values[1].y);
 }
 
+function facetCentre(points) {
+  return {
+    x: points.reduce((sum, point) => sum + point.x, 0) / points.length,
+    y: points.reduce((sum, point) => sum + point.y, 0) / points.length
+  };
+}
+
+function pointDistance(a, b) {
+  return Math.hypot(a.x - b.x, a.y - b.y);
+}
+
+function facetFrame(points) {
+  const left = {
+    x: (points[0].x + points[1].x) / 2,
+    y: (points[0].y + points[1].y) / 2
+  };
+  const right = {
+    x: (points[3].x + points[2].x) / 2,
+    y: (points[3].y + points[2].y) / 2
+  };
+  const top = {
+    x: (points[0].x + points[3].x) / 2,
+    y: (points[0].y + points[3].y) / 2
+  };
+  const bottom = {
+    x: (points[1].x + points[2].x) / 2,
+    y: (points[1].y + points[2].y) / 2
+  };
+  let angle = Math.atan2(right.y - left.y, right.x - left.x);
+  if (angle > Math.PI / 2) angle -= Math.PI;
+  if (angle < -Math.PI / 2) angle += Math.PI;
+  return {
+    width: pointDistance(left, right),
+    height: pointDistance(top, bottom),
+    angle
+  };
+}
+
+function tracePolygon(context, points) {
+  context.beginPath();
+  points.forEach((point, pointIndex) => {
+    if (pointIndex === 0) context.moveTo(point.x, point.y);
+    else context.lineTo(point.x, point.y);
+  });
+  context.closePath();
+}
+
+function drawCameraMark(context, x, y, size, colour) {
+  const width = size * 0.92;
+  const height = size * 0.62;
+  context.save();
+  context.strokeStyle = colour;
+  context.fillStyle = colour;
+  context.lineWidth = Math.max(1.2, size * 0.1);
+  context.lineJoin = 'round';
+  context.strokeRect(x - width / 2, y - height / 2 + size * 0.08, width, height);
+  context.fillRect(x - width * 0.3, y - height / 2 - size * 0.02, width * 0.28, size * 0.12);
+  context.beginPath();
+  context.arc(x + size * 0.07, y + size * 0.08, size * 0.2, 0, TAU);
+  context.stroke();
+  context.beginPath();
+  context.arc(x + width * 0.34, y - height * 0.24 + size * 0.08, size * 0.045, 0, TAU);
+  context.fill();
+  context.restore();
+}
+
+function drawDocumentMark(context, x, y, size, colour) {
+  const width = size * 0.68;
+  const height = size * 0.9;
+  const fold = size * 0.22;
+  context.save();
+  context.strokeStyle = colour;
+  context.lineWidth = Math.max(1.2, size * 0.095);
+  context.lineJoin = 'round';
+  context.beginPath();
+  context.moveTo(x - width / 2, y - height / 2);
+  context.lineTo(x + width / 2 - fold, y - height / 2);
+  context.lineTo(x + width / 2, y - height / 2 + fold);
+  context.lineTo(x + width / 2, y + height / 2);
+  context.lineTo(x - width / 2, y + height / 2);
+  context.closePath();
+  context.stroke();
+  context.beginPath();
+  context.moveTo(x + width / 2 - fold, y - height / 2);
+  context.lineTo(x + width / 2 - fold, y - height / 2 + fold);
+  context.lineTo(x + width / 2, y - height / 2 + fold);
+  context.stroke();
+  context.beginPath();
+  context.moveTo(x - width * 0.28, y + height * 0.03);
+  context.lineTo(x + width * 0.28, y + height * 0.03);
+  context.moveTo(x - width * 0.28, y + height * 0.25);
+  context.lineTo(x + width * 0.18, y + height * 0.25);
+  context.stroke();
+  context.restore();
+}
+
+function drawWebFallback(context, x, y, size, colour) {
+  context.save();
+  context.strokeStyle = colour;
+  context.lineWidth = Math.max(1.1, size * 0.08);
+  context.beginPath();
+  context.arc(x, y, size * 0.4, 0, TAU);
+  context.moveTo(x - size * 0.39, y);
+  context.lineTo(x + size * 0.39, y);
+  context.moveTo(x, y - size * 0.39);
+  context.bezierCurveTo(x - size * 0.22, y - size * 0.2, x - size * 0.22, y + size * 0.2, x, y + size * 0.39);
+  context.moveTo(x, y - size * 0.39);
+  context.bezierCurveTo(x + size * 0.22, y - size * 0.2, x + size * 0.22, y + size * 0.2, x, y + size * 0.39);
+  context.stroke();
+  context.restore();
+}
+
+function drawPlayMark(context, x, y, size) {
+  context.save();
+  context.fillStyle = 'rgba(10, 7, 20, 0.82)';
+  context.beginPath();
+  context.arc(x, y, size * 0.25, 0, TAU);
+  context.fill();
+  context.fillStyle = '#fffaf0';
+  context.beginPath();
+  context.moveTo(x - size * 0.06, y - size * 0.11);
+  context.lineTo(x + size * 0.13, y);
+  context.lineTo(x - size * 0.06, y + size * 0.11);
+  context.closePath();
+  context.fill();
+  context.restore();
+}
+
 function openSource(sourceId) {
   window.dispatchEvent(new CustomEvent('source:open', { detail: { sourceId } }));
 }
@@ -98,6 +227,10 @@ export function initialiseHornTorus() {
   const title = document.querySelector('[data-facet-title]');
   const story = document.querySelector('[data-facet-story]');
   const address = document.querySelector('[data-facet-address]');
+  const glimpse = document.querySelector('[data-facet-glimpse]');
+  const preview = document.querySelector('[data-facet-preview]');
+  const symbol = document.querySelector('[data-facet-symbol]');
+  const sequence = document.querySelector('[data-facet-sequence]');
   const openButton = document.querySelector('[data-facet-open]');
   const shuffleButton = document.querySelector('[data-facet-shuffle]');
   const resetButton = document.querySelector('[data-torus-reset]');
@@ -116,19 +249,70 @@ export function initialiseHornTorus() {
     lastTime: 0
   };
   let facets = [];
+  let activeFacetIndexes = [];
   let projectedFacets = [];
   let animationFrame = 0;
+  const iconImages = new Map();
+
+  const loadIcon = (path) => {
+    if (!path || iconImages.has(path)) return;
+    const image = new Image();
+    iconImages.set(path, image);
+    image.addEventListener('load', () => {
+      if (reducedMotion) draw();
+    }, { once: true });
+    image.addEventListener('error', () => {
+      iconImages.set(path, null);
+      if (reducedMotion) draw();
+    }, { once: true });
+    image.src = path;
+  };
 
   const describeFacet = (index) => {
     const facet = facets[index];
-    if (!facet) return;
+    if (!facet?.interactive) return;
     state.selected = index;
-    address.textContent = `Facet ${String(facet.number).padStart(3, '0')} of ${FACET_COUNT}`;
+    glimpse.dataset.type = facet.type;
+    glimpse.classList.remove('has-preview', 'has-favicon');
+    preview.hidden = true;
+    preview.removeAttribute('src');
+    symbol.dataset.type = facet.type;
+    sequence.textContent = facet.typeNumber || '';
+
+    if (facet.type === 'image') {
+      address.textContent = facet.previewPath ? 'A picture held in this story' : 'A place kept for the wider picture archive';
+      if (facet.previewPath) {
+        preview.src = facet.previewPath;
+        preview.hidden = false;
+        glimpse.classList.add('has-preview');
+      }
+    } else if (facet.type === 'document') {
+      address.textContent = facet.href ? 'A page you can read here' : 'A page held in the working archive';
+    } else if (facet.type === 'video') {
+      address.textContent = 'A moving-picture doorway';
+      if (facet.iconPath) {
+        preview.src = facet.iconPath;
+        preview.hidden = false;
+        glimpse.classList.add('has-favicon');
+      }
+    } else {
+      address.textContent = 'A doorway into the live work';
+      if (facet.iconPath) {
+        preview.src = facet.iconPath;
+        preview.hidden = false;
+        glimpse.classList.add('has-favicon');
+      }
+    }
     title.textContent = facet.title;
     story.textContent = facet.story;
     openButton.dataset.source = facet.sourceId;
     openButton.textContent = facet.href ? 'Open this thread' : 'Read its place in the archive';
-    canvas.setAttribute('aria-label', `Interactive horn torus. Facet ${facet.number}: ${facet.title}. Use arrow keys to move, Enter to open, and plus or minus to zoom while staying outside.`);
+    const numberedType = facet.type === 'image'
+      ? `picture ${facet.typeNumber}`
+      : facet.type === 'document'
+        ? `document ${facet.typeNumber}`
+        : facet.type;
+    canvas.setAttribute('aria-label', `Interactive horn torus. Selected ${numberedType}: ${facet.title}. Use arrow keys to move among the marked outer facets, then Tab to reach the card actions. Plus or minus zooms while staying outside.`);
   };
 
   const facetAt = (clientX, clientY) => {
@@ -136,7 +320,8 @@ export function initialiseHornTorus() {
     const x = clientX - bounds.left;
     const y = clientY - bounds.top;
     for (let index = projectedFacets.length - 1; index >= 0; index -= 1) {
-      if (containsPoint(projectedFacets[index].points, x, y)) return projectedFacets[index].index;
+      const facetIndex = projectedFacets[index].index;
+      if (facets[facetIndex]?.interactive && containsPoint(projectedFacets[index].points, x, y)) return facetIndex;
     }
     return -1;
   };
@@ -217,39 +402,95 @@ export function initialiseHornTorus() {
 
     polygons.forEach((polygon) => {
       const facet = facets[polygon.index];
-      const colour = COLOURS[((facet?.sourceOrder || polygon.index) + polygon.row * 2 + polygon.column) % COLOURS.length];
+      const interactive = Boolean(facet?.interactive);
+      const colour = COLOURS[((facet?.sourceOrder ?? polygon.index) + polygon.row * 2 + polygon.column) % COLOURS.length];
       const brightness = (polygon.brightness + 0.25) / 1.25;
       const luminance = 30 + brightness * 43;
       const lightLevel = 0.62 + brightness * 0.38;
       const [red, green, blue] = colour.map((channel) => Math.round(channel * lightLevel));
-      const selected = polygon.index === state.selected;
-      const hovered = polygon.index === state.hovered;
+      const selected = interactive && polygon.index === state.selected;
+      const hovered = interactive && polygon.index === state.hovered;
 
-      context.beginPath();
-      polygon.points.forEach((point, pointIndex) => {
-        if (pointIndex === 0) context.moveTo(point.x, point.y);
-        else context.lineTo(point.x, point.y);
-      });
-      context.closePath();
-      context.fillStyle = `rgba(${red}, ${green}, ${blue}, ${selected || hovered ? 0.98 : 0.92})`;
+      tracePolygon(context, polygon.points);
+      context.fillStyle = interactive
+        ? `rgba(${red}, ${green}, ${blue}, ${selected || hovered ? 0.98 : 0.92})`
+        : `rgba(${Math.round(red * 0.48)}, ${Math.round(green * 0.48)}, ${Math.round(blue * 0.55)}, 0.34)`;
       context.fill();
       context.strokeStyle = selected
         ? 'rgba(255,255,255,1)'
         : hovered
           ? 'rgba(255,244,178,0.95)'
-          : `rgba(9,7,15,${0.34 + (1 - brightness) * 0.34})`;
-      context.lineWidth = selected ? 2.4 : hovered ? 1.8 : 0.75;
+          : interactive
+            ? `rgba(9,7,15,${0.34 + (1 - brightness) * 0.34})`
+            : 'rgba(255,255,255,0.09)';
+      context.lineWidth = selected ? 2.4 : hovered ? 1.8 : interactive ? 0.75 : 0.55;
       context.stroke();
 
-      if (polygon.area > 620) {
-        const x = polygon.points.reduce((sum, point) => sum + point.x, 0) / polygon.points.length;
-        const y = polygon.points.reduce((sum, point) => sum + point.y, 0) / polygon.points.length;
-        context.fillStyle = luminance > 54 ? 'rgba(11,8,19,0.72)' : 'rgba(255,255,255,0.76)';
-        context.font = `${selected ? 800 : 650} ${clamp(Math.sqrt(polygon.area) * 0.23, 8, 12)}px ui-monospace, Consolas, monospace`;
-        context.textAlign = 'center';
+      if (!interactive || polygon.area < 85) return;
+      const centre = facetCentre(polygon.points);
+      const frame = facetFrame(polygon.points);
+      if (frame.width < 7 || frame.height < 7) return;
+      const markColour = luminance > 54 ? 'rgba(10,7,19,0.84)' : 'rgba(255,255,255,0.9)';
+
+      if (facet.type === 'document' || facet.type === 'image') {
+        const markSize = Math.min(
+          frame.height * 0.62,
+          frame.width * 0.56,
+          Math.sqrt(polygon.area) * 0.72,
+          58
+        );
+        if (markSize < 7) return;
+        const number = String(facet.typeNumber || '');
+        const fontSize = clamp(markSize * 0.66, 7, 15);
+        context.save();
+        tracePolygon(context, polygon.points);
+        context.clip();
+        context.translate(centre.x, centre.y);
+        context.rotate(frame.angle);
+        context.font = `${selected ? 850 : 760} ${fontSize}px ui-monospace, Consolas, monospace`;
+        const numberWidth = context.measureText(number).width;
+        const iconSize = markSize * 0.72;
+        const gap = Math.max(2, markSize * 0.15);
+        const totalWidth = iconSize + gap + numberWidth;
+        const iconX = -totalWidth / 2 + iconSize / 2;
+        if (facet.type === 'image') drawCameraMark(context, iconX, 0, iconSize, markColour);
+        else drawDocumentMark(context, iconX, 0, iconSize, markColour);
+        context.fillStyle = markColour;
+        context.textAlign = 'left';
         context.textBaseline = 'middle';
-        context.fillText(String(polygon.index + 1).padStart(3, '0'), x, y);
+        context.fillText(number, iconX + iconSize / 2 + gap, fontSize * 0.03);
+        context.restore();
+        return;
       }
+
+      const markSize = Math.min(
+        frame.width * 0.72,
+        frame.height * 0.72,
+        Math.sqrt(polygon.area) * 0.9,
+        76
+      );
+      if (markSize < 7) return;
+      const icon = facet.iconPath ? iconImages.get(facet.iconPath) : null;
+      context.save();
+      tracePolygon(context, polygon.points);
+      context.clip();
+      context.translate(centre.x, centre.y);
+      context.rotate(frame.angle);
+      if (icon?.complete && icon.naturalWidth) {
+        const size = markSize;
+        context.fillStyle = 'rgba(255,255,255,0.94)';
+        context.beginPath();
+        context.arc(0, 0, size * 0.55, 0, TAU);
+        context.fill();
+        context.beginPath();
+        context.arc(0, 0, size * 0.47, 0, TAU);
+        context.clip();
+        context.drawImage(icon, -size / 2, -size / 2, size, size);
+      } else {
+        drawWebFallback(context, 0, 0, markSize, markColour);
+      }
+      if (facet.type === 'video') drawPlayMark(context, markSize * 0.28, markSize * 0.28, markSize);
+      context.restore();
     });
 
     if (!reducedMotion) animationFrame = requestAnimationFrame(draw);
@@ -322,7 +563,6 @@ export function initialiseHornTorus() {
       const hit = facetAt(event.clientX, event.clientY);
       if (hit >= 0 && facets[hit]) {
         describeFacet(hit);
-        openSource(facets[hit].sourceId);
       }
     }
     state.dragging = null;
@@ -350,16 +590,17 @@ export function initialiseHornTorus() {
   canvas.addEventListener('keydown', (event) => {
     const row = Math.floor(state.selected / COLUMNS);
     const column = state.selected % COLUMNS;
+    const contentRowPosition = CONTENT_ROWS.indexOf(row);
     let next = state.selected;
     if (event.key === 'ArrowRight') next = row * COLUMNS + ((column + 1) % COLUMNS);
     if (event.key === 'ArrowLeft') next = row * COLUMNS + ((column - 1 + COLUMNS) % COLUMNS);
-    if (event.key === 'ArrowDown') next = ((row + 1) % ROWS) * COLUMNS + column;
-    if (event.key === 'ArrowUp') next = ((row - 1 + ROWS) % ROWS) * COLUMNS + column;
+    if (event.key === 'ArrowDown') next = CONTENT_ROWS[(contentRowPosition + 1) % CONTENT_ROWS.length] * COLUMNS + column;
+    if (event.key === 'ArrowUp') next = CONTENT_ROWS[(contentRowPosition - 1 + CONTENT_ROWS.length) % CONTENT_ROWS.length] * COLUMNS + column;
     if (event.key === '+' || event.key === '=') state.cameraDistance = clamp(state.cameraDistance - 0.35, MIN_CAMERA_DISTANCE, MAX_CAMERA_DISTANCE);
     if (event.key === '-') state.cameraDistance = clamp(state.cameraDistance + 0.35, MIN_CAMERA_DISTANCE, MAX_CAMERA_DISTANCE);
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      if (facets[state.selected]) openSource(facets[state.selected].sourceId);
+      describeFacet(state.selected);
       return;
     }
     if (next !== state.selected || ['+', '=', '-'].includes(event.key)) {
@@ -374,7 +615,9 @@ export function initialiseHornTorus() {
     if (facet) openSource(facet.sourceId);
   });
   shuffleButton?.addEventListener('click', () => {
-    describeFacet((state.selected + 17) % FACET_COUNT);
+    if (!activeFacetIndexes.length) return;
+    const currentPosition = Math.max(0, activeFacetIndexes.indexOf(state.selected));
+    describeFacet(activeFacetIndexes[(currentPosition + 17) % activeFacetIndexes.length]);
     state.yaw += 0.42;
     if (reducedMotion) draw();
   });
@@ -396,7 +639,7 @@ export function initialiseHornTorus() {
   }, { threshold: 0.02 });
   visibilityObserver.observe(canvas);
 
-  fetch('data/facets.json')
+  fetch('data/facets.json?v=20260905a')
     .then((response) => {
       if (!response.ok) throw new Error('The facet map could not be loaded.');
       return response.json();
@@ -404,7 +647,10 @@ export function initialiseHornTorus() {
     .then((records) => {
       if (!Array.isArray(records) || records.length !== FACET_COUNT) throw new Error('The horn torus needs exactly 288 facets.');
       facets = records;
-      describeFacet(0);
+      activeFacetIndexes = facets.map((facet, index) => facet.interactive ? index : -1).filter((index) => index >= 0);
+      facets.forEach((facet) => loadIcon(facet.iconPath));
+      if (activeFacetIndexes.length !== 192) throw new Error('The horn torus needs eight complete outer rows.');
+      describeFacet(activeFacetIndexes[0]);
       canvas.dataset.hornTorusReady = 'true';
       resize();
       draw();

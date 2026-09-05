@@ -1,9 +1,9 @@
-import { initialiseNavigation } from './navigation.js';
-import { initialiseSourceDrawer } from './source-drawer.js';
-import { initialiseAudienceDoors } from './audience.js';
-import { initialiseHornTorus } from './horn-torus.js?v=20260904c';
-import { initialiseSourceRoom } from './source-room.js';
-import { initialiseAdultGateway } from './adult-gateway.js';
+import { initialiseNavigation } from './navigation.js?v=20260905a';
+import { initialiseSourceDrawer } from './source-drawer.js?v=20260905a';
+import { initialiseAudienceDoors } from './audience.js?v=20260905a';
+import { initialiseHornTorus } from './horn-torus.js?v=20260905a';
+import { initialiseSourceRoom } from './source-room.js?v=20260905a';
+import { initialiseAdultGateway } from './adult-gateway.js?v=20260905a';
 
 initialiseNavigation();
 initialiseSourceDrawer();

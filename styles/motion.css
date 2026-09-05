@@ -12,6 +12,11 @@
   50% { box-shadow: 18px 18px 0 rgba(22, 217, 210, 0.15); }
 }
 
+@keyframes phone-hover {
+  0%, 100% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-8px) rotate(-1deg); }
+}
+
 .chapter-art {
   animation: gentle-float 8s ease-in-out infinite;
 }
@@ -22,6 +27,10 @@
 
 .torus-stage {
   animation: colour-breathe 7s ease-in-out infinite;
+}
+
+.soundtrack-phone {
+  animation: phone-hover 6s ease-in-out infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {

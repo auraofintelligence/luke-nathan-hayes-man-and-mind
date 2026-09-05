@@ -67,7 +67,7 @@ export function initialiseNavigation() {
     }
 
     const interactive = event.target instanceof Element
-      && event.target.closest('a, button, input, textarea, select, summary, [contenteditable="true"], [role="button"]');
+      && event.target.closest('a, button, canvas, input, textarea, select, summary, [contenteditable="true"], [role="button"]');
     if (interactive || event.altKey || event.ctrlKey || event.metaKey) return;
 
     const target = event.key === 'ArrowLeft'

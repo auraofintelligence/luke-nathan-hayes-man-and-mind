@@ -54,9 +54,30 @@ for (const sourceId of referencedSources) {
   if (!sourceIds.has(sourceId)) addError(`Unknown source reference ${sourceId}.`);
 }
 
+for (const source of sources) {
+  if (['website', 'video'].includes(source.type) && source.id !== 'U10' && !source.iconPath) {
+    addError(`${source.id}: public web thread has no raster favicon.`);
+  }
+  if (source.iconPath) {
+    try {
+      await access(resolve(root, source.iconPath));
+    } catch {
+      addError(`${source.id}: raster favicon is missing at ${source.iconPath}.`);
+    }
+  }
+}
+
 if (facets.length !== 288) addError(`Expected 288 horn-torus facets, found ${facets.length}.`);
 const facetAddresses = new Set();
 const facetCoverage = new Map(sources.map((source) => [source.id, 0]));
+const contentRows = new Set([0, 1, 2, 3, 8, 9, 10, 11]);
+const expectedTypeNumbers = new Map();
+for (const type of ['document', 'image']) {
+  sources.filter((source) => source.type === type).forEach((source, index) => {
+    expectedTypeNumbers.set(source.id, index + 1);
+  });
+}
+let interactiveFacetCount = 0;
 facets.forEach((facet, index) => {
   if (facet.number !== index + 1) addError(`Facet ${index} has non-contiguous number ${facet.number}.`);
   if (!Number.isInteger(facet.row) || facet.row < 0 || facet.row >= 12) addError(`Facet ${facet.number}: invalid row.`);
@@ -64,17 +85,38 @@ facets.forEach((facet, index) => {
   const address = `${facet.row}:${facet.column}`;
   if (facetAddresses.has(address)) addError(`Duplicate facet address ${address}.`);
   facetAddresses.add(address);
+  const shouldBeInteractive = contentRows.has(facet.row);
+  if (facet.interactive !== shouldBeInteractive) addError(`Facet ${facet.number}: interactive state does not match its row.`);
+  if (!shouldBeInteractive) {
+    if (facet.sourceId || facet.href || facet.iconPath || facet.previewPath) addError(`Facet ${facet.number}: a quiet horn row carries source data.`);
+    return;
+  }
+  interactiveFacetCount += 1;
   if (!sourceIds.has(facet.sourceId)) {
     addError(`Facet ${facet.number}: unknown source ${facet.sourceId}.`);
     return;
   }
   facetCoverage.set(facet.sourceId, facetCoverage.get(facet.sourceId) + 1);
   const source = sourceById.get(facet.sourceId);
+  if (facet.type !== source.type) addError(`Facet ${facet.number}: source type does not match ${facet.sourceId}.`);
+  if (facet.availability !== source.availability) addError(`Facet ${facet.number}: availability does not match ${facet.sourceId}.`);
+  if (['document', 'image'].includes(source.type) && facet.typeNumber !== expectedTypeNumbers.get(source.id)) {
+    addError(`Facet ${facet.number}: ${source.type} sequence does not match ${facet.sourceId}.`);
+  }
+  if (!['document', 'image'].includes(source.type) && facet.typeNumber !== null) {
+    addError(`Facet ${facet.number}: a website or video received an archive number.`);
+  }
   const expectedHref = source.url || source.publicPath || '';
   if (facet.href !== expectedHref) addError(`Facet ${facet.number}: source link does not match ${facet.sourceId}.`);
+  const expectedIconPath = source.iconPath || '';
+  if (facet.iconPath !== expectedIconPath) addError(`Facet ${facet.number}: favicon does not match ${facet.sourceId}.`);
+  const expectedPreviewPath = source.type === 'image' ? (source.publicPath || '') : '';
+  if (facet.previewPath !== expectedPreviewPath) addError(`Facet ${facet.number}: image preview does not match ${facet.sourceId}.`);
   if (source.availability === 'public-link' && !/^https:\/\//i.test(facet.href)) addError(`Facet ${facet.number}: public source needs an HTTPS link.`);
   if (!source.url && !source.publicPath && facet.href) addError(`Facet ${facet.number}: private archive location became a link.`);
 });
+
+if (interactiveFacetCount !== 192) addError(`Expected 192 marked outer facets, found ${interactiveFacetCount}.`);
 
 for (const [sourceId, count] of facetCoverage) {
   if (!count) addError(`Source ${sourceId} does not appear on the horn torus.`);
@@ -110,7 +152,10 @@ for (const page of pages) {
   if (/[–—]/u.test(html)) addError(`${page.file}: contains an en dash or em dash.`);
   if (/<svg\b|data:image\/svg\+xml|\.svg(?:[?#"']|$)/i.test(html)) addError(`${page.file}: contains a forbidden vector image reference.`);
   if (/ready SET(?! Co-op)/g.test(html)) addError(`${page.file}: contains an incomplete ready SET Co-op name.`);
-  if (page.id === 'home' && (!html.includes('data-horn-torus') || !html.includes('Facet 001 of 288'))) addError('index.html: 288-facet horn torus is missing.');
+  if (page.id === 'home' && (!html.includes('data-horn-torus') || !html.includes('marked outer facets'))) addError('index.html: 288-facet horn torus is missing.');
+  if (content[page.id]?.soundtrack?.title && (!html.includes('class="soundtrack-phone"') || html.includes('class="media-slot"'))) {
+    addError(`${page.file}: smartphone soundtrack placeholder is missing.`);
+  }
 
   const anchors = html.match(/<a\b[^>]*>/gi) || [];
   for (const anchor of anchors) {
@@ -143,9 +188,18 @@ for (const page of pages) {
 }
 
 const torusScript = await readFile(resolve(root, 'scripts/horn-torus.js'), 'utf8');
+const navigationScript = await readFile(resolve(root, 'scripts/navigation.js'), 'utf8');
 const minimumCamera = Number(torusScript.match(/MIN_CAMERA_DISTANCE\s*=\s*([\d.]+)/)?.[1]);
 if (!Number.isFinite(minimumCamera) || minimumCamera <= 4.1) addError('Horn-torus camera can cross the outside safety boundary.');
 if (!torusScript.includes('const ROWS = 12;') || !torusScript.includes('const COLUMNS = 24;')) addError('Horn-torus lattice is not fixed at 12 by 24.');
+if (!torusScript.includes('const CONTENT_ROWS = [0, 1, 2, 3, 8, 9, 10, 11];')) addError('Horn-torus content is not limited to the eight broad outer rows.');
+if (/fillText\(String\(polygon\.index \+ 1\)/.test(torusScript)) addError('Global facet numbers still appear on the horn torus.');
+if (!torusScript.includes('context.rotate(frame.angle)') || !torusScript.includes('context.clip()')) {
+  addError('Torus marks are not clipped and aligned to their projected facets.');
+}
+const releasePointerBody = torusScript.match(/const releasePointer = \(event\) => \{([\s\S]*?)\n  \};/)?.[1] || '';
+if (releasePointerBody.includes('openSource(')) addError('Clicking a torus facet still opens the source dialog.');
+if (!navigationScript.includes('button, canvas, input')) addError('Site-wide arrow navigation can still steal the torus keyboard controls.');
 
 async function walk(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -182,5 +236,5 @@ if (errors.length) {
   errors.forEach((error) => console.error(`- ${error}`));
   process.exitCode = 1;
 } else {
-  console.log(`Site checks passed: ${pages.length} pages, ${sources.length} source threads and all 288 outside facets mapped.`);
+  console.log(`Site checks passed: ${pages.length} pages, ${sources.length} source threads, 192 marked outer facets and 96 quiet cusp facets.`);
 }

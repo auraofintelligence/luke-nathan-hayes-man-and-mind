@@ -17,6 +17,41 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
+const assetVersion = '20260905a';
+const sourceIconPaths = {
+  U01: 'assets/favicons/u01.ico',
+  U02: 'assets/favicons/u02.png',
+  U03: 'assets/favicons/u03.webp',
+  U04: 'assets/favicons/u04.webp',
+  U05: 'assets/favicons/u05.webp',
+  U06: 'assets/favicons/u06.png',
+  U07: 'assets/favicons/u07.webp',
+  U08: 'assets/favicons/u08.png',
+  U09: 'assets/favicons/u09.png',
+  U11: 'assets/favicons/u11.png',
+  U12: 'assets/favicons/u12.webp',
+  U13: 'assets/favicons/u13.png',
+  U14: 'assets/favicons/u14.webp',
+  U15: 'assets/favicons/u15.webp',
+  U16: 'assets/favicons/u16.png',
+  U17: 'assets/favicons/u17.png',
+  U18: 'assets/favicons/u18.webp',
+  U19: 'assets/favicons/u19.webp',
+  U20: 'assets/favicons/u20.png',
+  U21: 'assets/favicons/u21.webp',
+  U22: 'assets/favicons/u22.png',
+  U23: 'assets/favicons/u23.webp',
+  U24: 'assets/favicons/u24.png',
+  U25: 'assets/favicons/u25.jpg',
+  U26: 'assets/favicons/u26.png',
+  S01: 'assets/favicons/s01.png',
+  S02: 'assets/favicons/s02.ico',
+  S03: 'assets/favicons/s03.png',
+  S04: 'assets/favicons/s04.ico',
+  S05: 'assets/favicons/s05.ico',
+  S06: 'assets/favicons/u01.ico',
+  S07: 'assets/favicons/s07.ico'
+};
 
 const sourceAuthorship = (record) => {
   if (record.authorship) return record.authorship;
@@ -51,7 +86,8 @@ const sources = sourceInput.map((record) => {
     canonicalTitle: live?.canonicalTitle || record.canonicalTitle,
     checkedOn: live?.checkedOn || record.checkedOn,
     url: isPublicLink ? (live?.finalUrl || record.url || record.location) : undefined,
-    publicPath: record.publicPath
+    publicPath: record.publicPath,
+    iconPath: sourceIconPaths[record.id] || undefined
   };
 });
 
@@ -69,15 +105,42 @@ const facetStory = (source) => {
 };
 
 const facetStride = 17;
+const contentRows = new Set([0, 1, 2, 3, 8, 9, 10, 11]);
+const sourceTypeNumbers = new Map();
+for (const type of ['document', 'image']) {
+  sources
+    .filter((source) => source.type === type)
+    .forEach((source, index) => sourceTypeNumbers.set(source.id, index + 1));
+}
+
+let activeFacetPosition = 0;
 const facets = Array.from({ length: 12 * 24 }, (_, index) => {
-  const sourceOrder = (index * facetStride) % sources.length;
+  const row = Math.floor(index / 24);
+  const column = index % 24;
+  if (!contentRows.has(row)) {
+    return {
+      number: index + 1,
+      row,
+      column,
+      interactive: false
+    };
+  }
+
+  const sourceOrder = (activeFacetPosition * facetStride) % sources.length;
+  activeFacetPosition += 1;
   const source = sources[sourceOrder];
   return {
     number: index + 1,
-    row: Math.floor(index / 24),
-    column: index % 24,
+    row,
+    column,
+    interactive: true,
     sourceOrder,
     sourceId: source.id,
+    type: source.type,
+    availability: source.availability,
+    typeNumber: sourceTypeNumbers.get(source.id) || null,
+    iconPath: source.iconPath || '',
+    previewPath: source.type === 'image' ? (source.publicPath || '') : '',
     title: source.title,
     story: facetStory(source),
     href: source.url || source.publicPath || ''
@@ -175,6 +238,12 @@ const heroMedia = {
   }
 };
 
+const soundtrackArtwork = {
+  'Album 3: Starseed Code': 'assets/media/starseed-code.webp',
+  'Album 4: A Protopian Gambit': 'assets/media/a-protopian-gambit.png',
+  'Album 5: Straddie Fun': 'assets/media/straddie-fun.webp'
+};
+
 function renderHero(page, pageContent) {
   const isHome = page.id === 'home';
   const origin = isHome
@@ -196,11 +265,18 @@ function renderHero(page, pageContent) {
         <canvas class="torus-canvas" data-horn-torus tabindex="0" aria-describedby="torus-instructions">
           An interactive 288-facet horn torus carrying Luke's public links and source archive.
         </canvas>
-        <p class="torus-instructions" id="torus-instructions">Drag to turn it. Tap a facet to follow its thread. Scroll or pinch to move closer, but the view always stays outside.</p>
+        <p class="torus-instructions" id="torus-instructions">Drag to turn it. Tap one of the marked outer facets and its story will appear below. Scroll or pinch to move closer, but the view always stays outside.</p>
         <div class="facet-whisper" aria-live="polite">
-          <span data-facet-address>Facet 001 of 288</span>
-          <strong data-facet-title>The torus is waking up</strong>
-          <p data-facet-story>Every public link and every document in this working archive has a place on the outside.</p>
+          <div class="facet-glimpse" data-facet-glimpse aria-hidden="true">
+            <img data-facet-preview alt="" hidden>
+            <span class="facet-symbol" data-facet-symbol></span>
+            <b data-facet-sequence></b>
+          </div>
+          <div class="facet-words">
+            <span data-facet-address>A thread from the outer ring</span>
+            <strong data-facet-title>The torus is waking up</strong>
+            <p data-facet-story>Every public link and every document in this working archive has a place on the broad outside rows.</p>
+          </div>
           <div class="facet-actions">
             <button class="button facet-open" type="button" data-facet-open>Open this thread</button>
             <button class="text-button" type="button" data-facet-shuffle>Surprise me</button>
@@ -347,6 +423,7 @@ function renderControversies(pageId) {
 
 function renderSoundtrack(soundtrack) {
   if (!soundtrack?.title) return '';
+  const artwork = soundtrackArtwork[soundtrack.album] || 'assets/favicon.jpg';
   return `
   <section class="section compact">
     <div class="page-shell soundtrack-card">
@@ -359,7 +436,16 @@ function renderSoundtrack(soundtrack) {
         <small>The lyric is here now. Luke will add the video when the right recording reaches this laptop.</small>
         <div class="story-card-footer">${renderSourceButtons(soundtrack.sourceIds)}</div>
       </div>
-      <div class="media-slot">The video is not on this laptop yet.</div>
+      <div class="soundtrack-phone" role="img" aria-label="Smartphone placeholder for a future video of ${escapeHtml(soundtrack.title)}">
+        <div class="phone-screen">
+          <img src="${artwork}" alt="" loading="lazy">
+          <div class="phone-screen-copy">
+            <span class="phone-play" aria-hidden="true"></span>
+            <strong>${escapeHtml(soundtrack.title)}</strong>
+            <small>This screen is waiting for the right recording.</small>
+          </div>
+        </div>
+      </div>
     </div>
   </section>`;
 }
@@ -586,10 +672,10 @@ function renderPage(page, index) {
   <link rel="canonical" href="${siteUrl}${page.file}">
   <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
   <link rel="apple-touch-icon" href="assets/favicon.jpg">
-  <link rel="stylesheet" href="styles/tokens.css?v=20260904c">
-  <link rel="stylesheet" href="styles/base.css?v=20260904c">
-  <link rel="stylesheet" href="styles/components.css?v=20260904c">
-  <link rel="stylesheet" href="styles/motion.css?v=20260904c">
+  <link rel="stylesheet" href="styles/tokens.css?v=${assetVersion}">
+  <link rel="stylesheet" href="styles/base.css?v=${assetVersion}">
+  <link rel="stylesheet" href="styles/components.css?v=${assetVersion}">
+  <link rel="stylesheet" href="styles/motion.css?v=${assetVersion}">
   ${personSchema}
 </head>
 <body data-page="${escapeHtml(page.id)}" data-theme="${escapeHtml(page.theme)}">
@@ -612,7 +698,7 @@ function renderPage(page, index) {
   ${renderSourceDialog()}
   ${renderAdultDialog()}
   <script>window.__AUDIENCE_ROUTES__ = ${audienceJson};</script>
-  <script type="module" src="scripts/app.js?v=20260904c"></script>
+  <script type="module" src="scripts/app.js?v=${assetVersion}"></script>
 </body>
 </html>
 `;

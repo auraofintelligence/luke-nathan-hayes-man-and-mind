@@ -8,7 +8,7 @@ The public site is:
 
 ## The living index
 
-The homepage centres Luke's canonical horn-torus geometry: 12 rows by 24 columns, exactly 288 outside facets. Every registered document, image, public project and social link appears at least once. Dragging turns the torus, tapping opens a source thread, and zoom is clamped outside the form.
+The homepage centres Luke's canonical horn-torus geometry: 12 rows by 24 columns, exactly 288 outside facets. The eight broad outer rows carry 192 marked facets, enough for every registered document, image, public project and social link to appear at least once. The four cramped rows curling into the horn stay decorative. Website facets use local raster favicons; documents and images have their own numbered icon sequences. Dragging turns the torus, tapping changes the story card below it, and zoom is clamped outside the form. The card's button is the deliberate way to open a source thread.
 
 ## Build and check it locally
 
@@ -17,7 +17,7 @@ The homepage centres Luke's canonical horn-torus geometry: 12 rows by 24 columns
 3. Start any simple local web server in the folder.
 4. Open the local address in a browser.
 
-`npm test` rebuilds all fourteen pages and the facet map, then checks page order, internal links, source references, the 288-facet coverage, raster-only media and the outside zoom boundary.
+`npm test` rebuilds all fourteen pages and the facet map, then checks page order, internal links, source references, the eight marked rows, the four quiet rows, raster-only media and the outside zoom boundary.
 
 ## Where the story lives
 
@@ -33,7 +33,7 @@ The homepage centres Luke's canonical horn-torus geometry: 12 rows by 24 columns
 
 This edition publishes the i C. infinity ring favicon, a Luke portrait, three music-world images and a speculative visual study already present in Luke's public archive. The *A Protopian Gambit* cover supplied for this project is now part of the artwork rather than a placeholder.
 
-The song choices come from Albums 3, 4 and 5. Their titles and lyric themes set the intended placement until Luke brings the selected video files onto this laptop.
+The song choices come from Albums 3, 4 and 5. Their titles and lyric themes set the intended placement inside colourful smartphone frames until Luke brings the selected video files onto this laptop.
 
 ## Licence
 

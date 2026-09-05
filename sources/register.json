@@ -51,9 +51,8 @@
     "primaryPage": "08",
     "status": "Working public draft",
     "notes": "Federated sovereign compute, civic stewardship and space horizon",
-    "availability": "published-source",
-    "authorship": "Supplied and directed by Luke Nathan Hayes; composite source history is not fully recorded",
-    "publicPath": "assets/media/a-protopian-gambit.png"
+    "availability": "local-reviewed-candidate",
+    "authorship": "Supplied and directed by Luke Nathan Hayes; composite source history is not fully recorded"
   },
   {
     "id": "F06",
@@ -420,7 +419,8 @@
     "authorship": "Third-party public video; creator attribution to be confirmed",
     "url": "https://www.youtube.com/watch?v=GzhfZy8-CjU",
     "canonicalTitle": "AI EDAs: Is It Real? - YouTube",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u01.ico"
   },
   {
     "id": "U02",
@@ -434,7 +434,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/aura-direct-hardware/",
     "canonicalTitle": "Aura Direct Hardware: Open systems for open minds",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u02.png"
   },
   {
     "id": "U03",
@@ -448,7 +449,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/virtual-solar-swarm/",
     "canonicalTitle": "Virtual Solar Swarm : mission design studio",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u03.webp"
   },
   {
     "id": "U04",
@@ -462,7 +464,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/extreme-matter-atlas/",
     "canonicalTitle": "Extreme Matter Atlas",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u04.webp"
   },
   {
     "id": "U05",
@@ -476,7 +479,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/index.html",
     "canonicalTitle": "Aura of Intelligence | A Bridge to The Infinite",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u05.webp"
   },
   {
     "id": "U06",
@@ -490,7 +494,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/grain-by-grain-documentary/index.html",
     "canonicalTitle": "The Long Game: Grain by Grain",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u06.png"
   },
   {
     "id": "U07",
@@ -504,7 +509,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://p4a.xyz/",
     "canonicalTitle": "P4A | Purple Party for Australia",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u07.webp"
   },
   {
     "id": "U08",
@@ -518,7 +524,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/aura-horn-torus/index.html",
     "canonicalTitle": "Horn Torus Lattice",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u08.png"
   },
   {
     "id": "U09",
@@ -532,7 +539,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/ready-set-co-op-cultural-intelligence-node/projects.html",
     "canonicalTitle": "Local projects around the Dunwich node | Ready S.E.T. Co-op",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u09.png"
   },
   {
     "id": "U10",
@@ -560,7 +568,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/Future-of-Life-2045/",
     "canonicalTitle": "Future of Life 2045",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u11.png"
   },
   {
     "id": "U12",
@@ -574,7 +583,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/strange-but-true/index.html",
     "canonicalTitle": "Strange but True | Tech, Art & Ideas That'll Actually Help",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u12.webp"
   },
   {
     "id": "U13",
@@ -588,7 +598,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/project-atlas/",
     "canonicalTitle": "Project Atlas | Aura of Intelligence",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u13.png"
   },
   {
     "id": "U14",
@@ -602,7 +613,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/index.html",
     "canonicalTitle": "Luke's Relevance · Australian Law 2012",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u14.webp"
   },
   {
     "id": "U15",
@@ -616,7 +628,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/Australian-visa-activity-atlas/",
     "canonicalTitle": "Australian Visa & Activity Atlas",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u15.webp"
   },
   {
     "id": "U16",
@@ -630,7 +643,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/Oceania-healthy-de-slop-co-ops/co-operative-paths/",
     "canonicalTitle": "Co-operative Paths | Oceania Healthy De-Slop Co-ops",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u16.png"
   },
   {
     "id": "U17",
@@ -644,7 +658,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/australian-sire-story-forge/index.html",
     "canonicalTitle": "Australian Sire Story Forge",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u17.png"
   },
   {
     "id": "U18",
@@ -658,7 +673,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/loose-goose-comedy-engine/index.html",
     "canonicalTitle": "Loose Goose Comedy Engine",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u18.webp"
   },
   {
     "id": "U19",
@@ -672,7 +688,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/right-place-right-time/index.html",
     "canonicalTitle": "Right Place, Right Time | Luke Nathan Hayes",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u19.webp"
   },
   {
     "id": "U20",
@@ -686,7 +703,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/gajra-earth-claude-build/index.html",
     "canonicalTitle": "GAJRA Earth · AI alignment, worked out in the open",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u20.png"
   },
   {
     "id": "U21",
@@ -700,7 +718,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/global-founder-atlas/index.html",
     "canonicalTitle": "Global Founder Atlas",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u21.webp"
   },
   {
     "id": "U22",
@@ -714,7 +733,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/global-group-marriages/",
     "canonicalTitle": "Global Group Marriages",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u22.png"
   },
   {
     "id": "U23",
@@ -728,7 +748,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/i-C-infinity-music-universe/index.html",
     "canonicalTitle": "i C. infinity - Music Universe",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u23.webp"
   },
   {
     "id": "U24",
@@ -742,7 +763,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/strange-but-true-cosmic-nexus/",
     "canonicalTitle": "Cosmic Nexus | Strange But True",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u24.png"
   },
   {
     "id": "U25",
@@ -756,7 +778,8 @@
     "authorship": "Luke Nathan Hayes personal public site",
     "url": "https://lukecatalyst.com/",
     "canonicalTitle": "Luke Catalyst",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u25.jpg"
   },
   {
     "id": "U26",
@@ -770,7 +793,8 @@
     "authorship": "Luke-authored or Luke-directed public project",
     "url": "https://auraofintelligence.github.io/grey-area-commons/",
     "canonicalTitle": "Grey Area Commons",
-    "checkedOn": "2026-09-04"
+    "checkedOn": "2026-09-04",
+    "iconPath": "assets/favicons/u26.png"
   },
   {
     "id": "F38",
@@ -854,7 +878,8 @@
     "notes": "One of the places Luke has shared life, work and changing ideas in public",
     "availability": "public-link",
     "authorship": "Luke Nathan Hayes public profile",
-    "url": "https://www.facebook.com/hayzy123"
+    "url": "https://www.facebook.com/hayzy123",
+    "iconPath": "assets/favicons/s01.png"
   },
   {
     "id": "S02",
@@ -866,7 +891,8 @@
     "notes": "A public stream carrying the Choose Infinity voice",
     "availability": "public-link",
     "authorship": "Luke Nathan Hayes public profile",
-    "url": "https://twitter.com/choose_infinity"
+    "url": "https://twitter.com/choose_infinity",
+    "iconPath": "assets/favicons/s02.ico"
   },
   {
     "id": "S03",
@@ -878,7 +904,8 @@
     "notes": "A visual trail through Luke Catalyst's public life and ideas",
     "availability": "public-link",
     "authorship": "Luke Nathan Hayes public profile",
-    "url": "https://www.instagram.com/lukecatalyst"
+    "url": "https://www.instagram.com/lukecatalyst",
+    "iconPath": "assets/favicons/s03.png"
   },
   {
     "id": "S04",
@@ -890,7 +917,8 @@
     "notes": "The professional thread through Luke's work, talks and experiments",
     "availability": "public-link",
     "authorship": "Luke Nathan Hayes public profile",
-    "url": "https://www.linkedin.com/in/lukecatalyst/"
+    "url": "https://www.linkedin.com/in/lukecatalyst/",
+    "iconPath": "assets/favicons/s04.ico"
   },
   {
     "id": "S05",
@@ -902,7 +930,8 @@
     "notes": "Images and references that have fed Luke's visual imagination",
     "availability": "public-link",
     "authorship": "Luke Nathan Hayes public profile",
-    "url": "https://www.pinterest.com.au/lukecatalyst/"
+    "url": "https://www.pinterest.com.au/lukecatalyst/",
+    "iconPath": "assets/favicons/s05.ico"
   },
   {
     "id": "S06",
@@ -914,7 +943,8 @@
     "notes": "The public home for moving images, talks and creative experiments",
     "availability": "public-link",
     "authorship": "Luke Nathan Hayes public profile",
-    "url": "https://www.youtube.com/channel/UC0mg83Rin_jsnFmbfcNuHtg"
+    "url": "https://www.youtube.com/channel/UC0mg83Rin_jsnFmbfcNuHtg",
+    "iconPath": "assets/favicons/u01.ico"
   },
   {
     "id": "S07",
@@ -926,6 +956,7 @@
     "notes": "A public music doorway beside the i C. infinity lyric archive",
     "availability": "public-link",
     "authorship": "Luke Nathan Hayes public profile",
-    "url": "https://open.spotify.com/user/22riyjxhapaeyzi2tjrco34wi"
+    "url": "https://open.spotify.com/user/22riyjxhapaeyzi2tjrco34wi",
+    "iconPath": "assets/favicons/s07.ico"
   }
 ]
