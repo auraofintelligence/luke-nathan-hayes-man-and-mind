@@ -6,18 +6,18 @@ const MIN_CAMERA_DISTANCE = 4.45;
 const MAX_CAMERA_DISTANCE = 7.8;
 const CONTENT_ROWS = [0, 1, 2, 3, 8, 9, 10, 11];
 const COLOURS = [
-  [176, 206, 215],
-  [160, 183, 210],
-  [148, 163, 199],
-  [175, 166, 199],
-  [201, 179, 203],
-  [219, 202, 214],
-  [225, 217, 204],
-  [209, 202, 181],
-  [188, 207, 204],
-  [169, 198, 210],
-  [205, 222, 227],
-  [225, 234, 231]
+  [103, 227, 210],
+  [89, 190, 222],
+  [118, 148, 224],
+  [164, 125, 222],
+  [214, 143, 213],
+  [236, 172, 195],
+  [239, 214, 159],
+  [209, 222, 163],
+  [142, 224, 192],
+  [118, 211, 219],
+  [189, 225, 232],
+  [225, 238, 220]
 ];
 
 function clamp(value, minimum, maximum) {
@@ -640,7 +640,7 @@ export function initialiseHornTorus() {
   }, { threshold: 0.02 });
   visibilityObserver.observe(canvas);
 
-  fetch('data/facets.json?v=20260905a')
+  fetch('data/facets.json?v=20260905-prismatic')
     .then((response) => {
       if (!response.ok) throw new Error('The facet map could not be loaded.');
       return response.json();

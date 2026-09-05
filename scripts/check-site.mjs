@@ -33,13 +33,17 @@ const referencedSources = new Set();
 for (const [pageId, pageContent] of Object.entries(content)) {
   if (!pageIds.has(pageId)) addError(`Content exists for unknown page ${pageId}.`);
   if ('firstPerson' in pageContent || 'thirdPerson' in pageContent) addError(`${pageId}: discarded split voice remains in content.`);
-  if (!Array.isArray(pageContent.story?.paragraphs) || !pageContent.story.paragraphs.length) addError(`${pageId}: coherent story opening is missing.`);
+  if (pageContent.story !== null && (!Array.isArray(pageContent.story?.paragraphs) || !pageContent.story.paragraphs.length)) addError(`${pageId}: story opening must contain paragraphs or be explicitly omitted with null.`);
   for (const section of pageContent.sections || []) {
     for (const card of section.cards || []) {
       for (const sourceId of card.sourceIds || []) referencedSources.add(sourceId);
     }
   }
   for (const sourceId of pageContent.soundtrack?.sourceIds || []) referencedSources.add(sourceId);
+  for (const sourceId of pageContent.narrativeSourceIds || []) referencedSources.add(sourceId);
+  for (const scene of pageContent.narrative || []) {
+    if (!scene.heading || !Array.isArray(scene.paragraphs) || !scene.paragraphs.length) addError(`${pageId}: incomplete narrative scene.`);
+  }
 }
 
 for (const item of controversies) {
@@ -144,6 +148,13 @@ for (const page of pages) {
   }
 
   if (!html.includes('<html lang="en-AU">')) addError(`${page.file}: missing Australian language declaration.`);
+  const documentIds = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
+  if (new Set(documentIds).size !== documentIds.length) addError(`${page.file}: duplicate element IDs.`);
+  if (!documentIds.includes('story')) addError(`${page.file}: chapter entry has no story destination.`);
+  if (page.id === 'bloke') {
+    if ((html.match(/What each name means/g) || []).length !== 1 || html.includes('The names I use')) addError('the-bloke.html: repeated names explanation.');
+    if (!html.includes('class="life-story"') || !html.includes('class="work-ledger"')) addError('the-bloke.html: flowing narrative or expandable work history is missing.');
+  }
   if (!/<main\s+id="top"(?:\s|>)/.test(html)) addError(`${page.file}: missing main#top.`);
   if (!html.includes('rel="icon"') || !html.includes('assets/favicon.jpg')) addError(`${page.file}: raster favicon is missing.`);
   if (/data-perspective|perspective-control|First-person draft|Third person/i.test(html)) addError(`${page.file}: discarded split voice remains.`);

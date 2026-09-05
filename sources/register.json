@@ -880,6 +880,17 @@
     "authorship": "Luke personal record"
   },
   {
+    "id": "F45",
+    "type": "document",
+    "title": "Learning about Luke",
+    "location": "Learning_about_Luke.md",
+    "primaryPage": "01",
+    "status": "Personal recollections in a reflective journalling conversation",
+    "notes": "Luke's own memories of childhood, more than 40 house moves, work, travel, family and life on Straddie. The biographical prose draws on his messages, not the AI's interpretations.",
+    "availability": "local-reviewed-candidate",
+    "authorship": "Luke Nathan Hayes autobiographical recollections; conversation includes AI responses"
+  },
+  {
     "id": "S01",
     "type": "website",
     "title": "Luke on Facebook",

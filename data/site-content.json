@@ -1,14 +1,15 @@
 {
   "home": {
-    "intro": "One bloke on Minjerribah, one gloriously overconnected mind, and the worlds that grew when he stopped keeping work, love, music, politics and impossible questions in separate boxes.",
+    "intro": "I’m Luke. I’ve moved house more than 40 times, worked all sorts of jobs and followed my curiosity overseas. These days I’m on Minjerribah, making music, building things and still asking far too many questions.",
     "sections": [
       {
-        "heading": "A person before a system",
-        "intro": "The face, place and ordinary work come first. The larger architecture only makes sense when it remains connected to the person who made it.",
+        "heading": "Come and meet me",
+        "intro": "There’s a life behind all these websites. Start with the people, places and experiences that got me here.",
         "cards": [
           {
             "title": "Luke Nathan Hayes",
-            "body": "The person at the centre of the archive. The portrait and CV show a practical, creative and widely travelled life, but they do not tell every part of it.",
+            "body": "From growing up in Ningi to chasing waves on the Sunshine Coast, working in England and returning to India. The jobs are part of the story; so are the friends, wrong turns and good times.",
+            "href": "the-bloke.html",
             "evidence": "lived",
             "sourceIds": [
               "F32",
@@ -17,7 +18,7 @@
           },
           {
             "title": "Strange but True",
-            "body": "Luke's current sole-trader practice and practical local doorway for technology help, AI, media, events and project work on Minjerribah.",
+            "body": "This is my business on Minjerribah. I help with technology, AI, media, events and projects, including face-to-face help at the local market.",
             "evidence": "built",
             "sourceIds": [
               "F30",
@@ -27,7 +28,7 @@
           },
           {
             "title": "The personal Aura",
-            "body": "A way Luke is developing to make his own body, mind, memory, work, love, humour, place and imagined futures navigable. It is personal architecture, not a template imposed on anyone else.",
+            "body": "My long-running exploration of memory, intelligence and an AI that could grow alongside a person. This is where the personal questions become designs and experiments.",
             "evidence": "open-question",
             "sourceIds": [
               "F14",
@@ -38,12 +39,12 @@
         ]
       },
       {
-        "heading": "Nothing is kept in a separate box",
-        "intro": "A song can become a system. A joke can become a submission. A strange question can grow a working website and still remain a strange question.",
+        "heading": "What I’m making",
+        "intro": "Music, practical tools and some very ambitious ideas. Follow whatever interests you.",
         "cards": [
           {
-            "title": "Receipts beside the leap",
-            "body": "Project Atlas lays the public paths between these worlds. It is a map rather than an organisation, and the live links let you see the work without pretending every idea inside them is settled.",
+            "title": "Find a project",
+            "body": "I’ve built enough websites that finding the right one became a job of its own. Project Atlas brings them together so you can browse the work.",
             "evidence": "built",
             "sourceIds": [
               "U13"
@@ -51,8 +52,8 @@
             "href": "https://auraofintelligence.github.io/project-atlas/"
           },
           {
-            "title": "Songs carry another kind of truth",
-            "body": "Music and story can hold desire, grief, comedy and possibility without being mistaken for technical proof. They belong in the portrait because they show how the system feels from inside.",
+            "title": "Put some music on",
+            "body": "Some songs are about love, some are about the island, and some head straight into the future. The lyrics are here while I gather the recordings I want to share.",
             "evidence": "story",
             "sourceIds": [
               "F24",
@@ -62,11 +63,12 @@
             "href": "https://auraofintelligence.github.io/i-C-infinity-music-universe/index.html"
           },
           {
-            "title": "The archive is incomplete",
-            "body": "Some images and life moments are not on this device yet. Missing media will be added through a later, selective pass rather than replaced with invented documentary detail.",
+            "title": "More places to go",
+            "body": "Travelling has been a big part of my life. Here are some memories from overseas, and the tools I’m making to help plan what comes next.",
+            "href": "every-border.html",
             "evidence": "open-question",
             "sourceIds": [
-              "F32",
+              "F45",
               "F36"
             ]
           }
@@ -82,67 +84,56 @@
       "reason": "It begins where this site begins: with worlds waiting to be born and the place before the blueprint.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "Start with the bloke, turn the torus, jump to the wild stuff, or choose why you are here. Every path is another way into the same unruly life.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "I rejected the status quo in 2012 and then spent the years since refusing to keep the pieces of myself in separate boxes.",
-        "The bloke at the Amity market table, Luke Catalyst, i C. infinity, Tiggy Bestmann, Australian Sire and Aura of Intelligence are not a row of brands. They are the practical, political, musical, romantic and wildly speculative voices of one man.",
-        "Some of this is working in public now. Some of it lives in old documents, songs and books. Some of it is still a proposal. Some of it is a question with no respectable shoes on yet. I am putting it together here without sanding off the contradictions.",
-        "Enter through any facet. You are still meeting one person."
+        "As a kid I loved hide-and-seek and tiggy. They were explorer games. I even named my first dog Tiggy. That urge to explore has stayed with me through new towns, countries, relationships and ideas.",
+        "I’ve been a mechanic, a festival worker, a driver and a web designer, among plenty of other things. I love a good conversation, live music and the ocean. Somewhere along the way, my questions about how we live became years of work on AI and the future. This site brings that work back together with the life it came from."
       ]
     }
   },
   "bloke": {
-    "intro": "I live at Amity on Minjerribah. My work has included construction, warehouses, driving, airport services, festivals, mechanics and customer service. I started web design in 2008/09, then went through NEIS with Sarina Russo and kept building independent media, research and AI projects. I also write songs and books.",
-    "sections": [
+    "intro": "More than 40 house moves, a lot of different jobs and plenty of reasons to keep exploring. I live at Amity now, but my story starts in Ningi and takes a few trips around the world before it gets here.",
+    "narrative": [
       {
-        "heading": "The names I use",
-        "intro": "These names separate different kinds of work. They are not separate people or companies.",
-        "cards": [
-          {
-            "title": "Luke Nathan Hayes and Luke Catalyst",
-            "body": "Luke Nathan Hayes is my name. I use Luke Catalyst for public work about systems, AI, ideas and speaking. The name-meaning image is personal symbolism, not authoritative etymology.",
-            "evidence": "lived",
-            "sourceIds": [
-              "F31",
-              "F36",
-              "U25"
-            ],
-            "href": "https://lukecatalyst.com"
-          },
-          {
-            "title": "Strange but True",
-            "body": "Strange but True is my sole-trader business. I use it for practical technology help, AI, media, event and project work, including face-to-face help at the local market.",
-            "evidence": "built",
-            "sourceIds": [
-              "F30",
-              "U12"
-            ],
-            "href": "https://auraofintelligence.github.io/strange-but-true/index.html"
-          },
-          {
-            "title": "i C. infinity and Aura of Intelligence",
-            "body": "i C. infinity is the name I release music under. Aura of Intelligence is the name of my long-term work on cognitive architecture. Some Aura projects are working public prototypes and others are still proposals.",
-            "evidence": "built",
-            "sourceIds": [
-              "U05",
-              "U23"
-            ]
-          }
+        "heading": "Scrub, tennis and the next wave",
+        "paragraphs": [
+          "I was born in Redcliffe and spent my first few years in Ningi, on about 100 acres that were mostly scrub forest. I loved hide-and-seek and tiggy, and gave my first dog the name Tiggy. Exploring was already the fun part.",
+          "At Grace Lutheran College I enjoyed technical drawing, woodwork, metalwork and the chance to make things. Outside class it was tennis and bodyboarding. At the Googa outdoor camp in Year 10, I won the boys’ orienteering competition. I wasn’t the fastest runner, but finding a way through the bush with a compass suited me.",
+          "I got into science at the University of the Sunshine Coast. Then I got bored, skipped lectures to go bodyboarding and left before the end of the first term. The waves were winning that argument."
         ]
       },
       {
+        "heading": "Moving out and heading overseas",
+        "paragraphs": [
+          "I moved out with an old school friend, drove a silver 1981 Holden Gemini and worked the checkouts at Woolworths in Burpengary. There were house parties, nightclubs, girlfriends and plenty of beach time. I remember being a fun-loving, easygoing beach bum. It was a good time.",
+          "Then came six months in Maroochydore and six in Mooloolaba, with a transfer to the new Woolworths at Buderim. After a year on the coast I returned to Caboolture and spent two and a half years learning servicing, brakes, steering, suspension and wheel alignment in Dad’s automotive business. After that, I went to England for a year on a working holiday visa.",
+          "One of the jobs took me to Glastonbury in 2004. While we were setting up the festival, I sat on the hill by the stone circle and watched a sunshower put a rainbow right on the tip of the Pyramid Stage. I caught it on my Sony Cyber-shot. Later the memory stick corrupted and I lost the photo. I still remember the sight."
+        ]
+      },
+      {
+        "heading": "Over 40 moves",
+        "paragraphs": [
+          "I’ve moved house more than 40 times. Making friends has usually come easily; keeping in touch after another move has been harder. I’ve left relationships untended and felt the limits of trying to keep a big life going on hourly wages. There’s a lot of starting again in my history.",
+          "There have been good reasons to pack up again too. Travel has given me some of my favourite memories: New Zealand, three trips to Thailand, longer stays in India and visits to Nepal. Some journeys were with a girlfriend, others on my own. I’ve met people easily and enjoyed the chance to see how life works somewhere else."
+        ]
+      },
+      {
+        "heading": "Straddie has always meant family",
+        "paragraphs": [
+          "Minjerribah was my home away from home long before it became my current address. Mum, her mum and other family members had homes at Amity. I came for family, friends and bodyboarding, eagerly waiting for the cyclone swells along the coast.",
+          "Later I worked on the island, helped with festivals and transcribed aural history for the museum. There were websites to build, people to meet and new projects to get involved in. My connection to this place grew through those ordinary encounters as much as through the big moments.",
+          "I still want adventure, affection, music and a reason to be excited about tomorrow. The AI projects, songs and books are part of that. So is wanting enough time and money to enjoy life with people I care about. When I say ‘joyful responsible abundance’, the joyful part matters."
+        ]
+      }
+    ],
+    "narrativeSourceIds": ["F45", "F44", "F36"],
+    "sections": [
+      {
         "heading": "My work history",
+        "layout": "ledger",
         "intro": "I have moved between physical work, service work, technology, community media and independent projects.",
         "cards": [
-          {
-            "title": "Web design started in 2008/09",
-            "body": "I began doing web design in 2008/09, shortly before starting NEIS with Sarina Russo. That early work included CreatingAttraction.com.au and led into later independent websites and projects.",
-            "evidence": "lived",
-            "sourceIds": [
-              "F44"
-            ]
-          },
           {
             "title": "Practical work from 2000 to 2007",
             "body": "I worked in customer service and perishables at Woolworths, automotive repair at Drive Safe Service, events in London and Brisbane, Queensland Rail, airport services in Darwin and mine shutdowns with Ausblast. I also completed automotive training, gained a heavy-rigid truck licence and received airside security training.",
@@ -153,7 +144,7 @@
           },
           {
             "title": "Business and learning from 2008 to 2012",
-            "body": "I started web design in 2008/09 and established CreatingAttraction.com.au through NEIS with Sarina Russo. During this period I also worked for Australia Post, Kirby Vacuum Cleaners and Viande Fine Foods, studied neuro-linguistic programming and entrepreneurship, researched Australian and international law, and hosted a podcast series that reached more than 80,000 listens.",
+            "body": "I started web design in 2008/09, shortly before starting NEIS with Sarina Russo, through which I established CreatingAttraction.com.au. During this period I also worked for Australia Post, Kirby Vacuum Cleaners and Viande Fine Foods, studied neuro-linguistic programming and entrepreneurship, researched Australian and international law, and hosted a podcast series that reached more than 80,000 listens.",
             "evidence": "lived",
             "sourceIds": [
               "F44"
@@ -161,39 +152,20 @@
           },
           {
             "title": "Island, media and systems work from 2013 to 2017",
-            "body": "The timeline records owner-builder work at Amity Point, I Choose Infinity, web administration for Maringa Farm, aural-history transcription for the North Stradbroke Island Historical Museum, Island Vibe and Quandamooka Festival volunteering, GamifyDemocracy.com, Quandamooka Festival web design, StraddieInfo.com and AuraOZ. It also records game-design study and machine-learning and AI education.",
+            "body": "I worked on an owner-builder project at Amity Point and on web design and administration for Maringa Farm. I transcribed aural history for the North Stradbroke Island Historical Museum, volunteered at Island Vibe and Quandamooka Festival, and built the Quandamooka Festival website. My own projects included I Choose Infinity, GamifyDemocracy.com, StraddieInfo.com and AuraOZ. I also studied game design at Evocca, which I did not complete, and pursued machine-learning and AI ethics and opportunities.",
             "evidence": "lived",
             "sourceIds": [
               "F44"
             ]
           },
           {
-            "title": "Work that exists now",
-            "body": "I currently take on construction and forklift work while building Strange but True. The business offers practical local help with technology, AI, media, events and projects.",
+            "title": "Later work",
+            "body": "My later jobs have included frozen-food warehouse picking and packing, market research interviews, and construction and forklift work.",
             "evidence": "built",
             "sourceIds": [
               "F30",
               "F36",
               "U12"
-            ]
-          },
-          {
-            "title": "Things still being proposed",
-            "body": "The Dunwich cultural intelligence node and ready SET Co-op do not currently exist. They are proposals for shared local facilities, training and work.",
-            "evidence": "proposed",
-            "sourceIds": [
-              "F01",
-              "F03",
-              "U09"
-            ]
-          },
-          {
-            "title": "A bloke who keeps the joke",
-            "body": "I use humour in my writing, music and public work. The comedy material is part of the creative record, not evidence for the technical claims elsewhere on this site.",
-            "evidence": "lived",
-            "sourceIds": [
-              "F35",
-              "U18"
             ]
           }
         ]
@@ -208,16 +180,11 @@
       "reason": "It puts the shed, market table, patient tech help and bigger questions into the same warm local frame.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "That is the basic record: practical jobs, independent projects, community work, music, writing and a long-running interest in AI and social systems.",
-    "story": {
-      "paragraphs": [
-        "I have worked in construction, warehouses, market research, mail and truck driving, mine shutdowns, airport services, rail, festivals, mechanics, retail and customer service. I started web design in 2008/09, shortly before doing NEIS with Sarina Russo. From there I built websites and developed independent research, media, community and AI projects.",
-        "I use different names for different work. Luke Catalyst is for public systems and AI work. Strange but True is my sole-trader business. i C. infinity is my music. Tiggy Bestmann and Australian Sire are names used in my fiction. Aura of Intelligence is my long-term cognitive architecture project."
-      ]
-    }
+    "closing": null,
+    "story": null
   },
   "break": {
-    "intro": "Between 2012 and 2014, Luke stopped treating the inherited operating system as inevitable. The surviving documents show a rough, energetic attempt to connect personal development, law, communication, technology and participation.",
+    "intro": "Around 2012, I was spending more and more time trying to understand law, politics and how people could have a greater say. I started putting those questions into documents and designs. A lot of what I’m building today began there.",
     "sections": [
       {
         "heading": "The early break",
@@ -298,12 +265,12 @@
     "story": {
       "paragraphs": [
         "I looked closely at law, politics, economics and corporate systems. I did not find a clean place outside them. So I began designing better interfaces for self-development, communication, participation and shared intelligence.",
-        "I was not waiting until I had perfect language or permission. Australian Law 2012, We Will Be Heard and The Constitutional Matrix of Participation were early attempts to draw what I could see. Some parts now feel unfinished or naive. I would rather show that history than polish it into a tidy founder myth."
+        "Australian Law 2012, We Will Be Heard and The Constitutional Matrix of Participation were early attempts to work through those questions. I was learning as I went. Keeping the originals here lets you see how the ideas developed."
       ]
     }
   },
   "personal-aura": {
-    "intro": "Aura is Luke's attempt to give one complicated human life a shape without flattening it. The horn torus holds 288 outside facets: many ways in, one moving person, and no demand that anybody else use the same map.",
+    "intro": "I want an AI that can learn with me over time, remember what matters and help me make sense of my life. Aura is where I explore how that might work, from the shape of its memory to the relationships it could develop.",
     "sections": [
       {
         "heading": "The facets are related",
@@ -480,7 +447,7 @@
     }
   },
   "songs": {
-    "intro": "Music, comedy and story are not decorations around Luke's serious work. They are working instruments for feeling a system, testing a world and keeping emotional truth present while the technical language catches up.",
+    "intro": "Love songs, island songs, ambitious futures and a bit of mischief. I release music as i C. infinity, write romantic adventures and enjoy seeing how much a good laugh can get across.",
     "sections": [
       {
         "heading": "The music carries the architecture",
@@ -562,8 +529,8 @@
     "closing": "The songs do not have to footnote every feeling. They keep open the reasons I cared enough to build any of this at all.",
     "story": {
       "paragraphs": [
-        "I use songs, stories and jokes to let people feel the system before asking them to study it. A song can carry love, anger, grief, civic frustration or cosmic possibility without squeezing it into a policy paper.",
-        "i C. infinity is where I sing the worlds. Loose Goose lets me turn a hard truth through different comedy lenses without losing the core fact. Tiggy Bestmann is the romantic traveller in me. Australian Sire is the hotter fantasy register, a name earned in the books through wins, promises and trust. They remain two sides of the same protagonist. Cosmic Nexus is where mystery, travel, maps and film can meet."
+        "Some ideas come out better as songs. There’s room for affection, frustration, desire and ridiculous possibilities, and room to enjoy them without needing to read all the research first.",
+        "The albums collected here are Starseed Code, A Protopian Gambit and Straddie Fun. Alongside them are the romantic adventures of Tiggy Bestmann and Australian Sire, comedy experiments with Loose Goose, and Cosmic Nexus, which brings together my interests in travel, mystery and film."
       ]
     }
   },
@@ -649,7 +616,7 @@
     }
   },
   "minjerribah": {
-    "intro": "Minjerribah is where the practical life and the civilisation-sized imagination touch the same sand: a market table, a ferry, a computer problem, an old yarn, a song, then a question big enough to need a whole island.",
+    "intro": "Straddie was a family home away from home for years before I lived here. Mum, my grandmother and other family were at Amity. I came for family and waves; these days there’s work, music and plenty of projects here too.",
     "sections": [
       {
         "heading": "Real today",
@@ -745,13 +712,13 @@
     "closing": "Start with what can be touched and checked. Then let the models and stories ask what the island might become, without speaking over the people whose authority and consent matter.",
     "story": {
       "paragraphs": [
-        "I live and work on Minjerribah. Strange but True starts with small useful things: a market table, a technology problem, a recording job, a community event or a yarn that helps somebody move forward.",
+        "I remember hearing a cyclone was on its way and thinking about the surf. Bodyboarding was a big part of what brought me back to the island. Later came festival work, history transcription for the museum, websites and a growing collection of local projects.",
         "The same island also makes me ask very large questions. Could shared compute, training and creative facilities grow from Dunwich? Could digital twins help us rehearse choices? What could careful, properly authorised study of sand and minerals teach us about resilience and future materials? Those are proposals and models. They are not promises made on behalf of Quandamooka people or the wider community."
       ]
     }
   },
   "fair-go": {
-    "intro": "Luke's civic work begins with ordinary complaints and keeps climbing until it reaches law, infrastructure, public ledgers and national choices. The humour stays, and the original submissions sit close enough to open.",
+    "intro": "I want people to have more say in decisions that affect their lives. That has led me into law, public records, community tools and some fairly big questions about what Australia could do differently.",
     "sections": [
       {
         "heading": "From gripe to public machinery",
@@ -850,15 +817,15 @@
     }
   },
   "every-border": {
-    "intro": "Travel made Luke's world larger and more particular at the same time. Photographs and event artefacts from India and Nepal sit beside public tools designed to turn borders into readable invitations rather than vague fantasies.",
+    "intro": "A year in England, three trips to Thailand, time in New Zealand, and longer stays in India with visits to Nepal. I’ve travelled for work, love and curiosity. There are still plenty of places I want to go.",
     "sections": [
       {
-        "heading": "Places that changed the map",
-        "intro": "The travel record stays personal and specific rather than turning cultures into scenery.",
+        "heading": "India and Nepal",
+        "intro": "Some of the places and events from those journeys. I’m still gathering the photographs from my other drives.",
         "cards": [
           {
             "title": "Golden Temple",
-            "body": "A personal photograph connecting travel, spirituality and India. It records Luke's presence and perspective, not authority to interpret Sikh experience for others.",
+            "body": "My visit to the Golden Temple in Amritsar is part of the photo collection I want to bring into this story.",
             "evidence": "lived",
             "sourceIds": [
               "F20",
@@ -867,7 +834,7 @@
           },
           {
             "title": "Boudhanath and Lumbini",
-            "body": "Photographs from Nepal connect spiritual curiosity with peace and international possibility. The available captions are limited, so the record should not invent encounters or dates.",
+            "body": "I also travelled to Nepal, visiting Boudhanath and Lumbini. The photographs from those visits are on the list for the next image pass.",
             "evidence": "lived",
             "sourceIds": [
               "F21",
@@ -876,7 +843,7 @@
           },
           {
             "title": "Kolhapur student rocket event",
-            "body": "A newspaper page records coverage associated with the event. Its full context and Luke's precise role should remain tied to the preserved artefact.",
+            "body": "A newspaper page from the student rocket event in Kolhapur is another piece of my India archive to bring here.",
             "evidence": "lived",
             "sourceIds": [
               "F19",
@@ -886,8 +853,8 @@
         ]
       },
       {
-        "heading": "Invitation before itinerary",
-        "intro": "The tools prepare routes without pretending that opportunity, permission or welcome has already been granted.",
+        "heading": "Where to next?",
+        "intro": "I’ve been building tools to help plan future travel, find useful work and connect with people and projects overseas.",
         "cards": [
           {
             "title": "Australian Visa and Activity Atlas",
@@ -925,14 +892,14 @@
       "sourceIds": [
         "F24"
       ],
-      "reason": "It names the page's central hope while leaving room for law, consent, hosts and local context to decide whether a bridge is real.",
+      "reason": "A song for the possibility of meeting someone, finding a connection and making the next journey.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The map is not a claim on the world. It is preparation to meet real places with more care, clearer permission and something useful to offer.",
+    "closing": null,
     "story": {
       "paragraphs": [
-        "I have learned by moving through places, meeting people and letting unfamiliar systems unsettle my own. India and Nepal were not backdrops for a personal brand. The Golden Temple, Boudhanath, Lumbini and the Kolhapur student rocket event each belong to their own people and histories, while also becoming part of my lived memory.",
-        "I want travel planning to begin with two separate questions: can I enter, and what may I responsibly do once I am there? A border can become a bridge when an invitation, useful work, art, research or relationship is real. It is not a bridge just because I would like it to be."
+        "My first trip to Thailand was with my girlfriend over New Year 2009/10. I went back twice on my own. I loved the warmth and the connections I made there. At the Golden Mount I got a particularly favourable fortune ticket. I was quite happy with that result.",
+        "In 2006 I spent a couple of weeks in Rotorua, staying at a hostel run by a friend’s parents. They encouraged me to take part in the Tamaki Māori ceremony as the representative of our visiting group. It was intimidating and memorable. England gave me a year of work and travel, including setting up Glastonbury in 2004. India later became somewhere I returned to for much longer stays."
       ]
     }
   },
@@ -1034,7 +1001,7 @@
     }
   },
   "sources": {
-    "intro": "This is the open studio floor: original files, public links, rough drafts, AI conversations, songs, dates, missing pieces and changing versions left close enough to inspect.",
+    "intro": "The documents, photographs, lyrics and websites behind these pages. Some are available to open now; others are still in my archive or waiting for me to find the original files.",
     "sections": [
       {
         "heading": "Leave the fingerprints on it",
@@ -1102,7 +1069,7 @@
     }
   },
   "choose-door": {
-    "intro": "Choose why you are here. Your door suggests a short route through the same sprawling person. It does not hide the strange parts or create a safer fictional Luke.",
+    "intro": "Here for the music, curious about Aura, or catching up after a few years? Pick a starting point and I’ll suggest a few pages. You can wander off whenever you like.",
     "sections": [
       {
         "heading": "Choose a starting route",

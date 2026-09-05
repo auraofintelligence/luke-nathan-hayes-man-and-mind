@@ -17,7 +17,7 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const assetVersion = '20260905-luminous';
+const assetVersion = '20260905-prismatic';
 const sourceIconPaths = {
   U01: 'assets/favicons/u01.ico',
   U02: 'assets/favicons/u02.png',
@@ -203,7 +203,7 @@ const heroMedia = {
   bloke: {
     src: 'assets/media/luke-aura-portrait.webp',
     alt: 'Luke in a bright striped shirt beside a many-coloured meditation figure',
-    caption: 'One bloke, many colours, no clean little box.',
+    caption: 'Luke, with artwork from the Aura project.',
     sourceId: 'F39'
   },
   'personal-aura': {
@@ -322,6 +322,7 @@ function renderHero(page, pageContent) {
 }
 
 function renderStory(pageContent) {
+  if (!pageContent.story) return '';
   return `
   <section class="story-opening" id="story">
     <div class="page-shell story-flow">
@@ -337,13 +338,21 @@ function renderSourceButtons(ids = []) {
   }).join('');
 }
 
+function renderNarrative(pageContent) {
+  if (!pageContent.narrative?.length) return '';
+  return `<section class="life-story" id="story"><div class="page-shell">
+    ${pageContent.narrative.map((part) => `<article class="life-scene"><h2>${escapeHtml(part.heading)}</h2><div class="life-prose">${part.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div></article>`).join('')}
+    <div class="life-sources">${renderSourceButtons(pageContent.narrativeSourceIds)}</div>
+  </div></section>`;
+}
+
 function renderStoryCard(card, index) {
   const isAdult = card.href?.includes('grey-area-commons');
   let externalLink = '';
   if (card.href) {
     externalLink = isAdult
       ? `<button class="button secondary" type="button" data-adult-link="${escapeHtml(card.href)}">Read the adult boundary first</button>`
-      : `<a class="external-card-link" href="${escapeHtml(card.href)}"${externalAttributes(card.href)}>Follow this into the live work</a>`;
+      : `<a class="external-card-link" href="${escapeHtml(card.href)}"${externalAttributes(card.href)}>Explore ${escapeHtml(card.title)} <span aria-hidden="true">↗</span></a>`;
   }
 
   return `
@@ -356,7 +365,12 @@ function renderStoryCard(card, index) {
 }
 
 function renderSections(pageContent) {
-  return pageContent.sections.map((section) => `
+  return pageContent.sections.map((section) => section.layout === 'ledger' ? `
+  <section class="section work-section"><div class="page-shell"><details class="work-ledger">
+    <summary>${escapeHtml(section.heading)}<span aria-hidden="true">+</span></summary>
+    ${section.intro ? `<p class="ledger-intro">${escapeHtml(section.intro)}</p>` : ''}
+    ${(section.cards || []).map((card) => `<article class="work-row"><h3>${escapeHtml(card.title)}</h3><div><p>${escapeHtml(card.body)}</p><div class="story-card-footer">${renderSourceButtons(card.sourceIds)}</div></div></article>`).join('')}
+  </details></div></section>` : `
   <section class="section">
     <div class="page-shell">
       <div class="section-heading">
@@ -373,23 +387,23 @@ function renderSections(pageContent) {
 function renderIdentityPanel(pageId) {
   if (pageId !== 'bloke') return '';
   const identities = [
-    ['Luke Nathan Hayes', 'My name and the person responsible for everything collected on this site.', []],
+    ['Luke Nathan Hayes', 'My name and the person responsible for everything collected on this site.', ['F31', 'F36']],
     ['Luke Catalyst', 'The public name I use for systems thinking, AI, talks and experimental projects.', ['U25']],
-    ['Strange but True', 'My sole-trader business for practical technology, AI, media, event and project help.', ['U12']],
+    ['Strange but True', 'My sole-trader business for practical technology, AI, media, event and project help, including face-to-face help at the local market.', ['F30', 'U12']],
     ['i C. infinity', 'The name I release my music under.', ['U23']],
     ['Tiggy Bestmann', 'A name used for my romantic travel fiction.', ['U17']],
     ['Australian Sire', 'A name used for the adult romantasy side of my fiction.', ['U17']],
-    ['Aura of Intelligence', 'My long-term project exploring personal cognitive architecture, memory and human-AI relationships.', ['U05']],
+    ['Aura of Intelligence', 'My long-term project exploring personal cognitive architecture, memory and human-AI relationships. Some projects are working public prototypes and others are still proposals.', ['U05']],
     ['GAJRA Earth', 'A proposed meeting place for several public-interest projects. It is not an operating organisation.', ['U20']],
     ['ready SET Co-op', 'A proposed co-operative model for shared local training, tools and work.', ['U09']],
     ['Project Atlas', 'A public index that connects my websites and projects.', ['U13']]
   ];
   return `
-  <section class="section identity-section">
+  <section class="section identity-section" id="names">
     <div class="page-shell">
       <div class="section-heading">
         <h2>What each name means</h2>
-        <p>I use these names to keep different bodies of work clear. This is what each one is for.</p>
+        <p>You might know me through the music, the books or a project. Here’s how the names fit together.</p>
       </div>
       <div class="identity-constellation">
         ${identities.map(([name, meaning, sourceIds], index) => `<article class="identity-card identity-card-${index % 5}"><h3>${escapeHtml(name)}</h3><p>${escapeHtml(meaning)}</p><div class="story-card-footer">${renderSourceButtons(sourceIds)}</div></article>`).join('')}
@@ -685,8 +699,9 @@ function renderPage(page, index) {
     ${renderHero(page, pageContent)}
     <div id="page-content" tabindex="-1">
       ${renderStory(pageContent)}
-      ${renderIdentityPanel(page.id)}
+      ${renderNarrative(pageContent)}
       ${renderSections(pageContent)}
+      ${renderIdentityPanel(page.id)}
       ${renderControversies(page.id)}
       ${renderAudienceDoors(page.id)}
       ${renderSourceRoom(page.id)}

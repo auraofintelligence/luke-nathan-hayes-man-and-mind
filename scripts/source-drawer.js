@@ -3,7 +3,7 @@ let dialogElements;
 
 function loadRegister() {
   if (!registerPromise) {
-    registerPromise = fetch('sources/register.json?v=20260905a').then((response) => {
+    registerPromise = fetch('sources/register.json?v=20260905-prismatic').then((response) => {
       if (!response.ok) throw new Error('The source register could not be loaded.');
       return response.json();
     });
