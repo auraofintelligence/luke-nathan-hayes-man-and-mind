@@ -93,15 +93,15 @@
     }
   },
   "bloke": {
-    "intro": "Before the tori, satellites and civic machinery, there is Luke: living at Amity on Minjerribah, doing practical work, making songs, having a laugh and trying to connect large questions to useful local action.",
+    "intro": "I live at Amity on Minjerribah. My work has included construction, warehouses, driving, airport services, festivals, mechanics, customer service, web design, media and AI projects. I also write songs and books.",
     "sections": [
       {
-        "heading": "The names on the table",
-        "intro": "Each name brings a different part of Luke to the front. Together they sound like one crowded, curious life.",
+        "heading": "The names I use",
+        "intro": "These names separate different kinds of work. They are not separate people or companies.",
         "cards": [
           {
             "title": "Luke Nathan Hayes and Luke Catalyst",
-            "body": "Luke Nathan Hayes is the person. Luke Catalyst is the public identity used for systems, ideas, speaking and creative provocation. The playful name-meaning image is personal symbolism, not authoritative etymology.",
+            "body": "Luke Nathan Hayes is my name. I use Luke Catalyst for public work about systems, AI, ideas and speaking. The name-meaning image is personal symbolism, not authoritative etymology.",
             "evidence": "lived",
             "sourceIds": [
               "F31",
@@ -112,7 +112,7 @@
           },
           {
             "title": "Strange but True",
-            "body": "A current sole-trader practice built around patient, practical help. The public record shows technology, AI, media, events and project support, with a local market-table scale rather than an invented corporate one.",
+            "body": "Strange but True is my sole-trader business. I use it for practical technology help, AI, media, event and project work, including face-to-face help at the local market.",
             "evidence": "built",
             "sourceIds": [
               "F30",
@@ -122,7 +122,7 @@
           },
           {
             "title": "i C. infinity and Aura of Intelligence",
-            "body": "i C. infinity is the music and creative identity. Aura of Intelligence is Luke's personal cognitive architecture and long-horizon constellation. Neither name turns a proposal into a completed organisation.",
+            "body": "i C. infinity is the name I release music under. Aura of Intelligence is the name of my long-term work on cognitive architecture. Some Aura projects are working public prototypes and others are still proposals.",
             "evidence": "built",
             "sourceIds": [
               "U05",
@@ -132,12 +132,12 @@
         ]
       },
       {
-        "heading": "Hands first. Then systems. Always songs.",
-        "intro": "The practical, intellectual and creative strands are most legible when they remain beside one another.",
+        "heading": "My work history",
+        "intro": "I have moved between physical work, service work, technology, community media and independent projects.",
         "cards": [
           {
             "title": "Work that exists now",
-            "body": "The business card, CV and live Strange but True site show the work Luke offers now, at the honest scale of a bloke, a market table and the people who come looking for help.",
+            "body": "I currently take on construction and forklift work while building Strange but True. The business offers practical local help with technology, AI, media, events and projects.",
             "evidence": "built",
             "sourceIds": [
               "F30",
@@ -147,7 +147,7 @@
           },
           {
             "title": "Things still being proposed",
-            "body": "The Dunwich cultural intelligence node and ready SET Co-op do not currently exist. They belong to Luke's proposed pathway for shared local facilities, learning and work.",
+            "body": "The Dunwich cultural intelligence node and ready SET Co-op do not currently exist. They are proposals for shared local facilities, training and work.",
             "evidence": "proposed",
             "sourceIds": [
               "F01",
@@ -157,7 +157,7 @@
           },
           {
             "title": "A bloke who keeps the joke",
-            "body": "Humour belongs inside the story because it is part of Luke's tone and personality. The wine screenshot and comedy work reveal the bloke without being asked to prove anything else.",
+            "body": "I use humour in my writing, music and public work. The comedy material is part of the creative record, not evidence for the technical claims elsewhere on this site.",
             "evidence": "lived",
             "sourceIds": [
               "F35",
@@ -176,11 +176,11 @@
       "reason": "It puts the shed, market table, patient tech help and bigger questions into the same warm local frame.",
       "mediaStatus": "Video selection pending the later media pass."
     },
-    "closing": "The big ideas did not arrive instead of ordinary life. They grew through it, usually with a computer humming, an island nearby and another song on the way.",
+    "closing": "That is the basic record: practical jobs, independent projects, community work, music, writing and a long-running interest in AI and social systems.",
     "story": {
       "paragraphs": [
-        "I am not a clean job title. I have worked with my hands, travelled, sold things at markets, helped people with technology, recorded community events, written songs and kept following questions that refused to stay in one box.",
-        "Luke Nathan Hayes is the person. Luke Catalyst takes the public systems questions. Strange but True is the work I can actually offer now. i C. infinity carries the music. Tiggy Bestmann wanders into romantic travelogue. Australian Sire turns up the heat in the books. Aura of Intelligence holds the long arc. Those names are different doors into one life, not a collection of companies pretending to be bigger than they are."
+        "I have worked in construction, warehouses, market research, mail and truck driving, mine shutdowns, airport services, rail, festivals, mechanics, retail and customer service. Since 2015 I have also built websites, recorded community events and developed independent AI, media and systems projects.",
+        "I use different names for different work. Luke Catalyst is for public systems and AI work. Strange but True is my sole-trader business. i C. infinity is my music. Tiggy Bestmann and Australian Sire are names used in my fiction. Aura of Intelligence is my long-term cognitive architecture project."
       ]
     }
   },

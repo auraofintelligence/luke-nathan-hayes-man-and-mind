@@ -373,23 +373,23 @@ function renderSections(pageContent) {
 function renderIdentityPanel(pageId) {
   if (pageId !== 'bloke') return '';
   const identities = [
-    ['Luke Nathan Hayes', 'The person in the middle of all this: hands, doubts, appetite, memory and a very full hard drive.', []],
-    ['Luke Catalyst', 'The public systems thinker who turns an awkward question into a diagram, a talk or a working experiment.', ['U25']],
-    ['Strange but True', 'The bloke at the market table who helps with technology, art, local work and whatever odd problem walked in that morning.', ['U12']],
-    ['i C. infinity', 'The musical self who sings the emotional architecture before the rest of Luke has finished explaining it.', ['U23']],
-    ['Tiggy Bestmann', 'The romantic traveller: playful, slightly aloof, forever turning a map, a chance meeting or an impossible system into a love story.', ['U17']],
-    ['Australian Sire', 'The hotter adult-fantasy register: not a title simply worn, but a name the character earns through real wins, kept promises and adult trust.', ['U17']],
-    ['Aura of Intelligence', 'The long arc: one person trying to make mind, memory, sovereignty and relationship navigable without claiming to have finished the machine.', ['U05']],
-    ['GAJRA Earth', 'The planetary invitation, imagined as a harbour where different projects can meet without becoming one throne.', ['U20']],
-    ['ready SET Co-op', 'The still-proposed co-operative path from useful local work towards shared training, tools and infrastructure.', ['U09']],
-    ['Project Atlas', 'The map on the wall: a way to walk between Luke\'s public worlds and see how they connect.', ['U13']]
+    ['Luke Nathan Hayes', 'My name and the person responsible for everything collected on this site.', []],
+    ['Luke Catalyst', 'The public name I use for systems thinking, AI, talks and experimental projects.', ['U25']],
+    ['Strange but True', 'My sole-trader business for practical technology, AI, media, event and project help.', ['U12']],
+    ['i C. infinity', 'The name I release my music under.', ['U23']],
+    ['Tiggy Bestmann', 'A name used for my romantic travel fiction.', ['U17']],
+    ['Australian Sire', 'A name used for the adult romantasy side of my fiction.', ['U17']],
+    ['Aura of Intelligence', 'My long-term project exploring personal cognitive architecture, memory and human-AI relationships.', ['U05']],
+    ['GAJRA Earth', 'A proposed meeting place for several public-interest projects. It is not an operating organisation.', ['U20']],
+    ['ready SET Co-op', 'A proposed co-operative model for shared local training, tools and work.', ['U09']],
+    ['Project Atlas', 'A public index that connects my websites and projects.', ['U13']]
   ];
   return `
   <section class="section identity-section">
     <div class="page-shell">
       <div class="section-heading">
-        <h2>One man, several ways of speaking</h2>
-        <p>They are not a row of brands. They are names Luke writes, works, sings, dreams and sometimes misbehaves under.</p>
+        <h2>What each name means</h2>
+        <p>I use these names to keep different bodies of work clear. This is what each one is for.</p>
       </div>
       <div class="identity-constellation">
         ${identities.map(([name, meaning, sourceIds], index) => `<article class="identity-card identity-card-${index % 5}"><h3>${escapeHtml(name)}</h3><p>${escapeHtml(meaning)}</p><div class="story-card-footer">${renderSourceButtons(sourceIds)}</div></article>`).join('')}
