@@ -93,7 +93,7 @@
     }
   },
   "bloke": {
-    "intro": "I live at Amity on Minjerribah. My work has included construction, warehouses, driving, airport services, festivals, mechanics, customer service, web design, media and AI projects. I also write songs and books.",
+    "intro": "I live at Amity on Minjerribah. My work has included construction, warehouses, driving, airport services, festivals, mechanics and customer service. I started web design in 2008/09, then went through NEIS with Sarina Russo and kept building independent media, research and AI projects. I also write songs and books.",
     "sections": [
       {
         "heading": "The names I use",
@@ -135,6 +135,22 @@
         "heading": "My work history",
         "intro": "I have moved between physical work, service work, technology, community media and independent projects.",
         "cards": [
+          {
+            "title": "Web design started in 2008/09",
+            "body": "I began doing web design in 2008/09, shortly before starting NEIS with Sarina Russo. That early work included CreatingAttraction.com.au and led into later independent websites and projects.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F44"
+            ]
+          },
+          {
+            "title": "Research and projects through 2017",
+            "body": "My saved ResumUP timeline records I Choose Infinity, Maringa Farm, North Stradbroke Island Historical Museum, Quandamooka Festival, GamifyDemocracy.com, StraddieInfo.com and AuraOZ. It also records education, volunteering and personal turning points alongside the paid work.",
+            "evidence": "lived",
+            "sourceIds": [
+              "F44"
+            ]
+          },
           {
             "title": "Work that exists now",
             "body": "I currently take on construction and forklift work while building Strange but True. The business offers practical local help with technology, AI, media, events and projects.",
@@ -179,7 +195,7 @@
     "closing": "That is the basic record: practical jobs, independent projects, community work, music, writing and a long-running interest in AI and social systems.",
     "story": {
       "paragraphs": [
-        "I have worked in construction, warehouses, market research, mail and truck driving, mine shutdowns, airport services, rail, festivals, mechanics, retail and customer service. Since 2015 I have also built websites, recorded community events and developed independent AI, media and systems projects.",
+        "I have worked in construction, warehouses, market research, mail and truck driving, mine shutdowns, airport services, rail, festivals, mechanics, retail and customer service. I started web design in 2008/09, shortly before doing NEIS with Sarina Russo. From there I built websites and developed independent research, media, community and AI projects.",
         "I use different names for different work. Luke Catalyst is for public systems and AI work. Strange but True is my sole-trader business. i C. infinity is my music. Tiggy Bestmann and Australian Sire are names used in my fiction. Aura of Intelligence is my long-term cognitive architecture project."
       ]
     }

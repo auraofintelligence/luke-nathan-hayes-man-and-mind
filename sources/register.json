@@ -869,6 +869,17 @@
     "publicPath": "assets/media/a-protopian-gambit.webp"
   },
   {
+    "id": "F44",
+    "type": "document",
+    "title": "Luke Work and Education ResumUP timeline",
+    "location": "Luke Work and Education.pdf",
+    "primaryPage": "01",
+    "status": "Luke-authored historical record",
+    "notes": "Luke's own saved ResumUP timeline recording his work, education, research, projects and life moments through 2017, including early web work, NEIS with Sarina Russo, CreatingAttraction.com.au, I Choose Infinity, StraddieInfo.com, community media and AuraOZ",
+    "availability": "local-reviewed-candidate",
+    "authorship": "Luke personal record"
+  },
+  {
     "id": "S01",
     "type": "website",
     "title": "Luke on Facebook",
