@@ -256,8 +256,7 @@ function renderHero(page, pageContent) {
     : `Chapter ${page.chapter} of 13 | ${page.shortTitle}`;
     const actions = isHome
     ? `
-      <a class="button secondary" href="the-bloke.html#top">Meet the bloke</a>
-      <a class="button secondary" href="choose-your-door.html#top">Find your way in</a>`
+      <a class="button secondary" href="the-bloke.html#top">Begin the story</a>`
     : `
       <a class="button primary" href="#story">Enter this chapter</a>
       <a class="button secondary" href="sources.html#source-register">Open the studio archive</a>`;
@@ -450,13 +449,14 @@ function collectSourceIds(value, ids = new Set()) {
 }
 
 function renderArchiveImages(page, pageContent) {
+  if (page.id === 'home') return '';
   const attachedIds = collectSourceIds(pageContent);
   const images = sources.filter(source => source.type === 'image' && source.primaryPage === page.chapter && source.publicPath?.includes('intake-20260906') && !attachedIds.has(source.id) && !(page.id === 'home' && source.id === 'F32'));
   if (!images.length) return '';
   return `<section class="section compact"><div class="page-shell"><div class="archive-image-flow">${images.map(source => `<figure><a href="${escapeHtml(source.publicPath)}" aria-label="Open ${escapeHtml(source.title)}"><img src="${escapeHtml(source.publicPath)}" alt="${escapeHtml(source.title)}" loading="lazy" decoding="async"></a><figcaption>${escapeHtml(source.title)}</figcaption></figure>`).join('')}</div></div></section>`;
 }
 
-function renderSoundtrack(soundtrack) {
+function renderSoundtrack(soundtrack, pageId) {
   if (!soundtrack?.title) return '';
   const artwork = soundtrackArtwork[soundtrack.album] || 'assets/favicon.jpg';
   return `
@@ -468,9 +468,9 @@ function renderSoundtrack(soundtrack) {
         <h2>${escapeHtml(soundtrack.title)}</h2>
         <p>${escapeHtml(soundtrack.album)}</p>
         <p>${escapeHtml(soundtrack.reason)}</p>
-        <small>${soundtrack.videoPath ? 'Play the lyric video here, or open it full size.' : 'The lyrics are here. I’m gathering the recording for this video space.'}</small>
+        <small>${soundtrack.videoPath ? (pageId === 'home' ? 'Play the lyric video here.' : 'Play the lyric video here, or open it full size.') : 'The lyrics are here. I’m gathering the recording for this video space.'}</small>
         ${soundtrack.videoVariants ? `<label class="song-version">Two voices, two styles <select data-song-version aria-label="Choose a vocal version of ${escapeHtml(soundtrack.title)}">${soundtrack.videoVariants.map((version) => `<option value="${escapeHtml(version.videoPath)}" data-poster="${escapeHtml(version.posterPath)}"${version.videoPath === soundtrack.videoPath ? ' selected' : ''}>${escapeHtml(version.label)}</option>`).join('')}</select></label>` : ''}
-        ${soundtrack.videoPath ? `<p><a class="source-thread" data-video-open href="${escapeHtml(soundtrack.videoPath)}" target="_blank" rel="noopener noreferrer">Open the video full size</a></p>` : ''}
+        ${soundtrack.videoPath && pageId !== 'home' ? `<p><a class="source-thread" data-video-open href="${escapeHtml(soundtrack.videoPath)}" target="_blank" rel="noopener noreferrer">Open the video full size</a></p>` : ''}
       </div>
       <div class="soundtrack-phone" role="${soundtrack.videoPath ? 'group' : 'img'}" aria-label="${soundtrack.videoPath ? 'Lyric video' : 'Smartphone placeholder for a future video'} of ${escapeHtml(soundtrack.title)}">
         <div class="phone-screen">
@@ -633,22 +633,26 @@ function renderFooter(page) {
   const previous = navigationPages[(index - 1 + navigationPages.length) % navigationPages.length];
   const next = navigationPages[(index + 1) % navigationPages.length];
   const social = socialLinks.map((link) => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`).join('');
-  const worlds = [
+  const worldChoices = [
     ['Aura of Intelligence', 'https://auraofintelligence.github.io/index.html'],
     ['Strange but True', 'https://auraofintelligence.github.io/strange-but-true/index.html'],
     ['i C. infinity', 'https://auraofintelligence.github.io/i-C-infinity-music-universe/index.html'],
     ['GAJRA Earth', 'https://auraofintelligence.github.io/gajra-earth-claude-build/index.html'],
     ['P4A', 'https://p4a.xyz/'],
     ['Project Atlas', 'https://auraofintelligence.github.io/project-atlas/']
-  ].map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`).join('');
+  ];
+  const worlds = (page.id === 'home'
+    ? worldChoices.filter(([label]) => ['Aura of Intelligence', 'Strange but True', 'Project Atlas'].includes(label))
+    : worldChoices
+  ).map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`).join('');
 
   return `
   <footer class="site-footer">
     <div class="page-shell">
-      <nav class="chapter-links" aria-label="Previous and next chapters">
+      ${page.id === 'home' ? '' : `<nav class="chapter-links" aria-label="Previous and next chapters">
         <a class="chapter-link previous" href="${previous.file}#top" data-previous-page><small>Previous page</small><strong>${escapeHtml(previous.title)}</strong></a>
         <a class="chapter-link next" href="${next.file}#top" data-next-page><small>Next page</small><strong>${escapeHtml(next.title)}</strong></a>
-      </nav>
+      </nav>`}
       <div class="footer-strip">
         <nav class="social-icons" aria-label="Social profiles">${socialLinks.map((entry,index) => `<a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(entry.label)}" title="${escapeHtml(entry.label)}"><img src="${sourceIconPaths['S0'+(index+1)]}" alt="" width="24" height="24" loading="lazy"></a>`).join('')}</nav>
         <nav class="world-links" aria-label="Explore worlds">${worlds}</nav>
@@ -711,13 +715,13 @@ function renderPage(page, index) {
     <div id="page-content" tabindex="-1">
       ${renderStory(pageContent)}
       ${renderNarrative(pageContent)}
-      ${renderSections(pageContent)}
+      ${page.id === 'home' ? '' : renderSections(pageContent)}
       ${renderIdentityPanel(page.id)}
       ${renderAudienceDoors(page.id)}
       ${renderSourceRoom(page.id)}
       ${renderSitemap(page.id)}
       ${renderArchiveImages(page, pageContent)}
-      ${renderSoundtrack(pageContent.soundtrack)}
+      ${renderSoundtrack(pageContent.soundtrack, page.id)}
       ${renderClosing(pageContent.closing)}
     </div>
   </main>
