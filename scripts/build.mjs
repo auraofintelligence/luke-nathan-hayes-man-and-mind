@@ -17,7 +17,7 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const assetVersion = '20260906-portrait-v2';
+const assetVersion = '20260906-direct-sources';
 const sourceIconPaths = {
   U01: 'assets/favicons/u01.ico',
   U02: 'assets/favicons/u02.png',
@@ -351,24 +351,47 @@ function renderNarrative(pageContent) {
   </div></section>`;
 }
 
-function renderStoryCard(card, index) {
+function renderStoryCard(card, index, renderedImageIds = new Set()) {
   const isAdult = card.href?.includes('grey-area-commons');
   let externalLink = '';
   if (card.href) {
     externalLink = isAdult
       ? `<button class="button secondary" type="button" data-adult-link="${escapeHtml(card.href)}">Read the adult boundary first</button>`
-      : `<a class="external-card-link" href="${escapeHtml(card.href)}"${externalAttributes(card.href)}>Explore ${escapeHtml(card.title)} <span aria-hidden="true">↗</span></a>`;
+      : `<a class="external-card-link" href="${escapeHtml(card.href)}"${externalAttributes(card.href)}>Visit ${escapeHtml(card.title)} <span aria-hidden="true">↗</span></a>`;
   }
+
+  const directSources = [...new Set(card.sourceIds || [])]
+    .map((id) => sourceById.get(id))
+    .filter(Boolean)
+    .filter((source) => {
+      const href = source.url || source.publicPath;
+      return href && href !== card.href;
+    });
+  const sourceItems = directSources.map((source) => {
+    const href = source.url || source.publicPath;
+    const sourceLabel = card.sourceLabels?.[source.id];
+    if (source.type === 'image') {
+      if (renderedImageIds.has(source.id)) {
+        return `<a class="story-card-source-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceLabel || `Open ${source.title}`)} <span aria-hidden="true">↗</span></a>`;
+      }
+      renderedImageIds.add(source.id);
+      return `<figure class="story-card-source story-card-image"><img src="${escapeHtml(href)}" alt="${escapeHtml(source.title)}" loading="lazy" decoding="async"><figcaption><a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceLabel || `Open ${source.title}`)}</a></figcaption></figure>`;
+    }
+    const action = source.type === 'website' ? 'Visit' : source.type === 'video' ? 'Play' : 'Open';
+    return `<a class="story-card-source-link" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceLabel || `${action} ${source.title}`)} <span aria-hidden="true">↗</span></a>`;
+  }).join('');
 
   return `
   <article class="story-card story-card-${index % 6}">
     <h3>${escapeHtml(card.title)}</h3>
     <p>${escapeHtml(card.body)}</p>
+    ${sourceItems ? `<div class="story-card-sources">${sourceItems}</div>` : ''}
     ${externalLink}
   </article>`;
 }
 
 function renderSections(pageContent) {
+  const renderedImageIds = new Set();
   return pageContent.sections.map((section) => section.layout === 'ledger' ? `
   <section class="section work-section"><div class="page-shell"><details class="work-ledger">
     <summary>${escapeHtml(section.heading)}<span aria-hidden="true">+</span></summary>
@@ -382,7 +405,7 @@ function renderSections(pageContent) {
         ${section.intro ? `<p>${escapeHtml(section.intro)}</p>` : ''}
       </div>
       <div class="card-grid">
-        ${(section.cards || []).map(renderStoryCard).join('')}
+        ${(section.cards || []).map((card, index) => renderStoryCard(card, index, renderedImageIds)).join('')}
       </div>
     </div>
   </section>`).join('');
@@ -416,8 +439,19 @@ function renderIdentityPanel(pageId) {
   </section>`;
 }
 
-function renderArchiveImages(page) {
-  const images = sources.filter(source => source.type === 'image' && source.primaryPage === page.chapter && source.publicPath?.includes('intake-20260906') && !(page.id === 'home' && source.id === 'F32'));
+function collectSourceIds(value, ids = new Set()) {
+  if (Array.isArray(value)) {
+    value.forEach((item) => collectSourceIds(item, ids));
+  } else if (value && typeof value === 'object') {
+    if (Array.isArray(value.sourceIds)) value.sourceIds.forEach((id) => ids.add(id));
+    Object.values(value).forEach((item) => collectSourceIds(item, ids));
+  }
+  return ids;
+}
+
+function renderArchiveImages(page, pageContent) {
+  const attachedIds = collectSourceIds(pageContent);
+  const images = sources.filter(source => source.type === 'image' && source.primaryPage === page.chapter && source.publicPath?.includes('intake-20260906') && !attachedIds.has(source.id) && !(page.id === 'home' && source.id === 'F32'));
   if (!images.length) return '';
   return `<section class="section compact"><div class="page-shell"><div class="archive-image-flow">${images.map(source => `<figure><a href="${escapeHtml(source.publicPath)}" aria-label="Open ${escapeHtml(source.title)}"><img src="${escapeHtml(source.publicPath)}" alt="${escapeHtml(source.title)}" loading="lazy" decoding="async"></a><figcaption>${escapeHtml(source.title)}</figcaption></figure>`).join('')}</div></div></section>`;
 }
@@ -682,7 +716,7 @@ function renderPage(page, index) {
       ${renderAudienceDoors(page.id)}
       ${renderSourceRoom(page.id)}
       ${renderSitemap(page.id)}
-      ${renderArchiveImages(page)}
+      ${renderArchiveImages(page, pageContent)}
       ${renderSoundtrack(pageContent.soundtrack)}
       ${renderClosing(pageContent.closing)}
     </div>

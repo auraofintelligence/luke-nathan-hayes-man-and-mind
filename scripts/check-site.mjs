@@ -39,6 +39,13 @@ for (const [pageId, pageContent] of Object.entries(content)) {
   for (const section of pageContent.sections || []) {
     for (const card of section.cards || []) {
       for (const sourceId of card.sourceIds || []) referencedSources.add(sourceId);
+      const hasAccessibleSource = (card.sourceIds || []).some((sourceId) => {
+        const source = sourceById.get(sourceId);
+        return source && (source.publicPath || source.url || (source.availability === 'public-link' && source.location));
+      });
+      if ((card.sourceIds || []).length && !hasAccessibleSource && !card.sourcePending) {
+        addError(`${pageId}: ${card.title} references sources but none can be opened.`);
+      }
     }
   }
   for (const sourceId of pageContent.soundtrack?.sourceIds || []) referencedSources.add(sourceId);

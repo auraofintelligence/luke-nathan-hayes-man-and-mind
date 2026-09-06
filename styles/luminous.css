@@ -474,6 +474,8 @@ body[data-page="sitemap"] .site-map-list a span { color:#172637; }
     linear-gradient(125deg, #fff, #e3b2de, #e7c085, #fff) border-box;
 }
 .card-grid:has(> :nth-child(3):last-child) { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+body[data-page="break"] .card-grid { grid-template-columns: 1fr; }
+body[data-page="break"] .story-card { max-width: 72rem; }
 .story-card::after {
   content: '';
   position: absolute;
@@ -492,6 +494,27 @@ body[data-page="sitemap"] .site-map-list a span { color:#172637; }
 .story-card .source-thread:hover, .story-card .external-card-link:hover { color: #fff; }
 .story-card .button.secondary { color: #172d38; background: #e5f7f1; }
 .story-card .external-card-link { font-weight: 500; margin-top: auto; }
+.story-card-sources { display: grid; gap: .8rem; margin: .25rem 0 1rem; }
+.story-card-source { margin: 0; }
+.story-card-image {
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--panel-colour) 55%, white);
+  border-radius: .9rem;
+  background: #0b1220;
+}
+.story-card-image img { display: block; width: 100%; max-height: 22rem; object-fit: contain; background: #0b1220; }
+.story-card-image figcaption { padding: .75rem .9rem; background: #101a2a; }
+.story-card-image a,
+.story-card-source-link { color: #c5f4ec; font-weight: 600; line-height: 1.45; }
+.story-card-source-link {
+  display: block;
+  padding: .8rem .95rem;
+  border: 1px solid #bce6df66;
+  border-radius: .7rem;
+  background: #07131e66;
+}
+.story-card-source-link:hover,
+.story-card-image a:hover { color: #fff; }
 .story-card-footer:empty { display: none; }
 .story-card .story-card-footer { padding-top: .8rem; margin-top: .8rem; }
 .external-card-link span { display: inline-block; transition: transform .2s; }
@@ -585,6 +608,8 @@ body[data-page="sitemap"] .site-map-list a span { color:#172637; }
   .identity-constellation { grid-template-columns: 1fr; }
   .card-grid { grid-template-columns: 1fr; }
   .story-card:nth-child(n) { grid-column: 1; }
+  .story-card { padding: 1.25rem; }
+  .story-card-image img { max-height: none; }
   .identity-card, .identity-card:nth-child(n) { grid-column: auto; }
   .soundtrack-card { grid-template-columns: 1fr; padding: 1.5rem; }
   .soundtrack-disc { width: 4rem; }

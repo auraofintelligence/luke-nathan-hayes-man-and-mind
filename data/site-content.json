@@ -210,13 +210,26 @@
             "href": "https://auraofintelligence.github.io/australian-law-2012-lukes-relevance/index.html"
           },
           {
-            "title": "We Will Be Heard",
-            "body": "I wrote We Will Be Heard in December 2013, bringing together identity, expression and participation. The poem says: I am, I see, I hear, I breathe, I feel, I speak, I sing, and I know that you do too. In this one infinite reality I know we will be heard. You are a black hole and bright star of calm observation and voice. Believe in the best, give it your all, and love will manifest. We are right here, we are right now, alive.",
+            "title": "Deeper Meaning",
+            "body": "I wrote Deeper Meaning as a poem about awareness, choice and the relationships beneath what we first see. One line I have since revised carries it: \"You are a black hole and bright star of calm observation and voice.\"",
             "evidence": "lived",
             "sourceIds": [
-              "F15",
+              "F57"
+            ],
+            "sourceLabels": {
+              "F57": "View the original poem"
+            }
+          },
+          {
+            "title": "We Will Be Heard",
+            "body": "I wrote We Will Be Heard in December 2013, bringing together identity, expression and participation. One line carries the heart of it: \"Know who you are, Make your mark, We will be heard!\"",
+            "evidence": "lived",
+            "sourceIds": [
               "F23"
-            ]
+            ],
+            "sourceLabels": {
+              "F23": "View the original poem"
+            }
           },
           {
             "title": "The Constitutional Matrix of Participation",
@@ -812,7 +825,8 @@
             "evidence": "proposed",
             "sourceIds": [
               "F06"
-            ]
+            ],
+            "sourcePending": true
           },
           {
             "title": "Alignment through self-alignment",
