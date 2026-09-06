@@ -150,6 +150,11 @@ const facets = Array.from({ length: 12 * 24 }, (_, index) => {
 await writeFile(resolve(root, 'data/facets.json'), `${JSON.stringify(facets, null, 2)}\n`, 'utf8');
 
 const pageById = new Map(pages.map((page) => [page.id, page]));
+const navigationPages = [
+  pages.find((page) => page.id === 'home'),
+  pages.find((page) => page.id === 'choose-door'),
+  ...pages.filter((page) => !['home', 'choose-door'].includes(page.id))
+].filter(Boolean);
 const sourceById = new Map(sources.map((source) => [source.id, source]));
 
 function escapeHtml(value = '') {
@@ -166,7 +171,7 @@ function externalAttributes(url = '') {
 }
 
 function renderHeader(page) {
-  const navigation = pages.map((entry) => `
+  const navigation = navigationPages.map((entry) => `
     <li>
       <a href="${entry.file}#top"${entry.id === page.id ? ' aria-current="page"' : ''}>
         <span class="nav-number">${entry.chapter}</span>
@@ -461,10 +466,9 @@ function renderSourceRoom(pageId) {
           ? 'I have the original locally; the complete file is not published here.'
           : 'I still need to locate the original in my wider archive.';
     return `
-      <article class="source-record" data-source-record data-source-type="${escapeHtml(source.type)}" data-availability="${escapeHtml(source.availability)}">
-        <span class="source-id">${escapeHtml(source.id)}</span>
-        <div>
-          <h3>${escapeHtml(source.title)}</h3>
+      <details class="source-record" data-source-record data-source-type="${escapeHtml(source.type)}" data-availability="${escapeHtml(source.availability)}">
+        <summary><span class="source-id">${escapeHtml(source.id)}</span><h3>${escapeHtml(source.title)}</h3><span class="source-toggle" aria-hidden="true">+</span></summary>
+        <div class="source-record-body">
           <p>${escapeHtml(source.notes)} ${escapeHtml(archiveSentence)}</p>
           ${primaryPage ? `<p>It first enters the story in Chapter ${escapeHtml(primaryPage.chapter)}, ${escapeHtml(primaryPage.title)}.</p>` : ''}
           <details class="source-provenance">
@@ -476,7 +480,7 @@ function renderSourceRoom(pageId) {
           </details>
           ${link ? `<a href="${escapeHtml(link)}"${externalAttributes(link)}>Open ${source.url ? 'the live work' : 'the source'}</a>` : ''}
         </div>
-      </article>`;
+      </details>`;
   }).join('');
 
   return `
@@ -531,7 +535,7 @@ function renderAudienceDoors(pageId) {
 
 function renderSitemap(pageId) {
   if (pageId !== 'sitemap') return '';
-  const pageLinks = pages.map((page) => `<li><a href="${page.file}#top"><strong>${page.chapter}</strong><span>${escapeHtml(page.title)}</span></a></li>`).join('');
+  const pageLinks = navigationPages.map((page) => `<li><a href="${page.file}#top"><strong>${page.chapter}</strong><span>${escapeHtml(page.title)}</span></a></li>`).join('');
   const projectLinks = projects.map((project) => `
     <article class="source-record">
       <span class="source-id">${escapeHtml(project.id)}</span>
@@ -590,9 +594,10 @@ function renderAdultDialog() {
   </dialog>`;
 }
 
-function renderFooter(page, index) {
-  const previous = pages[(index - 1 + pages.length) % pages.length];
-  const next = pages[(index + 1) % pages.length];
+function renderFooter(page) {
+  const index = navigationPages.findIndex((entry) => entry.id === page.id);
+  const previous = navigationPages[(index - 1 + navigationPages.length) % navigationPages.length];
+  const next = navigationPages[(index + 1) % navigationPages.length];
   const social = socialLinks.map((link) => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`).join('');
   const worlds = [
     ['Aura of Intelligence', 'https://auraofintelligence.github.io/index.html'],
@@ -682,7 +687,7 @@ function renderPage(page, index) {
       ${renderClosing(pageContent.closing)}
     </div>
   </main>
-  ${renderFooter(page, index)}
+  ${renderFooter(page)}
   ${renderAdultDialog()}
   <script>window.__AUDIENCE_ROUTES__ = ${audienceJson};</script>
   <script type="module" src="scripts/app.js?v=${assetVersion}"></script>
