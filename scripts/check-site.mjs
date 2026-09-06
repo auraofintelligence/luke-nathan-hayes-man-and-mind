@@ -42,6 +42,9 @@ for (const [pageId, pageContent] of Object.entries(content)) {
     }
   }
   for (const sourceId of pageContent.soundtrack?.sourceIds || []) referencedSources.add(sourceId);
+  for (const mediaPath of [pageContent.soundtrack?.videoPath, pageContent.soundtrack?.posterPath, ...(pageContent.soundtrack?.videoVariants || []).flatMap(version => [version.videoPath, version.posterPath])].filter(Boolean)) {
+    try { await access(resolve(root, mediaPath)); } catch { addError(`${pageId}: missing song media ${mediaPath}.`); }
+  }
   for (const sourceId of pageContent.narrativeSourceIds || []) referencedSources.add(sourceId);
   for (const scene of pageContent.narrative || []) {
     if (!scene.heading || !Array.isArray(scene.paragraphs) || !scene.paragraphs.length) addError(`${pageId}: incomplete narrative scene.`);
@@ -61,6 +64,10 @@ for (const sourceId of referencedSources) {
 }
 
 for (const source of sources) {
+  if (source.availability === 'published-source') {
+    if (!source.publicPath) addError(`${source.id}: connected source has no file.`);
+    else { try { await access(resolve(root, source.publicPath)); } catch { addError(`${source.id}: missing source file ${source.publicPath}.`); } }
+  }
   if (['website', 'video'].includes(source.type) && source.id !== 'U10' && !source.iconPath) {
     addError(`${source.id}: public web thread has no raster favicon.`);
   }
@@ -150,6 +157,7 @@ for (const page of pages) {
   }
 
   if (!html.includes('<html lang="en-AU">')) addError(`${page.file}: missing Australian language declaration.`);
+  if (content[page.id]?.soundtrack?.videoPath && (!html.includes('<video controls playsinline preload="none"') || !html.includes(content[page.id].soundtrack.videoPath))) addError(`${page.file}: song video or non-autoplay controls missing.`);
   if (/Questions with their sleeves rolled up|These ideas are allowed|earned in silicon|what might make Luke change/i.test(html)) addError(`${page.file}: removed editorial commentary has returned.`);
   const documentIds = [...html.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
   if (new Set(documentIds).size !== documentIds.length) addError(`${page.file}: duplicate element IDs.`);
@@ -165,7 +173,7 @@ for (const page of pages) {
   if (/mirror[ -]ball/i.test(html)) addError(`${page.file}: discarded mirror-ball language remains.`);
   if (/[–—]/u.test(html)) addError(`${page.file}: contains an en dash or em dash.`);
   if (/<svg\b|data:image\/svg\+xml|\.svg(?:[?#"']|$)/i.test(html)) addError(`${page.file}: contains a forbidden vector image reference.`);
-  if (/ready SET(?! Co-op)/g.test(html)) addError(`${page.file}: contains an incomplete ready SET Co-op name.`);
+  if (/ready SET|Ready S\.E\.T\./i.test(html)) addError(`${page.file}: contains an outdated Ready S..E.T. Co-op name.`);
   if (page.id === 'home' && (!html.includes('data-horn-torus') || !html.includes('marked outer facets'))) addError('index.html: 288-facet horn torus is missing.');
   if (content[page.id]?.soundtrack?.title && (!html.includes('class="soundtrack-phone"') || html.includes('class="media-slot"'))) {
     addError(`${page.file}: smartphone soundtrack placeholder is missing.`);

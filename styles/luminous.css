@@ -267,6 +267,10 @@ body[data-page="minjerribah"] .image-stage img {
 .phone-play::after { border-left-color: #374d65; }
 .phone-screen { background: #192536; }
 .phone-screen img { filter: none; }
+.soundtrack-phone:has(video) { width: clamp(14rem, 24vw, 20rem); max-width: 100%; }
+.soundtrack-phone:has(video)::before, .soundtrack-phone:has(video)::after,
+.phone-screen:has(video)::after { display: none; }
+.phone-screen video { display: block; width: 100%; height: 100%; object-fit: contain; background: #080614; }
 .closing-invitation {
   max-width: 1100px;
   padding: clamp(2rem, 6vw, 5rem);
@@ -452,3 +456,19 @@ body[data-page="minjerribah"] .image-stage img {
   .hero-deck, .identity-card p { color: #354357; }
   body[data-page="home"] .hero h1 { color: #182233; background: none; }
 }
+.song-version { display: grid; gap: .6rem; margin-block: 1rem; max-width: 22rem; }
+.song-version select { font: inherit; color: #f5efff; background: #25183f; border: 1px solid #bba7db; border-radius: .6rem; padding: .75rem; width: 100%; }
+.archive-image-flow { columns: 3 17rem; column-gap: 2rem; margin-top: 2rem; }
+.archive-image-flow figure { break-inside: avoid; margin: 0 0 2rem; }
+.archive-image-flow img { display: block; width: 100%; height: auto; border-radius: .8rem; }
+.archive-image-flow figcaption { font-size: .95rem; line-height: 1.5; padding-block: .65rem; }
+.archive-image-flow a:focus-visible { outline: 3px solid #8c64df; outline-offset: 5px; }
+.site-footer { padding-block: 1.25rem !important; }
+.site-footer .chapter-links { margin: 0 0 1rem; gap: 1rem; }
+.site-footer .chapter-link { padding: .8rem 1rem; min-height: 0; }
+.site-footer .chapter-link strong { font-size: clamp(1rem, 2vw, 1.4rem); line-height: 1.25; margin: .3rem 0 0; }
+.footer-strip { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1rem; padding-block: .5rem; font-size: .85rem; }
+.world-links, .social-icons { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem .85rem; max-width: 100%; }
+.social-icons { gap: .2rem; }
+.social-icons a { display: grid; place-items: center; width: 32px; height: 44px; flex: 0 0 auto; }
+.social-icons img { display: block; width: 24px; height: 24px; object-fit: contain; filter: none; }

@@ -17,7 +17,7 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const assetVersion = '20260905-my-voice';
+const assetVersion = '20260906-direct-media';
 const sourceIconPaths = {
   U01: 'assets/favicons/u01.ico',
   U02: 'assets/favicons/u02.png',
@@ -263,9 +263,9 @@ function renderHero(page, pageContent) {
     stage = `
       <div class="hero-stage torus-stage" id="torus-map">
         <canvas class="torus-canvas" data-horn-torus tabindex="0" aria-describedby="torus-instructions">
-          An interactive 288-facet horn torus carrying Luke's public links and source archive.
+          An interactive 288-facet horn torus carrying Luke's public links and source archive across its marked outer facets.
         </canvas>
-        <p class="torus-instructions" id="torus-instructions">Drag to turn it. Tap one of the marked outer facets and its story will appear below. Scroll or pinch to move closer, but the view always stays outside.</p>
+        <p class="torus-instructions" id="torus-instructions">Drag to turn it. Tap a marked outer facet to open its item. Scroll or pinch to move closer; the view stays outside.</p>
         <div class="facet-whisper" aria-live="polite">
           <div class="facet-glimpse" data-facet-glimpse aria-hidden="true">
             <img data-facet-preview alt="" hidden>
@@ -334,7 +334,8 @@ function renderStory(pageContent) {
 function renderSourceButtons(ids = []) {
   return [...new Set(ids)].filter((id) => sourceById.has(id)).map((id) => {
     const source = sourceById.get(id);
-    return `<button class="source-thread" type="button" data-source="${escapeHtml(id)}">${escapeHtml(source.title)}</button>`;
+    const href = source.url || source.publicPath;
+    return href ? `<a class="source-thread" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)}</a>` : `<span class="source-thread" title="File not yet available">${escapeHtml(source.title)} (not yet available)</span>`;
   }).join('');
 }
 
@@ -395,7 +396,7 @@ function renderIdentityPanel(pageId) {
     ['Australian Sire', 'A name used for the adult romantasy side of my fiction.', ['U17']],
     ['Aura of Intelligence', 'My long-term project exploring personal cognitive architecture, memory and human-AI relationships. Some projects are working public prototypes and others are still proposals.', ['U05']],
     ['GAJRA Earth', 'A proposed meeting place for several public-interest projects. It is not an operating organisation.', ['U20']],
-    ['ready SET Co-op', 'A proposed co-operative model for shared local training, tools and work.', ['U09']],
+    ['Ready S..E.T. Co-op', 'A proposed co-operative model for shared local training, tools and work.', ['U09']],
     ['Project Atlas', 'A public index that connects my websites and projects.', ['U13']]
   ];
   return `
@@ -412,6 +413,12 @@ function renderIdentityPanel(pageId) {
   </section>`;
 }
 
+function renderArchiveImages(page) {
+  const images = sources.filter(source => source.type === 'image' && source.primaryPage === page.chapter && source.publicPath?.includes('intake-20260906'));
+  if (!images.length) return '';
+  return `<section class="section compact"><div class="page-shell"><h2>From my archive</h2><div class="archive-image-flow">${images.map(source => `<figure><a href="${escapeHtml(source.publicPath)}" aria-label="Open ${escapeHtml(source.title)}"><img src="${escapeHtml(source.publicPath)}" alt="${escapeHtml(source.title)}" loading="lazy" decoding="async"></a><figcaption>${escapeHtml(source.title)}</figcaption></figure>`).join('')}</div></div></section>`;
+}
+
 function renderSoundtrack(soundtrack) {
   if (!soundtrack?.title) return '';
   const artwork = soundtrackArtwork[soundtrack.album] || 'assets/favicon.jpg';
@@ -424,17 +431,20 @@ function renderSoundtrack(soundtrack) {
         <h2>${escapeHtml(soundtrack.title)}</h2>
         <p>${escapeHtml(soundtrack.album)}</p>
         <p>${escapeHtml(soundtrack.reason)}</p>
-        <small>The lyrics are here. I’m gathering the recordings for these video spaces.</small>
+        <small>${soundtrack.videoPath ? 'Play the lyric video here, or open it full size.' : 'The lyrics are here. I’m gathering the recording for this video space.'}</small>
+        ${soundtrack.videoVariants ? `<label class="song-version">Two voices, two styles <select data-song-version aria-label="Choose a vocal version of ${escapeHtml(soundtrack.title)}">${soundtrack.videoVariants.map((version) => `<option value="${escapeHtml(version.videoPath)}" data-poster="${escapeHtml(version.posterPath)}"${version.videoPath === soundtrack.videoPath ? ' selected' : ''}>${escapeHtml(version.label)}</option>`).join('')}</select></label>` : ''}
+        ${soundtrack.videoPath ? `<p><a class="source-thread" data-video-open href="${escapeHtml(soundtrack.videoPath)}" target="_blank" rel="noopener noreferrer">Open the video full size</a></p>` : ''}
         <div class="story-card-footer">${renderSourceButtons(soundtrack.sourceIds)}</div>
       </div>
-      <div class="soundtrack-phone" role="img" aria-label="Smartphone placeholder for a future video of ${escapeHtml(soundtrack.title)}">
+      <div class="soundtrack-phone" role="${soundtrack.videoPath ? 'group' : 'img'}" aria-label="${soundtrack.videoPath ? 'Lyric video' : 'Smartphone placeholder for a future video'} of ${escapeHtml(soundtrack.title)}">
         <div class="phone-screen">
+          ${soundtrack.videoPath ? `<video controls playsinline preload="none" poster="${escapeHtml(soundtrack.posterPath)}" aria-label="${escapeHtml(soundtrack.title)} lyric video"><source src="${escapeHtml(soundtrack.videoPath)}" type="video/mp4">Your browser cannot play this video. Use the full-size video link.</video>` : `
           <img src="${artwork}" alt="" loading="lazy">
           <div class="phone-screen-copy">
             <span class="phone-play" aria-hidden="true"></span>
             <strong>${escapeHtml(soundtrack.title)}</strong>
             <small>This screen is waiting for the right recording.</small>
-          </div>
+          </div>`}
         </div>
       </div>
     </div>
@@ -606,21 +616,12 @@ function renderFooter(page, index) {
         <a class="chapter-link previous" href="${previous.file}#top" data-previous-page><small>Previous page</small><strong>${escapeHtml(previous.title)}</strong></a>
         <a class="chapter-link next" href="${next.file}#top" data-next-page><small>Next page</small><strong>${escapeHtml(next.title)}</strong></a>
       </nav>
-      <div class="footer-groups">
-        <section class="footer-group">
-          <h2>Find Luke</h2>
-          <div class="footer-links">${social}</div>
-        </section>
-        <section class="footer-group">
-          <h2>Explore the worlds</h2>
-          <div class="footer-links">${worlds}</div>
-        </section>
-      </div>
-      <p class="footer-note">Built solo on Minjerribah by Luke Nathan Hayes through Strange but True. Art, autobiography, unfinished systems and the paths back to their sources.</p>
-      <div class="utility-links">
-        <a href="sitemap.html#top">Complete site map</a>
-        <a href="sources.html#source-register">Source room</a>
-        <a href="https://github.com/auraofintelligence/luke-nathan-hayes-man-and-mind/blob/main/LICENCE.md" target="_blank" rel="noopener noreferrer">Strange But True Public Source Licence</a>
+      <div class="footer-strip">
+        <nav class="social-icons" aria-label="Social profiles">${socialLinks.map((entry,index) => `<a href="${escapeHtml(entry.url)}" target="_blank" rel="noopener noreferrer" aria-label="${escapeHtml(entry.label)}" title="${escapeHtml(entry.label)}"><img src="${sourceIconPaths['S0'+(index+1)]}" alt="" width="24" height="24" loading="lazy"></a>`).join('')}</nav>
+        <nav class="world-links" aria-label="Explore worlds">${worlds}</nav>
+        <a href="sitemap.html#top">Site map</a>
+        <a href="sources.html#source-register">Sources</a>
+        <a href="https://github.com/auraofintelligence/luke-nathan-hayes-man-and-mind/blob/main/LICENCE.md" target="_blank" rel="noopener noreferrer">Licence</a>
       </div>
     </div>
   </footer>
@@ -682,12 +683,12 @@ function renderPage(page, index) {
       ${renderAudienceDoors(page.id)}
       ${renderSourceRoom(page.id)}
       ${renderSitemap(page.id)}
+      ${renderArchiveImages(page)}
       ${renderSoundtrack(pageContent.soundtrack)}
       ${renderClosing(pageContent.closing)}
     </div>
   </main>
   ${renderFooter(page, index)}
-  ${renderSourceDialog()}
   ${renderAdultDialog()}
   <script>window.__AUDIENCE_ROUTES__ = ${audienceJson};</script>
   <script type="module" src="scripts/app.js?v=${assetVersion}"></script>

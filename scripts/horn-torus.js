@@ -305,8 +305,8 @@ export function initialiseHornTorus() {
     }
     title.textContent = facet.title;
     story.textContent = facet.story;
-    openButton.dataset.source = facet.sourceId;
-    openButton.textContent = facet.href ? 'Open this thread' : 'Read its place in the archive';
+    openButton.disabled = !facet.href;
+    openButton.textContent = facet.href ? 'Open item' : 'File not yet available';
     const numberedType = facet.type === 'image'
       ? `picture ${facet.typeNumber}`
       : facet.type === 'document'
@@ -558,12 +558,13 @@ export function initialiseHornTorus() {
   });
 
   const releasePointer = (event) => {
-    const tap = state.dragging?.id === event.pointerId && !state.dragging.moved;
+    const tap = event.type === 'pointerup' && state.dragging?.id === event.pointerId && !state.dragging.moved;
     pointers.delete(event.pointerId);
     if (tap) {
       const hit = facetAt(event.clientX, event.clientY);
       if (hit >= 0 && facets[hit]) {
         describeFacet(hit);
+        if (facets[hit].href) window.open(facets[hit].href, '_blank', 'noopener,noreferrer');
       }
     }
     state.dragging = null;
@@ -602,6 +603,7 @@ export function initialiseHornTorus() {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       describeFacet(state.selected);
+      if (facets[state.selected]?.href) window.open(facets[state.selected].href, '_blank', 'noopener,noreferrer');
       return;
     }
     if (next !== state.selected || ['+', '=', '-'].includes(event.key)) {
@@ -613,7 +615,7 @@ export function initialiseHornTorus() {
 
   openButton?.addEventListener('click', () => {
     const facet = facets[state.selected];
-    if (facet) openSource(facet.sourceId);
+    if (facet?.href) window.open(facet.href, '_blank', 'noopener,noreferrer');
   });
   shuffleButton?.addEventListener('click', () => {
     if (!activeFacetIndexes.length) return;
@@ -640,7 +642,7 @@ export function initialiseHornTorus() {
   }, { threshold: 0.02 });
   visibilityObserver.observe(canvas);
 
-  fetch('data/facets.json?v=20260905-my-voice')
+  fetch('data/facets.json?v=20260906-direct-media')
     .then((response) => {
       if (!response.ok) throw new Error('The facet map could not be loaded.');
       return response.json();

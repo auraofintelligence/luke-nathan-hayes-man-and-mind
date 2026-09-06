@@ -82,7 +82,10 @@
         "F25"
       ],
       "reason": "It begins where this site begins: with worlds waiting to be born and the place before the blueprint.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/aura-ultra.mp4",
+      "posterPath": "assets/video/aura-ultra.jpg",
+      "originalFilename": "Aura Ultra.mp4"
     },
     "closing": null,
     "story": {
@@ -182,7 +185,10 @@
         "F37"
       ],
       "reason": "It puts the shed, market table, patient tech help and bigger questions into the same warm local frame.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke.",
+      "videoPath": "assets/video/strange-but-true.mp4",
+      "posterPath": "assets/video/strange-but-true.jpg",
+      "originalFilename": "Strange But True (Tech Art and Ideas That Actually Help) lyrics.mp4"
     },
     "closing": null,
     "story": null
@@ -205,7 +211,7 @@
           },
           {
             "title": "We Will Be Heard",
-            "body": "I wrote We Will Be Heard in December 2013, bringing together identity, expression and participation.",
+            "body": "I wrote We Will Be Heard in December 2013, bringing together identity, expression and participation. The poem says: I am, I see, I hear, I breathe, I feel, I speak, I sing, and I know that you do too. In this one infinite reality I know we will be heard. You are a black hole and bright star of calm observation and voice. Believe in the best, give it your all, and love will manifest. We are right here, we are right now, alive.",
             "evidence": "lived",
             "sourceIds": [
               "F15",
@@ -263,7 +269,10 @@
         "F24"
       ],
       "reason": "The title fits this part of my story: Don't Try to Fix Me.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/dont-try-to-fix-me.mp4",
+      "posterPath": "assets/video/dont-try-to-fix-me.jpg",
+      "originalFilename": "Don't Try To Fix Me.mp4"
     },
     "closing": null,
     "story": {
@@ -352,7 +361,10 @@
         "F25"
       ],
       "reason": "Meaning gathers at the edges, love curves back through itself, and the whole world starts singing in circles.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/poetic-truths-of-infinity.mp4",
+      "posterPath": "assets/video/poetic-truths-of-infinity.jpg",
+      "originalFilename": "Poetic Truths of Infinity.mp4"
     },
     "closing": null,
     "story": {
@@ -440,7 +452,10 @@
         "F24"
       ],
       "reason": "The lyric names the 12 by 24 Aura and seven nested horn tori while treating damage as part of the pattern, not something to hide.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/kintsugi-protocol.mp4",
+      "posterPath": "assets/video/kintsugi-protocol.jpg",
+      "originalFilename": "Kintsugi Protocol.mp4"
     },
     "closing": null,
     "story": {
@@ -528,7 +543,10 @@
         "F24"
       ],
       "reason": "It is a central bridge between the emotional, civic and speculative worlds gathered on this page.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/the-protopian-gambit.mp4",
+      "posterPath": "assets/video/the-protopian-gambit.jpg",
+      "originalFilename": "The Protopian Gambit.mp4"
     },
     "closing": null,
     "story": {
@@ -609,7 +627,10 @@
         "F24"
       ],
       "reason": "A layered, self-authored yes feels more intimate and more honest than turning love into a diagram about consent.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/adaptable-yes.mp4",
+      "posterPath": "assets/video/adaptable-yes.jpg",
+      "originalFilename": "Adaptable Yes.mp4"
     },
     "closing": null,
     "story": {
@@ -664,8 +685,8 @@
         "intro": "The island is also part of my thinking about shared infrastructure, materials and future ways of living.",
         "cards": [
           {
-            "title": "ready SET Co-op and the Dunwich node",
-            "body": "I’m proposing ready SET Co-op and a Dunwich cultural intelligence node to connect shared work, learning and infrastructure.",
+            "title": "Ready S..E.T. Co-op and the Dunwich node",
+            "body": "Ready S..E.T. Co-op means Ready Sustainable Employment and Training Cooperative, a play on ‘ready, set, go’. I’m proposing it alongside a Dunwich cultural intelligence node to connect shared work, learning and infrastructure.",
             "evidence": "proposed",
             "sourceIds": [
               "F01",
@@ -711,13 +732,16 @@
         "F37"
       ],
       "reason": "Ferry light, Goompi, art, fishing and kookaburras give this chapter the warm pulse of an actual day on the island.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/two-dogs-on-island-country.mp4",
+      "posterPath": "assets/video/two-dogs-on-island-country.jpg",
+      "originalFilename": "Two Dogs on Island Country.mp4"
     },
     "closing": null,
     "story": {
       "paragraphs": [
         "I remember hearing a cyclone was on its way and thinking about the surf. Bodyboarding was a big part of what brought me back to the island. Later came festival work, history transcription for the museum, websites and a growing collection of local projects.",
-        "I’m also interested in what shared computing, training and creative facilities could offer here. The Dunwich node and ready SET Co-op are proposals I’m developing, alongside digital twins and materials research."
+        "I’m also interested in what shared computing, training and creative facilities could offer here. The Dunwich node and Ready S..E.T. Co-op are proposals I’m developing, alongside digital twins and materials research."
       ]
     }
   },
@@ -747,8 +771,8 @@
             ]
           },
           {
-            "title": "ready SET Co-op and shared infrastructure",
-            "body": "I’m proposing a co-operative approach to shared facilities, practical work and training through ready SET Co-op.",
+            "title": "Ready S..E.T. Co-op and shared infrastructure",
+            "body": "I’m proposing a co-operative approach to shared facilities, practical work and training through Ready S..E.T. Co-op.",
             "evidence": "proposed",
             "sourceIds": [
               "U09",
@@ -810,7 +834,10 @@
         "F24"
       ],
       "reason": "It keeps the toilet-mat origin, friendly humour and serious democratic curiosity in the same story.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/the-purple-mat-that-could.mp4",
+      "posterPath": "assets/video/the-purple-mat-that-could.jpg",
+      "originalFilename": "The Purple Mat That Could.mp4"
     },
     "closing": null,
     "story": {
@@ -829,7 +856,7 @@
         "cards": [
           {
             "title": "Golden Temple",
-            "body": "My visit to the Golden Temple in Amritsar is part of the photo collection I want to bring into this story.",
+            "body": "This photograph is from my visit to the Golden Temple in Amritsar.",
             "evidence": "lived",
             "sourceIds": [
               "F20",
@@ -838,7 +865,7 @@
           },
           {
             "title": "Boudhanath and Lumbini",
-            "body": "I also travelled to Nepal, visiting Boudhanath and Lumbini. The photographs from those visits are on the list for the next image pass.",
+            "body": "I also travelled to Nepal, visiting Boudhanath and Lumbini. These are photographs from those visits.",
             "evidence": "lived",
             "sourceIds": [
               "F21",
@@ -847,7 +874,7 @@
           },
           {
             "title": "Kolhapur student rocket event",
-            "body": "A newspaper page from the student rocket event in Kolhapur is another piece of my India archive to bring here.",
+            "body": "I’ve kept this newspaper page from the student rocket event in Kolhapur as part of my India archive.",
             "evidence": "lived",
             "sourceIds": [
               "F19",
@@ -897,7 +924,10 @@
         "F24"
       ],
       "reason": "A song for the possibility of meeting someone, finding a connection and making the next journey.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/every-border-a-bridge.mp4",
+      "posterPath": "assets/video/every-border-a-bridge.jpg",
+      "originalFilename": "Every Border a Bridge.mp4"
     },
     "closing": null,
     "story": {
@@ -994,7 +1024,22 @@
         "F24"
       ],
       "reason": "It travels from a lavender mat and unpaid care to Minjerribah, orbit, the Sun and the galaxy without losing the human thread.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/we-go-beyond-f1.mp4",
+      "posterPath": "assets/video/we-go-beyond-f1.jpg",
+      "originalFilename": "We Go Beyond (f1).mp4",
+      "videoVariants": [
+        {
+          "label": "Female vocal (f1)",
+          "videoPath": "assets/video/we-go-beyond-f1.mp4",
+          "posterPath": "assets/video/we-go-beyond-f1.jpg"
+        },
+        {
+          "label": "Male vocal (m1)",
+          "videoPath": "assets/video/we-go-beyond-m1.mp4",
+          "posterPath": "assets/video/we-go-beyond-m1.jpg"
+        }
+      ]
     },
     "closing": null,
     "story": {
@@ -1062,7 +1107,10 @@
         "F25"
       ],
       "reason": "A song alongside the documents, drawings and memories gathered here.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/poetic-truths-of-infinity.mp4",
+      "posterPath": "assets/video/poetic-truths-of-infinity.jpg",
+      "originalFilename": "Poetic Truths of Infinity.mp4"
     },
     "closing": null,
     "story": {
@@ -1161,7 +1209,10 @@
         "F24"
       ],
       "reason": "A song to accompany choosing your own way through these ideas.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/choose-your-own-protopia.mp4",
+      "posterPath": "assets/video/choose-your-own-protopia.jpg",
+      "originalFilename": "Choose Your Own Protopia.mp4"
     },
     "closing": null,
     "story": {
@@ -1341,7 +1392,10 @@
         "F25"
       ],
       "reason": "A song to bring the different parts of the site together.",
-      "mediaStatus": "Video selection pending the later media pass."
+      "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
+      "videoPath": "assets/video/weave-the-aura.mp4",
+      "posterPath": "assets/video/weave-the-aura.jpg",
+      "originalFilename": "Weave The Aura.mp4"
     },
     "closing": null,
     "story": {
