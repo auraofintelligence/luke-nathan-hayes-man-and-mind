@@ -232,6 +232,12 @@ export function initialiseHornTorus() {
   const symbol = document.querySelector('[data-facet-symbol]');
   const sequence = document.querySelector('[data-facet-sequence]');
   const openButton = document.querySelector('[data-facet-open]');
+  const previewFacet = (facet) => {
+    if (!facet?.href) return;
+    const sourceControl = facet.sourceId && document.querySelector(`[data-source="${facet.sourceId}"]`);
+    if (sourceControl) sourceControl.click();
+    else window.dispatchEvent(new CustomEvent('facet-source-preview', { detail: facet }));
+  };
   const shuffleButton = document.querySelector('[data-facet-shuffle]');
   const resetButton = document.querySelector('[data-torus-reset]');
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -564,7 +570,7 @@ export function initialiseHornTorus() {
       const hit = facetAt(event.clientX, event.clientY);
       if (hit >= 0 && facets[hit]) {
         describeFacet(hit);
-        if (facets[hit].href) window.open(facets[hit].href, '_blank', 'noopener,noreferrer');
+        previewFacet(facets[hit]);
       }
     }
     state.dragging = null;
@@ -603,7 +609,7 @@ export function initialiseHornTorus() {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       describeFacet(state.selected);
-      if (facets[state.selected]?.href) window.open(facets[state.selected].href, '_blank', 'noopener,noreferrer');
+      previewFacet(facets[state.selected]);
       return;
     }
     if (next !== state.selected || ['+', '=', '-'].includes(event.key)) {
@@ -615,7 +621,7 @@ export function initialiseHornTorus() {
 
   openButton?.addEventListener('click', () => {
     const facet = facets[state.selected];
-    if (facet?.href) window.open(facet.href, '_blank', 'noopener,noreferrer');
+    previewFacet(facet);
   });
   shuffleButton?.addEventListener('click', () => {
     if (!activeFacetIndexes.length) return;

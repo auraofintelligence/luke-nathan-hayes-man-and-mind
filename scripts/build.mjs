@@ -249,9 +249,8 @@ function renderHero(page, pageContent) {
   const origin = isHome
     ? 'Luke Catalyst Nathan Hayes | Minjerribah | Free thinking since 2012'
     : `Chapter ${page.chapter} of 13 | ${page.shortTitle}`;
-  const actions = isHome
+    const actions = isHome
     ? `
-      <a class="button primary" href="#torus-map">Turn the living index</a>
       <a class="button secondary" href="the-bloke.html#top">Meet the bloke</a>
       <a class="button secondary" href="choose-your-door.html#top">Find your way in</a>`
     : `
