@@ -155,6 +155,8 @@ const navigationPages = [
   pages.find((page) => page.id === 'choose-door'),
   ...pages.filter((page) => !['home', 'choose-door'].includes(page.id))
 ].filter(Boolean);
+const navigationChapterById = new Map(navigationPages.map((page, index) => [page.id, String(index).padStart(2, '0')]));
+const displayChapter = (page) => navigationChapterById.get(page.id) || page.chapter;
 const sourceById = new Map(sources.map((source) => [source.id, source]));
 
 function escapeHtml(value = '') {
@@ -174,7 +176,7 @@ function renderHeader(page) {
   const navigation = navigationPages.map((entry) => `
     <li>
       <a href="${entry.file}#top"${entry.id === page.id ? ' aria-current="page"' : ''}>
-        <span class="nav-number">${entry.chapter}</span>
+        <span class="nav-number">${displayChapter(entry)}</span>
         <span>${escapeHtml(entry.title)}</span>
       </a>
     </li>`).join('');
@@ -187,7 +189,7 @@ function renderHeader(page) {
       <a class="home-mark" href="index.html#top" aria-label="The Mind Behind the Man home"><img src="assets/favicon.jpg" alt=""></a>
       <div class="chapter-progress">
         <strong>${escapeHtml(page.shortTitle)}</strong>
-        <span>Chapter ${page.chapter} of 13</span>
+        <span>Chapter ${displayChapter(page)} of 13</span>
       </div>
       <div class="header-actions">
         <button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-controls="site-navigation">Menu</button>
@@ -253,10 +255,9 @@ function renderHero(page, pageContent) {
   const isHome = page.id === 'home';
   const origin = isHome
     ? 'Luke Catalyst Nathan Hayes | Minjerribah | Free thinking since 2012'
-    : `Chapter ${page.chapter} of 13 | ${page.shortTitle}`;
+    : `Chapter ${displayChapter(page)} of 13 | ${page.shortTitle}`;
     const actions = isHome
-    ? `
-      <a class="button secondary" href="the-bloke.html#top">Begin the story</a>`
+    ? ''
     : `
       <a class="button primary" href="#story">Enter this chapter</a>
       <a class="button secondary" href="sources.html#source-register">Open the studio archive</a>`;
@@ -299,7 +300,7 @@ function renderHero(page, pageContent) {
     stage = `
       <div class="hero-stage" aria-hidden="true">
         <div class="hero-glow"></div>
-        <div class="chapter-art"><span>${escapeHtml(page.chapter)}</span><strong>${escapeHtml(page.shortTitle)}</strong></div>
+        <div class="chapter-art"><span>${escapeHtml(displayChapter(page))}</span><strong>${escapeHtml(page.shortTitle)}</strong></div>
       </div>`;
   }
 
@@ -317,7 +318,7 @@ function renderHero(page, pageContent) {
         <h1 id="page-title">${escapeHtml(page.title)}</h1>
         <p class="hero-deck">${escapeHtml(pageContent.intro)}</p>
         ${isHome ? `<figure class="home-portrait"><img src="assets/media/luke-aura-portrait-new.webp?v=${assetVersion}" alt="Luke Hayes beside artwork from the Aura project" fetchpriority="high"><figcaption>Luke Hayes, beside an Aura work.</figcaption></figure>` : ''}
-        <div class="hero-actions">${actions}</div>
+        ${actions ? `<div class="hero-actions">${actions}</div>` : ''}
         ${mature}
       </div>
       ${stage}
@@ -504,7 +505,7 @@ function renderSourceRoom(pageId) {
         <summary><span class="source-id">${escapeHtml(source.id)}</span><h3>${escapeHtml(source.title)}</h3><span class="source-toggle" aria-hidden="true">+</span></summary>
         <div class="source-record-body">
           <p>${escapeHtml(source.notes)} ${escapeHtml(archiveSentence)}</p>
-          ${primaryPage ? `<p>It first enters the story in Chapter ${escapeHtml(primaryPage.chapter)}, ${escapeHtml(primaryPage.title)}.</p>` : ''}
+          ${primaryPage ? `<p>It first enters the story in Chapter ${escapeHtml(displayChapter(primaryPage))}, ${escapeHtml(primaryPage.title)}.</p>` : ''}
           <details class="source-provenance">
             <summary>Where this came from</summary>
             <p>${escapeHtml(source.status)}. ${escapeHtml(source.authorship)}.</p>
@@ -569,7 +570,7 @@ function renderAudienceDoors(pageId) {
 
 function renderSitemap(pageId) {
   if (pageId !== 'sitemap') return '';
-  const pageLinks = navigationPages.map((page) => `<li><a href="${page.file}#top"><strong>${page.chapter}</strong><span>${escapeHtml(page.title)}</span></a></li>`).join('');
+  const pageLinks = navigationPages.map((page) => `<li><a href="${page.file}#top"><strong>${displayChapter(page)}</strong><span>${escapeHtml(page.title)}</span></a></li>`).join('');
   const projectLinks = projects.map((project) => `
     <article class="source-record">
       <span class="source-id">${escapeHtml(project.id)}</span>
