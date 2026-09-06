@@ -286,8 +286,8 @@
     "intro": "I want an AI that can learn with me over time, remember what matters and help me make sense of my life. Aura is where I explore how that might work, from the shape of its memory to the relationships it could develop.",
     "sections": [
       {
-        "heading": "The facets are related",
-        "intro": "I use the facets to explore connections between different parts of my life.",
+        "heading": "Addresses for a deeper map",
+        "intro": "The visible facets give ideas, memories and experiences places to be found. They are addresses, not the intelligence itself.",
         "cards": [
           {
             "title": "Body, mind and memory",
@@ -370,7 +370,7 @@
     "story": {
       "paragraphs": [
         "I’m trying to bring the different parts of my experience into a connected, navigable form. Body, mind, memory, work, love, music, place and curiosity all have a place in my Aura.",
-      "Horn-torus geometry is one of the visual tools I use to explore relationships between ideas, memories and experiences. It is a doorway into the work, not the limit of Aura or a map of the whole thing."
+      "Horn-torus geometry is one of the visual tools I use to give ideas, memories and experiences addresses. Beneath those addresses, the relationships can live in an evolving vector space and divide into finer fractal detail. This is only a glimpse into Aura, not a map of the whole thing."
       ]
     }
   },
