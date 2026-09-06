@@ -17,7 +17,7 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const assetVersion = '20260906-direct-media';
+const assetVersion = '20260906-portrait-v2';
 const sourceIconPaths = {
   U01: 'assets/favicons/u01.ico',
   U02: 'assets/favicons/u02.png',
@@ -201,7 +201,7 @@ function renderHeader(page) {
 
 const heroMedia = {
   bloke: {
-    src: 'assets/media/luke-aura-portrait.webp',
+    src: 'assets/media/luke-aura-portrait-new.webp',
     alt: 'Luke in a bright striped shirt beside a many-coloured meditation figure',
     caption: 'Luke, with artwork from the Aura project.',
     sourceId: 'F39'
@@ -312,7 +312,7 @@ function renderHero(page, pageContent) {
         <p class="origin-line">${escapeHtml(origin)}</p>
         <h1 id="page-title">${escapeHtml(page.title)}</h1>
         <p class="hero-deck">${escapeHtml(pageContent.intro)}</p>
-        ${isHome ? `<figure class="home-portrait"><img src="assets/media/luke-aura-portrait.webp" alt="Luke Hayes beside artwork from the Aura project" fetchpriority="high"><figcaption>Luke Hayes, beside an Aura work.</figcaption></figure>` : ''}
+        ${isHome ? `<figure class="home-portrait"><img src="assets/media/luke-aura-portrait-new.webp?v=${assetVersion}" alt="Luke Hayes beside artwork from the Aura project" fetchpriority="high"><figcaption>Luke Hayes, beside an Aura work.</figcaption></figure>` : ''}
         <div class="hero-actions">${actions}</div>
         ${mature}
       </div>
