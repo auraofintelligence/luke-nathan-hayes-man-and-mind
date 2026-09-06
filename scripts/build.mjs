@@ -414,7 +414,7 @@ function renderIdentityPanel(pageId) {
 }
 
 function renderArchiveImages(page) {
-  const images = sources.filter(source => source.type === 'image' && source.primaryPage === page.chapter && source.publicPath?.includes('intake-20260906'));
+  const images = sources.filter(source => source.type === 'image' && source.primaryPage === page.chapter && source.publicPath?.includes('intake-20260906') && !(page.id === 'home' && source.id === 'F32'));
   if (!images.length) return '';
   return `<section class="section compact"><div class="page-shell"><div class="archive-image-flow">${images.map(source => `<figure><a href="${escapeHtml(source.publicPath)}" aria-label="Open ${escapeHtml(source.title)}"><img src="${escapeHtml(source.publicPath)}" alt="${escapeHtml(source.title)}" loading="lazy" decoding="async"></a><figcaption>${escapeHtml(source.title)}</figcaption></figure>`).join('')}</div></div></section>`;
 }
