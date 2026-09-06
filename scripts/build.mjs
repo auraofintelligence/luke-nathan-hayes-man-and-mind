@@ -289,7 +289,7 @@ function renderHero(page, pageContent) {
       <figure class="hero-stage image-stage">
         <div class="hero-glow"></div>
         <img src="${media.src}" alt="${escapeHtml(media.alt)}" ${page.id === 'songs' ? 'fetchpriority="high"' : 'loading="lazy"'}>
-        <figcaption>${escapeHtml(media.caption)} <button class="source-thread inline" type="button" data-source="${media.sourceId}">See where it came from</button></figcaption>
+        <figcaption>${escapeHtml(media.caption)}</figcaption>
       </figure>`;
   } else {
     stage = `
@@ -343,7 +343,6 @@ function renderNarrative(pageContent) {
   if (!pageContent.narrative?.length) return '';
   return `<section class="life-story" id="story"><div class="page-shell">
     ${pageContent.narrative.map((part) => `<article class="life-scene"><h2>${escapeHtml(part.heading)}</h2><div class="life-prose">${part.paragraphs.map((paragraph) => `<p>${escapeHtml(paragraph)}</p>`).join('')}</div></article>`).join('')}
-    <div class="life-sources">${renderSourceButtons(pageContent.narrativeSourceIds)}</div>
   </div></section>`;
 }
 
@@ -361,7 +360,6 @@ function renderStoryCard(card, index) {
     <h3>${escapeHtml(card.title)}</h3>
     <p>${escapeHtml(card.body)}</p>
     ${externalLink}
-    <div class="story-card-footer">${renderSourceButtons(card.sourceIds)}</div>
   </article>`;
 }
 
@@ -370,7 +368,7 @@ function renderSections(pageContent) {
   <section class="section work-section"><div class="page-shell"><details class="work-ledger">
     <summary>${escapeHtml(section.heading)}<span aria-hidden="true">+</span></summary>
     ${section.intro ? `<p class="ledger-intro">${escapeHtml(section.intro)}</p>` : ''}
-    ${(section.cards || []).map((card) => `<article class="work-row"><h3>${escapeHtml(card.title)}</h3><div><p>${escapeHtml(card.body)}</p><div class="story-card-footer">${renderSourceButtons(card.sourceIds)}</div></div></article>`).join('')}
+    ${(section.cards || []).map((card) => `<article class="work-row"><h3>${escapeHtml(card.title)}</h3><div><p>${escapeHtml(card.body)}</p></div></article>`).join('')}
   </details></div></section>` : `
   <section class="section">
     <div class="page-shell">
@@ -407,7 +405,7 @@ function renderIdentityPanel(pageId) {
         <p>You might know me through the music, the books or a project. Here’s how the names fit together.</p>
       </div>
       <div class="identity-constellation">
-        ${identities.map(([name, meaning, sourceIds], index) => `<article class="identity-card identity-card-${index % 5}"><h3>${escapeHtml(name)}</h3><p>${escapeHtml(meaning)}</p><div class="story-card-footer">${renderSourceButtons(sourceIds)}</div></article>`).join('')}
+        ${identities.map(([name, meaning], index) => `<article class="identity-card identity-card-${index % 5}"><h3>${escapeHtml(name)}</h3><p>${escapeHtml(meaning)}</p></article>`).join('')}
       </div>
     </div>
   </section>`;
@@ -434,7 +432,6 @@ function renderSoundtrack(soundtrack) {
         <small>${soundtrack.videoPath ? 'Play the lyric video here, or open it full size.' : 'The lyrics are here. I’m gathering the recording for this video space.'}</small>
         ${soundtrack.videoVariants ? `<label class="song-version">Two voices, two styles <select data-song-version aria-label="Choose a vocal version of ${escapeHtml(soundtrack.title)}">${soundtrack.videoVariants.map((version) => `<option value="${escapeHtml(version.videoPath)}" data-poster="${escapeHtml(version.posterPath)}"${version.videoPath === soundtrack.videoPath ? ' selected' : ''}>${escapeHtml(version.label)}</option>`).join('')}</select></label>` : ''}
         ${soundtrack.videoPath ? `<p><a class="source-thread" data-video-open href="${escapeHtml(soundtrack.videoPath)}" target="_blank" rel="noopener noreferrer">Open the video full size</a></p>` : ''}
-        <div class="story-card-footer">${renderSourceButtons(soundtrack.sourceIds)}</div>
       </div>
       <div class="soundtrack-phone" role="${soundtrack.videoPath ? 'group' : 'img'}" aria-label="${soundtrack.videoPath ? 'Lyric video' : 'Smartphone placeholder for a future video'} of ${escapeHtml(soundtrack.title)}">
         <div class="phone-screen">

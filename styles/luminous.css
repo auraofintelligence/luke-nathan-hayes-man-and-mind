@@ -251,6 +251,76 @@ body[data-page="minjerribah"] .image-stage img {
 .home-portrait { max-width: 18rem; margin: 1.25rem 0 0; }
 .home-portrait img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 1rem; box-shadow: 0 1rem 3rem rgba(0,0,0,.28); }
 .home-portrait figcaption { margin-top: .55rem; color: var(--muted, #aeb8cc); font-size: .9rem; }
+
+/* Each chapter carries its own light, material and rhythm. */
+body[data-page="bloke"] { --chapter-a:#ef8f62; --chapter-b:#ffd27a; --chapter-c:#4eaac7; --chapter-deep:#402238; }
+body[data-page="break"] { --chapter-a:#ff5e8e; --chapter-b:#ffbd45; --chapter-c:#7558ff; --chapter-deep:#261348; }
+body[data-page="personal-aura"] { --chapter-a:#7d4dff; --chapter-b:#00e0c6; --chapter-c:#ff82cf; --chapter-deep:#211149; }
+body[data-page="under-aura"] { --chapter-a:#00d7ff; --chapter-b:#83f5b0; --chapter-c:#4565ff; --chapter-deep:#062f45; }
+body[data-page="songs"] { --chapter-a:#ffb629; --chapter-b:#ff547c; --chapter-c:#7957ff; --chapter-deep:#3d1738; }
+body[data-page="love"] { --chapter-a:#ff4f9e; --chapter-b:#ff9c75; --chapter-c:#c352ff; --chapter-deep:#451838; }
+body[data-page="minjerribah"] { --chapter-a:#00bfc4; --chapter-b:#f0bd62; --chapter-c:#4a8ce0; --chapter-deep:#083b4b; }
+body[data-page="fair-go"] { --chapter-a:#7c4dff; --chapter-b:#ffd43c; --chapter-c:#00c6ca; --chapter-deep:#261a55; }
+body[data-page="every-border"] { --chapter-a:#ef7e30; --chapter-b:#ffd65a; --chapter-c:#0aa69a; --chapter-deep:#432815; }
+body[data-page="earth-infinity"] { --chapter-a:#78f0ff; --chapter-b:#b35cff; --chapter-c:#ff5ca8; --chapter-deep:#15143f; }
+body[data-page="choose-door"] { --chapter-a:#38d7aa; --chapter-b:#ffd45c; --chapter-c:#ff718e; --chapter-deep:#173b3d; }
+
+body[data-page]:not([data-page="home"]):not([data-page="sources"]):not([data-page="sitemap"]) .story-card {
+  --panel-colour: var(--chapter-a);
+  border-color: color-mix(in srgb, var(--chapter-a) 65%, white);
+  background:
+    radial-gradient(circle at 88% 10%, color-mix(in srgb, var(--chapter-b) 55%, transparent), transparent 34%),
+    linear-gradient(145deg, color-mix(in srgb, var(--chapter-deep) 90%, var(--chapter-c)), var(--chapter-deep));
+  box-shadow: inset 0 1px 0 #ffffff8c, 0 1.35rem 3rem color-mix(in srgb, var(--chapter-deep) 24%, transparent);
+}
+body[data-page] .story-card:nth-child(2n) {
+  border-radius: 3.4rem .7rem 3.4rem .7rem;
+  border-color: color-mix(in srgb, var(--chapter-b) 70%, white);
+  background:
+    linear-gradient(115deg, transparent 38%, color-mix(in srgb, var(--chapter-c) 30%, transparent)),
+    linear-gradient(145deg, color-mix(in srgb, var(--chapter-deep) 82%, var(--chapter-b)), var(--chapter-deep));
+}
+body[data-page] .story-card:nth-child(3n) {
+  border-radius: .7rem 3.4rem .7rem 3.4rem;
+  border-color: color-mix(in srgb, var(--chapter-c) 72%, white);
+  background:
+    radial-gradient(ellipse at 18% 100%, color-mix(in srgb, var(--chapter-a) 48%, transparent), transparent 52%),
+    linear-gradient(155deg, color-mix(in srgb, var(--chapter-deep) 78%, var(--chapter-c)), var(--chapter-deep));
+}
+body[data-page] .story-card:nth-child(4n) { transform: translateY(1.2rem); }
+body[data-page] .story-card:nth-child(5n) {
+  border-radius: 50% 1.4rem 1.4rem 1.4rem / 18% 1.4rem 1.4rem 1.4rem;
+  background:
+    linear-gradient(165deg, color-mix(in srgb, var(--chapter-a) 34%, transparent), transparent 48%),
+    linear-gradient(135deg, var(--chapter-deep), color-mix(in srgb, var(--chapter-deep) 72%, var(--chapter-b)));
+}
+body[data-page] .story-card:nth-child(6n) {
+  border-radius: 1.4rem;
+  background:
+    repeating-linear-gradient(125deg, transparent 0 18px, color-mix(in srgb, var(--chapter-c) 12%, transparent) 18px 19px),
+    linear-gradient(145deg, color-mix(in srgb, var(--chapter-deep) 82%, var(--chapter-a)), var(--chapter-deep));
+}
+body[data-page="bloke"] .story-card,
+body[data-page="minjerribah"] .story-card {
+  color: #231a2c;
+  background:
+    radial-gradient(circle at 90% 0, color-mix(in srgb, var(--chapter-a) 38%, transparent), transparent 42%),
+    linear-gradient(145deg, #fffdf5, color-mix(in srgb, var(--chapter-b) 22%, #edfaff));
+}
+body[data-page="bloke"] .story-card p,
+body[data-page="minjerribah"] .story-card p { color:#443a48; }
+body[data-page="under-aura"] .card-grid > :first-child,
+body[data-page="break"] .card-grid > :first-child,
+body[data-page="earth-infinity"] .card-grid > :first-child { grid-column: 1 / -1; }
+body[data-page="songs"] .story-card { min-height: 24rem; justify-content: flex-end; }
+body[data-page="every-border"] .card-grid,
+body[data-page="choose-door"] .card-grid { grid-template-columns: minmax(0, 1.35fr) minmax(17rem, .65fr); }
+
+@media (max-width: 760px) {
+  body[data-page] .story-card:nth-child(n) { transform:none; border-radius:1.25rem; }
+  body[data-page="every-border"] .card-grid,
+  body[data-page="choose-door"] .card-grid { grid-template-columns:1fr; }
+}
 .soundtrack-card {
   color: #e2e9ef;
   background: radial-gradient(ellipse at 85% 20%, #3b435b, transparent 60%), linear-gradient(120deg, #152233, #17212e);
