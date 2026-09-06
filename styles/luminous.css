@@ -245,6 +245,12 @@ body[data-page="minjerribah"] .image-stage img {
 .identity-card p { color: #b7c4d3; line-height: 1.8; }
 .identity-card .source-thread { color: #bcd3df; }
 .source-thread { font-weight: 500; }
+.source-thread { border: 0; padding: 0; background: none; color: inherit; font: inherit; cursor: pointer; }
+.source-preview { min-height: 12rem; display: grid; place-items: center; background: #0c1020; border-radius: .8rem; overflow: hidden; }
+.source-preview img, .source-preview iframe { display: block; width: 100%; min-height: 22rem; border: 0; object-fit: contain; }
+.home-portrait { max-width: 18rem; margin: 1.25rem 0 0; }
+.home-portrait img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 1rem; box-shadow: 0 1rem 3rem rgba(0,0,0,.28); }
+.home-portrait figcaption { margin-top: .55rem; color: var(--muted, #aeb8cc); font-size: .9rem; }
 .soundtrack-card {
   color: #e2e9ef;
   background: radial-gradient(ellipse at 85% 20%, #3b435b, transparent 60%), linear-gradient(120deg, #152233, #17212e);

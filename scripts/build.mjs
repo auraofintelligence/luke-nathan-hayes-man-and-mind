@@ -313,6 +313,7 @@ function renderHero(page, pageContent) {
         <p class="origin-line">${escapeHtml(origin)}</p>
         <h1 id="page-title">${escapeHtml(page.title)}</h1>
         <p class="hero-deck">${escapeHtml(pageContent.intro)}</p>
+        ${isHome ? `<figure class="home-portrait"><img src="assets/media/luke-aura-portrait.webp" alt="Luke Hayes beside artwork from the Aura project" fetchpriority="high"><figcaption>Luke Hayes, beside an Aura work.</figcaption></figure>` : ''}
         <div class="hero-actions">${actions}</div>
         ${mature}
       </div>
@@ -335,7 +336,7 @@ function renderSourceButtons(ids = []) {
   return [...new Set(ids)].filter((id) => sourceById.has(id)).map((id) => {
     const source = sourceById.get(id);
     const href = source.url || source.publicPath;
-    return href ? `<a class="source-thread" href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.title)}</a>` : `<span class="source-thread" title="File not yet available">${escapeHtml(source.title)} (not yet available)</span>`;
+    return href ? `<button class="source-thread" type="button" data-source="${escapeHtml(source.id)}">${escapeHtml(source.title)}</button>` : `<span class="source-thread" title="File not yet available">${escapeHtml(source.title)} (not yet available)</span>`;
   }).join('');
 }
 
@@ -416,7 +417,7 @@ function renderIdentityPanel(pageId) {
 function renderArchiveImages(page) {
   const images = sources.filter(source => source.type === 'image' && source.primaryPage === page.chapter && source.publicPath?.includes('intake-20260906'));
   if (!images.length) return '';
-  return `<section class="section compact"><div class="page-shell"><h2>From my archive</h2><div class="archive-image-flow">${images.map(source => `<figure><a href="${escapeHtml(source.publicPath)}" aria-label="Open ${escapeHtml(source.title)}"><img src="${escapeHtml(source.publicPath)}" alt="${escapeHtml(source.title)}" loading="lazy" decoding="async"></a><figcaption>${escapeHtml(source.title)}</figcaption></figure>`).join('')}</div></div></section>`;
+  return `<section class="section compact"><div class="page-shell"><div class="archive-image-flow">${images.map(source => `<figure><a href="${escapeHtml(source.publicPath)}" aria-label="Open ${escapeHtml(source.title)}"><img src="${escapeHtml(source.publicPath)}" alt="${escapeHtml(source.title)}" loading="lazy" decoding="async"></a><figcaption>${escapeHtml(source.title)}</figcaption></figure>`).join('')}</div></div></section>`;
 }
 
 function renderSoundtrack(soundtrack) {
@@ -570,12 +571,9 @@ function renderSourceDialog() {
   <dialog class="source-dialog" data-source-dialog aria-labelledby="source-dialog-title">
     <div class="source-dialog-inner">
       <button class="drawer-close" type="button" data-source-close aria-label="Close source record">×</button>
-      <span class="dialog-id" data-dialog-id></span>
-      <h2 id="source-dialog-title" data-dialog-title>The thread behind this facet</h2>
-      <p data-dialog-body></p>
-      <p class="dialog-context" data-dialog-context></p>
-      <p class="archive-name" data-dialog-filename hidden></p>
-      <a class="button primary" data-dialog-link hidden>Open source</a>
+      <h2 id="source-dialog-title" data-dialog-title>Preview</h2>
+      <div class="source-preview" data-source-preview></div>
+      <a class="button primary" data-dialog-link hidden>Open full size</a>
     </div>
   </dialog>`;
 }
