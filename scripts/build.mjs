@@ -17,7 +17,7 @@ const [pages, content, audiences, projects, sourceInput, socialLinks, controvers
 ]);
 
 const siteUrl = 'https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/';
-const assetVersion = '20260906-direct-sources';
+const assetVersion = '20260923-torus-open';
 const sourceIconPaths = {
   U01: 'assets/favicons/u01.ico',
   U02: 'assets/favicons/u02.png',
@@ -282,7 +282,7 @@ function renderHero(page, pageContent) {
             <p data-facet-story>Every public link and every document in this working archive has a place on the broad outside rows.</p>
           </div>
           <div class="facet-actions">
-            <button class="button facet-open" type="button" data-facet-open>Open this thread</button>
+            <a class="button facet-open" data-facet-open aria-disabled="true">Open item</a>
             <button class="text-button" type="button" data-facet-shuffle>Surprise me</button>
             <button class="text-button" type="button" data-torus-reset>Reset the view</button>
           </div>

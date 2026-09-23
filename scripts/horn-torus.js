@@ -232,11 +232,9 @@ export function initialiseHornTorus() {
   const symbol = document.querySelector('[data-facet-symbol]');
   const sequence = document.querySelector('[data-facet-sequence]');
   const openButton = document.querySelector('[data-facet-open]');
-  const previewFacet = (facet) => {
-    if (!facet?.href) return;
-    const sourceControl = facet.sourceId && document.querySelector(`[data-source="${facet.sourceId}"]`);
-    if (sourceControl) sourceControl.click();
-    else window.dispatchEvent(new CustomEvent('facet-source-preview', { detail: facet }));
+  const openSelectedFacet = () => {
+    if (!openButton?.hasAttribute('href')) return;
+    openButton.click();
   };
   const shuffleButton = document.querySelector('[data-facet-shuffle]');
   const resetButton = document.querySelector('[data-torus-reset]');
@@ -311,7 +309,13 @@ export function initialiseHornTorus() {
     }
     title.textContent = facet.title;
     story.textContent = facet.story;
-    openButton.disabled = !facet.href;
+    if (facet.href) {
+      openButton.href = facet.href;
+      openButton.removeAttribute('aria-disabled');
+    } else {
+      openButton.removeAttribute('href');
+      openButton.setAttribute('aria-disabled', 'true');
+    }
     openButton.textContent = facet.href ? 'Open item' : 'File not yet available';
     const numberedType = facet.type === 'image'
       ? `picture ${facet.typeNumber}`
@@ -570,7 +574,7 @@ export function initialiseHornTorus() {
       const hit = facetAt(event.clientX, event.clientY);
       if (hit >= 0 && facets[hit]) {
         describeFacet(hit);
-        previewFacet(facets[hit]);
+        openSelectedFacet();
       }
     }
     state.dragging = null;
@@ -609,7 +613,7 @@ export function initialiseHornTorus() {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
       describeFacet(state.selected);
-      previewFacet(facets[state.selected]);
+      openSelectedFacet();
       return;
     }
     if (next !== state.selected || ['+', '=', '-'].includes(event.key)) {
@@ -619,10 +623,6 @@ export function initialiseHornTorus() {
     }
   });
 
-  openButton?.addEventListener('click', () => {
-    const facet = facets[state.selected];
-    previewFacet(facet);
-  });
   shuffleButton?.addEventListener('click', () => {
     if (!activeFacetIndexes.length) return;
     const currentPosition = Math.max(0, activeFacetIndexes.indexOf(state.selected));
@@ -648,7 +648,7 @@ export function initialiseHornTorus() {
   }, { threshold: 0.02 });
   visibilityObserver.observe(canvas);
 
-  fetch('data/facets.json?v=20260906-direct-media')
+  fetch('data/facets.json?v=20260923-torus-open')
     .then((response) => {
       if (!response.ok) throw new Error('The facet map could not be loaded.');
       return response.json();
