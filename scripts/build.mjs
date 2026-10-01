@@ -635,6 +635,8 @@ function renderFooter(page) {
   const next = navigationPages[(index + 1) % navigationPages.length];
   const social = socialLinks.map((link) => `<a href="${escapeHtml(link.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`).join('');
   const worldChoices = [
+    ['Australian Sire', 'https://auraofintelligence.github.io/australiansire/'],
+    ['Tiggy Bestmann', 'https://auraofintelligence.github.io/tiggy-bestmann/'],
     ['Aura of Intelligence', 'https://auraofintelligence.github.io/index.html'],
     ['Strange but True', 'https://auraofintelligence.github.io/strange-but-true/index.html'],
     ['i C. infinity', 'https://auraofintelligence.github.io/i-C-infinity-music-universe/index.html'],
@@ -643,7 +645,7 @@ function renderFooter(page) {
     ['Project Atlas', 'https://auraofintelligence.github.io/project-atlas/']
   ];
   const worlds = (page.id === 'home'
-    ? worldChoices.filter(([label]) => ['Aura of Intelligence', 'Strange but True', 'Project Atlas'].includes(label))
+    ? worldChoices.filter(([label]) => ['Australian Sire', 'Tiggy Bestmann', 'Aura of Intelligence', 'Strange but True', 'Project Atlas'].includes(label))
     : worldChoices
   ).map(([label, url]) => `<a href="${url}" target="_blank" rel="noopener noreferrer">${label}</a>`).join('');
 
