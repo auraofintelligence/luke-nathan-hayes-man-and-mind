@@ -186,8 +186,8 @@
       ],
       "reason": "It puts the shed, market table, patient tech help and bigger questions into the same warm local frame.",
       "mediaStatus": "Suno lyric video supplied by Luke.",
-      "videoPath": "assets/video/strange-but-true.mp4",
-      "posterPath": "assets/video/strange-but-true.jpg",
+      "videoPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/strange-but-true-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/strange-but-true-portrait-cover-v1.jpg",
       "originalFilename": "Strange But True (Tech Art and Ideas That Actually Help) lyrics.mp4"
     },
     "closing": null,
@@ -283,8 +283,8 @@
       ],
       "reason": "The title fits this part of my story: Don't Try to Fix Me.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/dont-try-to-fix-me.mp4",
-      "posterPath": "assets/video/dont-try-to-fix-me.jpg",
+      "videoPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/dont-try-to-fix-me-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/dont-try-to-fix-me-portrait-cover-v1.jpg",
       "originalFilename": "Don't Try To Fix Me.mp4"
     },
     "closing": null,
@@ -466,8 +466,8 @@
       ],
       "reason": "The lyric names the 12 by 24 Aura and seven nested horn tori while treating damage as part of the pattern, not something to hide.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/kintsugi-protocol.mp4",
-      "posterPath": "assets/video/kintsugi-protocol.jpg",
+      "videoPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/kintsugi-protocol-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/kintsugi-protocol-portrait-cover-v1.jpg",
       "originalFilename": "Kintsugi Protocol.mp4"
     },
     "closing": null,
@@ -557,8 +557,8 @@
       ],
       "reason": "It is a central bridge between the emotional, civic and speculative worlds gathered on this page.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/the-protopian-gambit.mp4",
-      "posterPath": "assets/video/the-protopian-gambit.jpg",
+      "videoPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/protopian-gambit-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/protopian-gambit-portrait-cover-v1.jpg",
       "originalFilename": "The Protopian Gambit.mp4"
     },
     "closing": null,
@@ -641,8 +641,8 @@
       ],
       "reason": "A layered, self-authored yes feels more intimate and more honest than turning love into a diagram about consent.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/adaptable-yes.mp4",
-      "posterPath": "assets/video/adaptable-yes.jpg",
+      "videoPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/adaptable-yes-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/adaptable-yes-portrait-cover-v1.jpg",
       "originalFilename": "Adaptable Yes.mp4"
     },
     "closing": null,
@@ -849,8 +849,8 @@
       ],
       "reason": "It keeps the toilet-mat origin, friendly humour and serious democratic curiosity in the same story.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/the-purple-mat-that-could.mp4",
-      "posterPath": "assets/video/the-purple-mat-that-could.jpg",
+      "videoPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/the-purple-mat-that-could-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/luke-nathan-hayes-man-and-mind/assets/protopian-portraits/the-purple-mat-that-could-portrait-cover-v1.jpg",
       "originalFilename": "The Purple Mat That Could.mp4"
     },
     "closing": null,
@@ -939,8 +939,8 @@
       ],
       "reason": "A song for the possibility of meeting someone, finding a connection and making the next journey.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/every-border-a-bridge.mp4",
-      "posterPath": "assets/video/every-border-a-bridge.jpg",
+      "videoPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/every-border-a-bridge-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/every-border-a-bridge-portrait-cover-v1.jpg",
       "originalFilename": "Every Border a Bridge.mp4"
     },
     "closing": null,
@@ -1039,19 +1039,19 @@
       ],
       "reason": "It travels from a lavender mat and unpaid care to Minjerribah, orbit, the Sun and the galaxy without losing the human thread.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/we-go-beyond-f1.mp4",
-      "posterPath": "assets/video/we-go-beyond-f1.jpg",
+      "videoPath": "https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/we-go-beyond-female-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/we-go-beyond-female-portrait-cover-v1.jpg",
       "originalFilename": "We Go Beyond (f1).mp4",
       "videoVariants": [
         {
           "label": "Female vocal (f1)",
-          "videoPath": "assets/video/we-go-beyond-f1.mp4",
-          "posterPath": "assets/video/we-go-beyond-f1.jpg"
+          "videoPath": "https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/we-go-beyond-female-portrait-web-v1.mp4",
+          "posterPath": "https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/we-go-beyond-female-portrait-cover-v1.jpg"
         },
         {
           "label": "Male vocal (m1)",
-          "videoPath": "assets/video/we-go-beyond-m1.mp4",
-          "posterPath": "assets/video/we-go-beyond-m1.jpg"
+          "videoPath": "https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/we-go-beyond-male-portrait-web-v1.mp4",
+          "posterPath": "https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/we-go-beyond-male-portrait-cover-v1.jpg"
         }
       ]
     },
@@ -1224,8 +1224,8 @@
       ],
       "reason": "A song to accompany choosing your own way through these ideas.",
       "mediaStatus": "Suno lyric video supplied by Luke, matched by on-screen title.",
-      "videoPath": "assets/video/choose-your-own-protopia.mp4",
-      "posterPath": "assets/video/choose-your-own-protopia.jpg",
+      "videoPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/choose-your-own-protopia-portrait-web-v1.mp4",
+      "posterPath": "https://auraofintelligence.github.io/infinity-engine/assets/protopian-portraits/choose-your-own-protopia-portrait-cover-v1.jpg",
       "originalFilename": "Choose Your Own Protopia.mp4"
     },
     "closing": null,
