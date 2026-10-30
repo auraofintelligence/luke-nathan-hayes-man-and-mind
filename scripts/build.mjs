@@ -709,7 +709,7 @@ function renderPage(page, index) {
   <link rel="stylesheet" href="styles/components.css?v=${assetVersion}">
   <link rel="stylesheet" href="styles/motion.css?v=${assetVersion}">
   <link rel="stylesheet" href="styles/luminous.css?v=${assetVersion}">
-  ${personSchema}
+  ${personSchema}${pageContent.soundtrack?.videoPath?.includes("/assets/protopian-portraits/") ? '\n<link rel="stylesheet" href="assets/current-portrait.css">' : ""}
 </head>
 <body data-page="${escapeHtml(page.id)}" data-theme="${escapeHtml(page.theme)}">
   ${renderHeader(page)}
@@ -738,7 +738,11 @@ function renderPage(page, index) {
 }
 
 await Promise.all(pages.map((page, index) => {
-  const html = renderPage(page, index).replace(/[ \t]+$/gm, '');
+  const html = renderPage(page, index).replace(/[ \t]+$/gm, '').replace(/<a\b[^>]*href="https:\/\/auraofintelligence\.github\.io\/[^"<>]*\/assets\/protopian-portraits\/[^"<>]*"[^>]*>/g, (anchor) => {
+    if (!anchor.includes('target="')) anchor = anchor.replace('>', ' target="_blank">');
+    if (!anchor.includes('rel="')) anchor = anchor.replace('>', ' rel="noopener noreferrer">');
+    return anchor;
+  });
   return writeFile(resolve(root, page.file), html, 'utf8');
 }));
 const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>

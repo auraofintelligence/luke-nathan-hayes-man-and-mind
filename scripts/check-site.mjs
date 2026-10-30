@@ -50,7 +50,12 @@ for (const [pageId, pageContent] of Object.entries(content)) {
   }
   for (const sourceId of pageContent.soundtrack?.sourceIds || []) referencedSources.add(sourceId);
   for (const mediaPath of [pageContent.soundtrack?.videoPath, pageContent.soundtrack?.posterPath, ...(pageContent.soundtrack?.videoVariants || []).flatMap(version => [version.videoPath, version.posterPath])].filter(Boolean)) {
+    if (/^https:\/\//.test(mediaPath)) {
+      const url = new URL(mediaPath);
+      if (url.hostname !== "auraofintelligence.github.io" || !url.pathname.includes("/assets/protopian-portraits/")) addError(`${pageId}: unexpected remote song media ${mediaPath}.`);
+    } else {
     try { await access(resolve(root, mediaPath)); } catch { addError(`${pageId}: missing song media ${mediaPath}.`); }
+    }
   }
   for (const sourceId of pageContent.narrativeSourceIds || []) referencedSources.add(sourceId);
   for (const scene of pageContent.narrative || []) {
@@ -247,7 +252,9 @@ for (const file of files) {
   const extension = extname(file).toLowerCase();
   if (extension === '.svg') addError(`Forbidden vector image file: ${relative(root, file)}`);
   const details = await stat(file);
-  if (details.size > 20 * 1024 * 1024) addError(`File exceeds 20 MB: ${relative(root, file)}`);
+  const isPortraitVideo = relative(root, file).replaceAll('\\', '/').startsWith('assets/protopian-portraits/') && extname(file) === '.mp4';
+  const maximumBytes = (isPortraitVideo ? 95 : 20) * 1024 * 1024;
+  if (details.size > maximumBytes) addError(`File exceeds its ${isPortraitVideo ? 95 : 20} MB limit: ${relative(root, file)}`);
   if (['.html', '.css', '.js', '.json'].includes(extension) && !file.endsWith('check-site.mjs')) {
     const text = await readFile(file, 'utf8');
     if (/data:image\/svg\+xml|\.svg(?:[?#"']|$)|createElementNS\([^)]*svg/i.test(text)) {
